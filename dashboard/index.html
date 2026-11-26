@@ -1847,6 +1847,11 @@
   @keyframes fadeUpFoot { from { opacity: 0; transform: translate(-50%, 14px); } to { opacity: 1; transform: translateX(-50%); } }
   @media (prefers-reduced-motion: reduce) { .ld-car .lamp, .ld-beams, .ld-word span, .ld-sub { animation: none !important; opacity: 1 !important; transform: none !important; } }
 
+  /* ---------- PHASE 3.8: CEO lens across pages ---------- */
+  .lens-pill { display: inline-flex; align-items: center; gap: 7px; font-size: 11px; font-weight: 800; padding: 4px 10px; border-radius: 4px; background: #043248; color: #FFFFFF; }
+  .lens-pill::before { content: ""; width: 6px; height: 6px; border-radius: 1px; background: #97D7FF; }
+  .co-chip.lens { background: #97D7FF; color: #031B29; font-weight: 800; }
+
 </style>
 </head>
 <body>
@@ -3139,6 +3144,7 @@
     localStorage.removeItem("sl_auto_auth");
     sessionStorage.removeItem("sl_auto_auth");
     localStorage.removeItem("sl_auto_view");
+    localStorage.removeItem("sl_auto_lens");
     document.getElementById("loginEmail").value = "";
     document.getElementById("loginPass").value = "";
     exitDashboard();
@@ -3335,6 +3341,7 @@
       if (id === "quadrant") renderQuadrant(activeSegment);
       if (id === "scale") renderStrategyCanvas();
       if (id === "macro") { renderMacroCharts(); renderPulse(); renderOriginChart(); }
+      if (id === "companies") applyLensToCompanies(false);
       armReveal(id);
       const hs = document.getElementById("hs-" + id);
       if (hs && hs.restartShow) hs.restartShow();
@@ -3365,7 +3372,7 @@
       <span class="badge">Budget: ${bCount}</span>
       <span class="badge steel">Mid-Range: ${mCount}</span>
       <span class="badge dark">Premium: ${pCount}</span>
-    `;
+    ` + lensTierPill(data);
     const yMap = { "EV": 1, "Hybrid": 2, "ICE": 3 };
     const dists = [...new Set(data.map(d => d.Distributor))].sort();
     const palette = ["#086288","#4D8DBA","#032233","#0EA5E9","#0284C7","#1E40AF","#0F766E","#38BDF8","#2563EB","#155E75","#0369A1","#1D4ED8"];
@@ -3377,9 +3384,14 @@
         y: rows.map((r, i) => yMap[r.Powertrain] + (((i * 37 + idx * 13) % 10) - 4.5) * 0.045),
         text: rows.map(r => `${r.Brand} ${r.Model}`),
         customdata: rows.map(r => [r.Distributor, r.Powertrain, r.Body_Type || "N/A", parseFloat(r.Std_Price_Mn).toFixed(2)]),
-        mode: data.length <= 24 ? "markers+text" : "markers", textposition: "top center", textfont: { size: 10, color: "#072233" },
-        marker: { size: 13, color: palette[idx % palette.length], line: { color: "#FFFFFF", width: 1.8 } },
-        name: dist,
+        mode: data.length <= 24 ? "markers+text" : "markers",
+        textposition: "top center", textfont: { size: 10, color: "#043248" },
+        marker: lensOn()
+          ? (dist === activeCeoCompany
+              ? { size: 17, color: "#043248", line: { color: "#97D7FF", width: 2.4 } }
+              : { size: 11, color: palette[idx % palette.length], opacity: 0.22, line: { color: "#FFFFFF", width: 1 } })
+          : { size: 13, color: palette[idx % palette.length], line: { color: "#FFFFFF", width: 1.8 } },
+        name: lensOn() && dist === activeCeoCompany ? `${dist} (CEO Lens)` : dist,
         hovertemplate: "<b>%{text}</b><br>Distributor: %{customdata[0]}<br>Powertrain: %{customdata[1]} • %{customdata[2]}<br>18% VAT-Incl. Price: LKR %{customdata[3]}M<extra></extra>"
       };
     });
@@ -3413,10 +3425,11 @@
     const c = (dist, pt) => data.filter(d => d.Distributor === dist && d.Powertrain === pt).length;
     dists.sort((a,b) => (c(a,"ICE")+c(a,"Hybrid")+c(a,"EV")) - (c(b,"ICE")+c(b,"Hybrid")+c(b,"EV")));
     Plotly.newPlot("portfolioChart", [
-      {y:dists, x:dists.map(d => c(d,"ICE")), name:"ICE", type:"bar", orientation:"h", marker:{color:"#086288"}},
-      {y:dists, x:dists.map(d => c(d,"Hybrid")), name:"Hybrid", type:"bar", orientation:"h", marker:{color:"#4D8DBA"}},
-      {y:dists, x:dists.map(d => c(d,"EV")), name:"EV", type:"bar", orientation:"h", marker:{color:"#97D7FF"}}
+      {y:dists, x:dists.map(d => c(d,"ICE")), name:"ICE", type:"bar", orientation:"h", marker:{color:"#086288", opacity: dists.map(lensOpacity)}},
+      {y:dists, x:dists.map(d => c(d,"Hybrid")), name:"Hybrid", type:"bar", orientation:"h", marker:{color:"#4D8DBA", opacity: dists.map(lensOpacity)}},
+      {y:dists, x:dists.map(d => c(d,"EV")), name:"EV", type:"bar", orientation:"h", marker:{color:"#97D7FF", opacity: dists.map(lensOpacity)}}
     ], {
+      yaxis:{ tickvals: dists, ticktext: dists.map(d => lensOn() && d === activeCeoCompany ? `<b>${d}</b>` : d) },
       barmode:"stack", paper_bgcolor:"#FFFFFF", plot_bgcolor:"#F8FBFE", font:plotFont,
       margin:{l:140,r:18,t:12,b:40}, xaxis:{title:"Number of Brand-New Models", gridcolor:gridCol}, legend:{orientation:"h", y:1.12}
     }, { responsive:true, displaylogo:false });
@@ -3690,11 +3703,34 @@
     `).join("");
   }
 
+  const lensOn = () => activeCeoCompany !== "ALL";
+  const lensOpacity = d => (!lensOn() || d === activeCeoCompany) ? 1 : 0.25;
+  function lensTierPill(data) {
+    if (!lensOn()) return "";
+    const mine = data.filter(d => d.Distributor === activeCeoCompany).map(d => parseFloat(d.Std_Price_Mn));
+    if (!mine.length) return `<span class="lens-pill">CEO Lens: ${activeCeoCompany} — no models in this filter</span>`;
+    const b = mine.filter(p => p < BUDGET_MAX).length, m = mine.filter(p => p >= BUDGET_MAX && p <= MIDRANGE_MAX).length, pr = mine.filter(p => p > MIDRANGE_MAX).length;
+    return `<span class="lens-pill">CEO Lens: ${activeCeoCompany} — ${b} Budget • ${m} Mid • ${pr} Premium</span>`;
+  }
+  let coLensShown = null;
+  function lensCompanyIndex() {
+    return companyProfiles.findIndex(c => c.data === activeCeoCompany);
+  }
+  function applyLensToCompanies(force) {
+    if (!lensOn() || !document.getElementById("view-companies").classList.contains("active")) return;
+    if (!force && coLensShown === activeCeoCompany) return;
+    const i = lensCompanyIndex();
+    if (i >= 0) { coLensShown = activeCeoCompany; openCompany(i); }
+  }
   function applyCeoLens() {
     activeCeoCompany = document.getElementById("ceoCompanySelect").value;
+    try { localStorage.setItem("sl_auto_lens", activeCeoCompany); } catch (e) {}
     renderCeoDecisionBrief();
     if (document.getElementById("view-features").classList.contains("active")) applyPfFilters();
     if (document.getElementById("view-ninebox").classList.contains("active")) applyFilters();
+    if (document.getElementById("view-companies").classList.contains("active")) {
+      if (lensOn()) applyLensToCompanies(true); else openCompany(coIdx);
+    }
   }
 
   function renderCeoDecisionBrief() {
@@ -4223,6 +4259,7 @@
   function openCompanyByName(term) {
     const t = term.toLowerCase();
     const i = companyProfiles.findIndex(c => (c.name + " " + c.brands.join(" ")).toLowerCase().includes(t));
+    coLensShown = activeCeoCompany;
     document.getElementById("nav-companies").click();
     openCompany(i < 0 ? 0 : i);
   }
@@ -4265,6 +4302,7 @@
             <a class="co-chip" href="https://${c.web.split(";")[0].trim()}" target="_blank" rel="noopener">${c.web} ↗</a>
             <span class="co-chip">Researched by ${c.owner}</span>
             ${outlook ? `<span class="co-chip hot">${outlook.label}</span>` : ""}
+            ${lensOn() && c.data === activeCeoCompany ? `<span class="co-chip lens">CEO Lens — your company</span>` : ""}
           </div>
           <div class="co-nav">
             <button onclick="stepCompany(-1)"><svg class="ico" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Previous</button>
@@ -4584,6 +4622,11 @@
   renderOfferings();
   populateFilters(currentData);
   populatePfFilters(currentData);
+  try {
+    const savedLens = localStorage.getItem("sl_auto_lens");
+    const sel = document.getElementById("ceoCompanySelect");
+    if (savedLens && [...sel.options].some(o => o.value === savedLens)) { sel.value = savedLens; activeCeoCompany = savedLens; }
+  } catch (e) {}
   renderCeoDecisionBrief();
   renderRegistry();
   initHeroShows();
