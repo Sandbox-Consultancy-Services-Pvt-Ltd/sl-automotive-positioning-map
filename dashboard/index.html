@@ -1686,6 +1686,119 @@
     .card, .ceo-brief-panel { break-inside: avoid; box-shadow: none !important; }
   }
 
+  /* ======================================================================
+     PHASE 3.5 — CEO ENGINE POLISH (matches DriveX design system:
+     no accent bars, square tags, soft cards, dark war-room panel)
+     ====================================================================== */
+  .ceo-lens-wrap { background: #FFFFFF; border: 1px solid var(--border); border-radius: 99px; padding: 4px 4px 4px 12px; gap: 8px; transition: box-shadow .15s; }
+  .ceo-lens-wrap:hover { box-shadow: var(--soft); }
+  .ceo-lens-ico { width: 14px; height: 14px; color: var(--deep); }
+  .ceo-lens-lbl { font-size: 10px; letter-spacing: 1px; color: var(--muted); }
+  .ceo-lens-select {
+    -webkit-appearance: none; appearance: none; border: none; border-radius: 99px; padding: 7px 30px 7px 12px;
+    background: var(--ice-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23086288' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") no-repeat right 10px center;
+    color: var(--deep-dark); font-weight: 700; font-family: inherit;
+  }
+  .board-export-btn { border-radius: 99px; border: 1px solid var(--border); background: #FFFFFF; color: var(--deep-dark); padding: 8px 14px; font-family: inherit; }
+  .board-export-btn:hover { background: var(--deep); color: #FFFFFF; border-color: var(--deep); }
+
+  /* war-room decision panel */
+  .ceo-brief-panel {
+    position: relative; overflow: hidden; border: none; border-top: none; border-radius: 22px; padding: 24px 24px 22px 24px; margin-bottom: 20px; color: #FFFFFF;
+    background: radial-gradient(700px 300px at 100% 0%, rgba(255,198,41,.12), transparent 60%), radial-gradient(600px 300px at 0% 100%, rgba(151,215,255,.14), transparent 60%), linear-gradient(145deg, #053A55 0%, #031B29 100%);
+    box-shadow: 0 18px 44px rgba(3,27,41,.24);
+  }
+  .ceo-brief-top { border-bottom: 1px solid rgba(151,215,255,.14); padding-bottom: 16px; margin-bottom: 16px; }
+  .ceo-brief-title { color: #FFFFFF; font-size: 18px; }
+  .ceo-brief-sub { color: rgba(190,225,247,.85); font-size: 12.5px; margin-top: 3px; }
+  .ceo-live { display: inline-flex; align-items: center; gap: 8px; font-size: 10.5px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;
+    color: #031B29; background: #FFC629; padding: 6px 11px; border-radius: 3px; white-space: nowrap; }
+  .ceo-live i { width: 7px; height: 7px; border-radius: 50%; background: #031B29; animation: livePulse 1.4s ease-in-out infinite; }
+  @keyframes livePulse { 0%,100% { opacity: 1; } 50% { opacity: .25; } }
+  .ceo-action-grid { gap: 14px; }
+  .ceo-act-card, .ceo-act-card.warn, .ceo-act-card.go {
+    border: 1px solid rgba(151,215,255,.12); border-left: 1px solid rgba(151,215,255,.12); border-radius: 18px; padding: 16px 16px 15px 16px;
+    background: rgba(255,255,255,.06); backdrop-filter: blur(6px); transition: transform .18s, background .18s;
+  }
+  .ceo-act-card:hover { transform: translateY(-3px); background: rgba(255,255,255,.1); }
+  .ceo-act-tag { display: inline-flex; align-items: center; gap: 7px; border-radius: 3px; padding: 4px 9px; margin-bottom: 10px; background: rgba(151,215,255,.16); color: #CFEBFF; }
+  .ceo-act-tag::before { content: ""; width: 6px; height: 6px; border-radius: 1px; background: var(--ice); }
+  .ceo-act-card.warn .ceo-act-tag { background: rgba(255,198,41,.16); color: #FFD866; }
+  .ceo-act-card.warn .ceo-act-tag::before { background: #FFC629; }
+  .ceo-act-card.go .ceo-act-tag { background: rgba(52,211,153,.16); color: #6EE7B7; }
+  .ceo-act-card.go .ceo-act-tag::before { background: #34D399; }
+  .ceo-act-card h5 { color: #FFFFFF; font-size: 14px; margin-bottom: 6px; }
+  .ceo-act-card p { color: rgba(214,236,250,.85); font-size: 12.3px; line-height: 1.55; }
+
+  /* monthly threat feed */
+  .mrr-feed { gap: 12px; }
+  .mrr-item { border: none; border-radius: 16px; background: var(--tint-ice); padding: 15px 16px; transition: transform .18s, box-shadow .18s, background .18s; }
+  .mrr-item:hover { transform: translateY(-2px); background: #FFFFFF; box-shadow: var(--soft-hover); }
+  .mrr-date { display: inline-flex; align-items: center; gap: 7px; color: var(--steel); }
+  .mrr-date::before { content: ""; width: 6px; height: 6px; border-radius: 1px; background: #FFC629; }
+  .mrr-title { font-size: 13.5px; margin: 2px 0 4px 0; }
+  .mrr-desc { font-size: 12.2px; line-height: 1.55; }
+  .mrr-item .badge { flex: none; }
+
+  /* what-if simulator */
+  .sim-box { border: none; border-left: none; border-radius: 20px; background: #FFFFFF; box-shadow: var(--soft); padding: 20px 22px; }
+  .sim-head { display: flex; align-items: center; gap: 12px; }
+  .sim-ico { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; flex: none; color: #031B29; background: linear-gradient(135deg, #FFC629, #FFE08A); box-shadow: 0 6px 16px rgba(255,198,41,.35); }
+  .sim-ico .ico { width: 18px; height: 18px; fill: rgba(3,27,41,.12); }
+  .sim-title { font-size: 15px; font-weight: 800; color: var(--deep-dark); letter-spacing: -.2px; }
+  .sim-sub { font-size: 12.2px; color: var(--muted); }
+  .sim-grid { margin-top: 16px; gap: 12px; }
+  .sim-field label { color: var(--muted); font-size: 10px; letter-spacing: 1px; }
+  .sim-field input, .sim-field select { border-radius: 10px; border: 1px solid transparent; background: var(--canvas); padding: 10px 12px; font-family: inherit; transition: border-color .15s, background .15s; }
+  .sim-field input:focus, .sim-field select:focus { border-color: var(--deep); background: #FFFFFF; }
+  .sim-run-btn { height: 40px; border-radius: 10px; padding: 0 18px; background: linear-gradient(135deg, #086288, #043248); box-shadow: 0 8px 18px rgba(8,98,136,.28); font-family: inherit; }
+  .sim-run-btn:hover { background: linear-gradient(135deg, #0A74A0, #052F44); }
+  .sim-result { border: none; border-radius: 16px; padding: 14px 16px; margin-top: 14px; background: var(--tint-ice); animation: coIn .35s ease; }
+  .sim-v-title { font-size: 14px; font-weight: 800; color: var(--deep-dark); }
+  .sim-v-desc { font-size: 12.3px; color: var(--muted); margin-top: 2px; }
+  .sim-edge { font-size: 13px; font-weight: 800; padding: 8px 12px; border-radius: 4px; background: var(--deep); color: #FFFFFF; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .sim-result.go { background: linear-gradient(135deg, #ECFDF5, #D1FAE5); }
+  .sim-result.go .sim-v-title { color: #047857; } .sim-result.go .sim-edge { background: #059669; }
+  .sim-result.par { background: linear-gradient(135deg, #FFFBEB, #FEF3C7); }
+  .sim-result.par .sim-v-title { color: #B45309; } .sim-result.par .sim-edge { background: #D97706; }
+  .sim-result.caution { background: linear-gradient(135deg, #FEF2F2, #FEE2E2); }
+  .sim-result.caution .sim-v-title { color: #B91C1C; } .sim-result.caution .sim-edge { background: #DC2626; }
+
+  /* auto-gap radar */
+  .gap-radar-grid { gap: 14px; margin-top: 16px; }
+  .gap-card { border: none; border-top: none; border-radius: 18px; background: var(--tint-ice); padding: 16px 16px 15px 16px; gap: 7px; transition: transform .18s, box-shadow .18s, background .18s; }
+  .gap-card:hover { transform: translateY(-3px); background: #FFFFFF; box-shadow: var(--soft-hover); }
+  .gap-card h5 { font-size: 14px; }
+  .gap-pt { font-size: 10px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--deep); background: #FFFFFF; padding: 4px 9px; border-radius: 3px; }
+  .gap-pill { border-radius: 3px; padding: 4px 9px; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; font-weight: 800; }
+  .gap-card.open .gap-pill { background: #059669; color: #FFFFFF; }
+  .gap-card.thin .gap-pill { background: #FFC629; color: #031B29; }
+  .gap-count { display: flex; align-items: baseline; gap: 8px; }
+  .gap-count b { font-size: 30px; font-weight: 800; letter-spacing: -1px; color: var(--deep-dark); line-height: 1; }
+  .gap-count span { font-size: 11.5px; color: var(--muted); font-weight: 600; }
+  .gap-band { position: relative; height: 8px; border-radius: 99px; background: rgba(8,98,136,.12); margin-top: 4px; }
+  .gap-band i { position: absolute; top: 0; bottom: 0; border-radius: 99px; background: linear-gradient(90deg, var(--deep), var(--ice)); }
+  .gap-card.open .gap-band i { background: linear-gradient(90deg, #059669, #6EE7B7); }
+  .gap-band-lbl { display: flex; justify-content: space-between; font-size: 10.5px; color: var(--muted); font-weight: 600; }
+  .gap-band-lbl span:first-child { color: var(--deep-dark); font-weight: 700; }
+
+  @media (max-width: 760px) { .ceo-lens-ico { display: none; } .ceo-lens-wrap { padding: 3px; } .board-export-btn { padding: 8px 10px; } }
+
+  /* board brief print: hide chrome, never print reveal-hidden cards blank */
+  @media print {
+    .hero-show, .bento-head, .ov-brands-strip, .profile, .ceo-lens-wrap, .board-export-btn, .tour-trigger, #signout-modal, .grid-3:has(.visual-card) { display: none !important; }
+    .rv { opacity: 1 !important; transform: none !important; transition: none !important; }
+    .ceo-brief-panel { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+  @media (max-width: 640px) {
+    .topbar { gap: 8px; }
+    .crumb, .topbar-right .tour-trigger { display: none; }
+    .page-heading { font-size: 16px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 120px; }
+    .topbar > div:first-child { min-width: 0; }
+    .topbar-right { gap: 6px; }
+    .ceo-lens-select { max-width: 112px; padding: 7px 24px 7px 10px; background-position: right 7px center; }
+  }
+
 </style>
 </head>
 <body>
@@ -2022,7 +2135,7 @@
       </div>
       <div class="topbar-right">
         <div class="ceo-lens-wrap" title="Switch entire dashboard to a specific CEO perspective">
-          <span class="ceo-lens-lbl">CEO Lens</span>
+          <svg class="ico ceo-lens-ico" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><span class="ceo-lens-lbl">CEO Lens</span>
           <select id="ceoCompanySelect" class="ceo-lens-select" onchange="applyCeoLens()">
             <option value="ALL">Market-Wide View</option>
             <option value="United Motors (UNIMO)">United Motors (UNIMO)</option>
@@ -2120,7 +2233,7 @@
               <div class="ceo-brief-title" id="ceoBriefTitle">Proactive CEO Decision Radar — Sri Lanka Automotive Market</div>
               <div class="ceo-brief-sub" id="ceoBriefSub">Select your company in the topbar CEO Lens to unlock tailored blind spots, threat alerts, and 90-day launch bets.</div>
             </div>
-            <span class="badge dark" id="ceoBriefBadge">MRR Live Intelligence • Nov 2026 Cycle</span>
+            <span class="ceo-live" id="ceoBriefBadge"><i></i>Live Intelligence • Nov 2026 Cycle</span>
           </div>
           <div class="ceo-action-grid" id="ceoActionGrid"></div>
         </div>
@@ -2279,8 +2392,13 @@
         <div class="sim-box">
           <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
             <div>
-              <div style="font-size:13.5px; font-weight:800; color:#043248;">What-If New Model Launch &amp; Pricing Simulator</div>
-              <div style="font-size:11.8px; color:#526A7C;">Test a proposed vehicle launch before signing an OEM franchise—plots live on the matrix and scores your competitive edge.</div>
+              <div class="sim-head">
+                <span class="sim-ico"><svg class="ico" viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.8 5.5 21l2-7.5L2 9h7z"/></svg></span>
+                <div>
+                  <div class="sim-title">What-If New Model Launch &amp; Pricing Simulator</div>
+                  <div class="sim-sub">Test a proposed vehicle launch before signing an OEM franchise — it plots live on the matrix and scores your competitive edge.</div>
+                </div>
+              </div>
             </div>
             <button class="reset-btn" onclick="clearWhatIf()">Clear Simulation</button>
           </div>
@@ -2309,10 +2427,10 @@
           </div>
           <div class="sim-result" id="simResult">
             <div>
-              <div style="font-size:13px; font-weight:800; color:#043248;" id="simVerdictTitle">STRONG GO — Market Disruptor</div>
-              <div style="font-size:11.8px; color:#4A6375;" id="simVerdictDesc">Undercuts nearby rivals while delivering superior feature value.</div>
+              <div class="sim-v-title" id="simVerdictTitle">STRONG GO — Market Disruptor</div>
+              <div class="sim-v-desc" id="simVerdictDesc">Undercuts nearby rivals while delivering superior feature value.</div>
             </div>
-            <span class="badge dark" id="simEdgeBadge">+9.4 pts vs Frontier</span>
+            <span class="sim-edge" id="simEdgeBadge">+9.4 pts vs Frontier</span>
           </div>
         </div>
 
@@ -3503,13 +3621,17 @@
     const el = document.getElementById("autoGapRadar");
     if (!el) return;
     const gaps = detectAutoGaps(dataset);
+    const AX = 45;
     el.innerHTML = gaps.map(g => `
-      <div class="gap-card">
+      <div class="gap-card ${g.count === 0 ? "open" : "thin"}">
         <div class="gap-card-head">
-          <h5>${g.title}</h5>
-          <span class="gap-pill">${g.count === 0 ? "0 Rivals • OPEN" : g.count + " Rivals • Thin"}</span>
+          <span class="gap-pt">${g.pt}</span>
+          <span class="gap-pill">${g.count === 0 ? "Open" : "Thin"}</span>
         </div>
-        <div style="font-size:11px; font-weight:700; color:#086288;">Band: LKR ${g.x0}M – ${g.x1}M • Target Score ${g.y0}+ (${g.pt})</div>
+        <h5>${g.title}</h5>
+        <div class="gap-count"><b>${g.count}</b><span>${g.count === 1 ? "rival" : "rivals"} scoring ${g.y0}+ in this band</span></div>
+        <div class="gap-band" title="LKR ${g.x0}M – ${g.x1}M on a 0–${AX}M scale"><i style="left:${(g.x0 / AX * 100).toFixed(1)}%;width:${((g.x1 - g.x0) / AX * 100).toFixed(1)}%"></i></div>
+        <div class="gap-band-lbl"><span>LKR ${g.x0}M – ${g.x1}M</span><span>0 – ${AX}M</span></div>
         <p>${g.desc}</p>
       </div>
     `).join("");
@@ -3605,6 +3727,8 @@
 
     const res = document.getElementById("simResult");
     res.classList.add("active");
+    res.classList.remove("go", "par", "caution");
+    res.classList.add(delta >= 3.5 ? "go" : (delta >= -2.5 ? "par" : "caution"));
     document.getElementById("simEdgeBadge").textContent = `${delta >= 0 ? "+" : ""}${delta.toFixed(1)} pts vs Frontier`;
     if (delta >= 3.5) {
       document.getElementById("simVerdictTitle").textContent = `STRONG GO — High-Value ${pt} Disruptor`;
