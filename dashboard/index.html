@@ -1990,6 +1990,40 @@
   .rc-web { margin-top: auto; padding-top: 6px; display: inline-flex; align-items: center; gap: 6px; font-size: 11.5px; font-weight: 700; color: var(--deep); }
   .rc-web .ico { width: 13px; height: 13px; }
 
+  /* ======================================================================
+     DIMO PLC company portal
+     ====================================================================== */
+  .role-dimo-only { display: none !important; }
+  body.role-dimo .role-dimo-only { display: flex !important; }
+  body.role-dimo .ceo-lens-wrap { display: none; }
+  .dimo-hero { position: relative; overflow: hidden; border-radius: 22px; min-height: 300px; color: #FFFFFF; margin-bottom: 20px; box-shadow: 0 18px 44px rgba(3,27,41,.22);
+    background: linear-gradient(90deg, rgba(3,27,41,.96) 0%, rgba(3,27,41,.82) 42%, rgba(3,27,41,.2) 100%), var(--img) center 60% / cover; display: flex; align-items: center; }
+  .dimo-hero-text { padding: 34px 38px; max-width: 640px; }
+  .dimo-hero h2 { font-size: 34px; font-weight: 800; letter-spacing: -.8px; line-height: 1.12; margin: 4px 0 10px 0; }
+  .dimo-hero h2 span { color: var(--ice); }
+  .dimo-hero p { font-size: 14px; line-height: 1.65; color: rgba(225,241,252,.9); }
+  .dimo-brands { display: flex; gap: 10px; margin-top: 18px; flex-wrap: wrap; }
+  .dimo-brand { display: inline-flex; align-items: center; gap: 9px; padding: 6px 14px 6px 6px; border-radius: 99px; background: rgba(255,255,255,.12); font-size: 13px; font-weight: 700; backdrop-filter: blur(6px); }
+  .dimo-brand .logo-box { border: none; background: #FFFFFF; border-radius: 50%; width: 30px; height: 30px; padding: 5px; }
+  .dimo-kpis { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-bottom: 20px; }
+  @media (max-width: 1180px) { .dimo-kpis { grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); } }
+  .dimo-kpis .kpi-val { font-size: 26px; }
+  .dimo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  @media (max-width: 1080px) { .dimo-grid { grid-template-columns: 1fr; } }
+  .dimo-mix-row { background: var(--tint-ice); border-radius: 14px; padding: 12px 14px; margin-bottom: 10px; }
+  .dmr-head { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
+  .dmr-head b { font-size: 14px; color: var(--deep-dark); } .dmr-head span:last-child { margin-left: auto; font-size: 12px; font-weight: 700; color: var(--muted); }
+  .dmr-head .logo-box { border: none; }
+  .dimo-note { font-size: 12.3px; color: var(--deep-dark); font-weight: 600; }
+  .dimo-tbl-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
+  .dimo-rivals { display: flex; flex-direction: column; gap: 8px; }
+  .dr-row { display: grid; grid-template-columns: 1fr auto 1fr auto; gap: 10px; align-items: center; padding: 11px 13px; border-radius: 14px; background: var(--tint-ice); }
+  .dr-row b { display: block; font-size: 12.6px; color: var(--deep-dark); } .dr-row small { font-size: 11px; color: var(--muted); }
+  .dr-vs { font-size: 10px; font-weight: 800; color: var(--steel); text-transform: uppercase; }
+  .dr-gap { font-size: 13px; font-weight: 800; color: #FFFFFF; background: var(--deep-dark); padding: 5px 9px; border-radius: 4px; font-variant-numeric: tabular-nums; }
+  #dimoSignals .co-sig { background: var(--tint-ice); }
+  @media (max-width: 640px) { .dimo-hero-text { padding: 24px 20px; } .dimo-hero h2 { font-size: 26px; } .dr-row { grid-template-columns: 1fr; } .dr-vs { display: none; } }
+
 </style>
 </head>
 <body>
@@ -2027,14 +2061,14 @@
       </button>
       <div class="login-kicker">Executive Access Required</div>
       <div class="login-title">Sign In to Dashboard</div>
-      <div class="login-sub">Enter your authorized Sandbox executive credentials to unlock the interactive positioning suite.</div>
+      <div class="login-sub">Sign in with your Sandbox executive email or your company portal username.</div>
 
       <div class="login-err" id="loginErr">Invalid email or password. Please verify your Sandbox credentials.</div>
 
       <form id="loginForm" onsubmit="handleLogin(event)">
         <div class="field">
-          <label for="loginEmail">Executive Email</label>
-          <input type="email" id="loginEmail" placeholder="name@sandbox.lk" required autocomplete="email">
+          <label for="loginEmail">Email or Username</label>
+          <input type="text" id="loginEmail" placeholder="name@sandbox.lk or company username" required autocomplete="username">
         </div>
         <div class="field">
           <label for="loginPass">Password</label>
@@ -2267,12 +2301,16 @@
       <div class="sb-logo"><svg class="brand-mark" width="36" height="36" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="17" fill="#0B1117"/><g transform="translate(3.5 15) scale(.2375)"><path d="M120 8C95 8 73 13 59 23C49 30 41 38 35 47C46 44 62 41 80 41C96 41 110 44 120 50ZM6 29C16 28 29 32 40 39L35 46C24 40 14 35 6 29ZM27 46L39 48.5L36.5 54L25 51ZM29 57L64 60L73 75L45 77C38 71 32 64 29 57Z" fill="#FFFFFF"/><path d="M120 8C95 8 73 13 59 23C49 30 41 38 35 47C46 44 62 41 80 41C96 41 110 44 120 50ZM6 29C16 28 29 32 40 39L35 46C24 40 14 35 6 29ZM27 46L39 48.5L36.5 54L25 51ZM29 57L64 60L73 75L45 77C38 71 32 64 29 57Z" fill="#FFFFFF" transform="translate(240 0) scale(-1 1)"/><path d="M68 25C82 15 99 11 116 11C101 13 86 19 77 31C74 29 71 27 68 25Z" fill="#0B1117" opacity=".55"/><path class="lamp" d="M37 50.5L74 51.5L72 55.5L39 54.5Z" fill="#FFC629"/><path class="lamp" d="M37 50.5L74 51.5L72 55.5L39 54.5Z" fill="#FFC629" transform="translate(240 0) scale(-1 1)"/><path class="spark" d="M112.5 68l2-4 2 4-2 4zM123.5 68l2-4 2 4-2 4z" fill="#FFC629"/></g></svg></div>
       <div>
         <div class="sb-brand-title">DRIVE<b>X</b></div>
-        <div class="sb-brand-sub">SL Auto Intelligence</div>
+        <div class="sb-brand-sub" id="sbSub">SL Auto Intelligence</div>
       </div>
     </div>
 
     <div class="sb-label">Navigation</div>
     <nav class="sb-nav" id="tour-nav">
+      <button class="nav-item role-dimo-only" id="nav-dimo" onclick="showView('dimo', 'DIMO Home', 'DIMO PLC • Company Dashboard', this)">
+        <svg class="ico" viewBox="0 0 24 24"><path d="M3 10.5L12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>
+        DIMO Home
+      </button>
       <button class="nav-item active" id="nav-overview" onclick="showView('overview', 'Executive Overview', 'Market Summary &amp; Brand Landscape', this)">
         <svg class="ico" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
         Overview
@@ -2347,11 +2385,11 @@
         <div class="profile" id="profileMenu">
           <button class="profile-btn" onclick="toggleProfile()" aria-label="Account menu">
             <span class="avatar"><svg class="ico" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><i class="online"></i></span>
-            <span class="profile-meta"><b>Executive</b><small>Sandbox Consultancy</small></span>
+            <span class="profile-meta"><b id="pfName">Executive</b><small id="pfOrg">Sandbox Consultancy</small></span>
             <svg class="ico chev" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="profile-pop">
-            <div class="pp-head"><span class="avatar lg"><svg class="ico" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><div><b>Executive Reviewer</b><small>Sandbox Consultancy • Full access</small></div></div>
+            <div class="pp-head"><span class="avatar lg"><svg class="ico" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><div><b id="ppName">Executive Reviewer</b><small id="ppOrg">Sandbox Consultancy • Full access</small></div></div>
             <button onclick="toggleProfile(false); startTour(true)"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>Guided tour</button>
             <button onclick="toggleProfile(false); document.getElementById('nav-companies').click()"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>Company profiles</button>
             <button onclick="toggleProfile(false); exportBoardBrief()"><svg class="ico" viewBox="0 0 24 24"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>Board brief (print)</button>
@@ -2523,6 +2561,77 @@
         </div>
       </section>
 
+
+
+      <!-- ==================== DIMO PLC COMPANY DASHBOARD (DIMO login only) ==================== -->
+      <section id="view-dimo" class="view">
+        <div class="dimo-hero" style="--img:url('https://images.unsplash.com/photo-1764605206511-7a649d9df63b?auto=format&fit=crop&w=1800&q=80')">
+          <div class="dimo-hero-text">
+            <div class="bento-tag">DIMO PLC • Company Portal • Nov 2026</div>
+            <h2>Welcome back, <span>DIMO PLC</span></h2>
+            <p>Your position in Sri Lanka's brand-new vehicle market — Mercedes-Benz and Tata portfolio, value against the market, rival pressure and the moves to make next.</p>
+            <div class="dimo-brands" id="dimoBrands"></div>
+          </div>
+        </div>
+
+        <div class="dimo-kpis" id="dimoKpis"></div>
+
+        <div class="dimo-grid">
+          <div class="card">
+            <div class="card-title">Audited Revenue (Rs. Billion, CSE)</div>
+            <div class="card-sub">DIMO Group revenue — FY 2023/24 to FY 2025/26.</div>
+            <div id="dimoRevChart" style="width:100%; height:260px;"></div>
+          </div>
+          <div class="card">
+            <div class="card-title">Portfolio by Brand &amp; Powertrain</div>
+            <div class="card-sub">Models in the 116-model MECE matrix.</div>
+            <div id="dimoMix"></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">Your Models on the Market Value Map</div>
+          <div class="card-sub">Every brand-new model in Sri Lanka (faded) with DIMO's line-up highlighted. Dashed line = Market Value Frontier — above it means more features per rupee.</div>
+          <div id="dimoMapChart" style="width:100%; height:420px;"></div>
+        </div>
+
+        <div class="card">
+          <div class="dimo-tbl-head">
+            <div><div class="card-title">DIMO Line-up Scorecard</div><div class="card-sub" style="margin-bottom:0">Sorted by value against the frontier. Select a filter to narrow the list.</div></div>
+            <div class="seg-tabs" id="dimoFilter">
+              <button class="active" onclick="setDimoFilter('ALL', this)">All</button>
+              <button onclick="setDimoFilter('Mercedes-Benz', this)">Mercedes-Benz</button>
+              <button onclick="setDimoFilter('Tata', this)">Tata</button>
+              <button onclick="setDimoFilter('EV', this)">EV only</button>
+            </div>
+          </div>
+          <div class="table-wrap"><table>
+            <thead><tr><th>Model</th><th>Powertrain</th><th>Body</th><th>Price (LKR M)</th><th>MECE Score</th><th>vs. Frontier</th></tr></thead>
+            <tbody id="dimoTable"></tbody>
+          </table></div>
+        </div>
+
+        <div class="ceo-brief-panel">
+          <div class="ceo-brief-top">
+            <div><div class="ceo-brief-title">Strategic Moves for DIMO</div><div class="ceo-brief-sub" id="dimoBriefSub"></div></div>
+            <span class="ceo-live"><i></i>DIMO Board View</span>
+          </div>
+          <div class="ceo-action-grid" id="dimoMoves"></div>
+        </div>
+
+        <div class="dimo-grid">
+          <div class="card">
+            <div class="card-title">Rival Pressure Watch</div>
+            <div class="card-sub">For each DIMO model, the strongest rival within ±20% of its price that scores higher.</div>
+            <div class="dimo-rivals" id="dimoRivals"></div>
+          </div>
+          <div class="card">
+            <div class="card-title">Market Signals</div>
+            <div class="card-sub">Analyst outlook, benchmark scores and press-reported registrations.</div>
+            <div class="co-signal" id="dimoSignals"></div>
+          </div>
+        </div>
+      </section>
 
       <!-- ==================== PHASE 3: COMPANY PROFILES (ONE BY ONE) ==================== -->
       <section id="view-companies" class="view">
@@ -3199,6 +3308,7 @@
   // ==================== EXECUTIVE LOGIN GATE ====================
   const AUTH_EMAIL = "angelo@sandbox.lk";
   const AUTH_PASS = "Automative228";
+  const COMPANY_ACCOUNTS = { "dimo plc": { pass: "DIMO228", role: "dimo" } };
   let pendingRoute = { viewId: "overview", searchTerm: "" };
 
   function isAuthenticated() {
@@ -3224,12 +3334,17 @@
     e.preventDefault();
     const email = document.getElementById("loginEmail").value.trim().toLowerCase();
     const pass = document.getElementById("loginPass").value;
-    if (email === AUTH_EMAIL.toLowerCase() && pass === AUTH_PASS) {
+    const acct = COMPANY_ACCOUNTS[email];
+    const role = (email === AUTH_EMAIL.toLowerCase() && pass === AUTH_PASS) ? "exec" : (acct && pass === acct.pass ? acct.role : null);
+    if (role) {
       localStorage.setItem("sl_auto_auth", "1");
       sessionStorage.setItem("sl_auto_auth", "1");
+      localStorage.setItem("sl_auto_role", role);
+      localStorage.removeItem("sl_auto_view");
       closeLoginModal();
       document.getElementById("loginPass").value = "";
-      unlockDashboard(pendingRoute.viewId, pendingRoute.searchTerm);
+      applyRole();
+      unlockDashboard(role === "dimo" ? "dimo" : pendingRoute.viewId, role === "dimo" ? "" : pendingRoute.searchTerm);
     } else {
       const err = document.getElementById("loginErr");
       err.classList.remove("show");
@@ -3252,6 +3367,8 @@
       openLoginModal();
       return;
     }
+    applyRole();
+    if (currentRole() === "dimo" && viewId === "overview" && !isRestore) viewId = "dimo";
     document.getElementById("landing-mode").classList.add("hidden");
     document.getElementById("dashboard-mode").classList.add("active");
     window.scrollTo({ top: 0, behavior: "instant" });
@@ -3260,7 +3377,7 @@
     if (searchTerm) {
       document.getElementById("registrySearch").value = searchTerm;
       renderRegistry();
-    } else if (!isRestore && !localStorage.getItem("sl_auto_tour_done")) {
+    } else if (!isRestore && currentRole() !== "dimo" && !localStorage.getItem("sl_auto_tour_done")) {
       setTimeout(() => startTour(false), 450);
     }
   }
@@ -3278,6 +3395,8 @@
     sessionStorage.removeItem("sl_auto_auth");
     localStorage.removeItem("sl_auto_view");
     localStorage.removeItem("sl_auto_lens");
+    localStorage.removeItem("sl_auto_role");
+    applyRole();
     document.getElementById("loginEmail").value = "";
     document.getElementById("loginPass").value = "";
     exitDashboard();
@@ -3475,6 +3594,7 @@
       if (id === "scale") renderStrategyCanvas();
       if (id === "macro") { renderMacroCharts(); renderPulse(); renderOriginChart(); }
       if (id === "companies") applyLensToCompanies(false);
+      if (id === "dimo") renderDimoHome();
       armReveal(id);
       const hs = document.getElementById("hs-" + id);
       if (hs && hs.restartShow) hs.restartShow();
@@ -4862,6 +4982,126 @@
     }, 3800);
   })();
 
+
+  // ==================== DIMO PLC COMPANY PORTAL ====================
+  function currentRole() { return localStorage.getItem("sl_auto_role") || "exec"; }
+  function applyRole() {
+    const dimo = currentRole() === "dimo" && isAuthenticated();
+    document.body.classList.toggle("role-dimo", dimo);
+    const set = (id, t) => { const el = document.getElementById(id); if (el) el.textContent = t; };
+    set("pfName", dimo ? "DIMO PLC" : "Executive");
+    set("pfOrg", dimo ? "Mercedes-Benz • Tata" : "Sandbox Consultancy");
+    set("ppName", dimo ? "DIMO PLC" : "Executive Reviewer");
+    set("ppOrg", dimo ? "Company portal • DIMO view" : "Sandbox Consultancy • Full access");
+    set("sbSub", dimo ? "DIMO PLC Portal" : "SL Auto Intelligence");
+    const sel = document.getElementById("ceoCompanySelect");
+    if (dimo) { activeCeoCompany = "DIMO"; if (sel) sel.value = "DIMO"; }
+    else if (sel && sel.value === "DIMO" && localStorage.getItem("sl_auto_lens") !== "DIMO") { sel.value = "ALL"; activeCeoCompany = "ALL"; }
+    if (typeof renderCeoDecisionBrief === "function") renderCeoDecisionBrief();
+  }
+
+  let dimoFilter = "ALL";
+  function setDimoFilter(f, btn) {
+    dimoFilter = f;
+    document.querySelectorAll("#dimoFilter button").forEach(b => b.classList.toggle("active", b === btn));
+    renderDimoTable();
+  }
+  const dimoModels = () => currentData.filter(m => m.Distributor === "DIMO");
+  const gapOf = m => m.Feature_Score - frontierScore(m.Std_Price_Mn);
+  function renderDimoTable() {
+    const rows = dimoModels().filter(m => dimoFilter === "ALL" || m.Brand === dimoFilter || m.Powertrain === dimoFilter).sort((a, b) => gapOf(b) - gapOf(a));
+    document.getElementById("dimoTable").innerHTML = rows.map(m => `
+      <tr>
+        <td><div class="co-cell"><div class="logo-box sm">${brandLogoInner(m.Brand)}</div><strong>${m.Brand} ${m.Model}</strong></div></td>
+        <td><span class="badge ${m.Powertrain === "EV" ? "dark" : ""}">${m.Powertrain}</span></td>
+        <td>${m.Body_Type}</td>
+        <td>${m.Std_Price_Mn.toFixed(2)}</td>
+        <td><b>${m.Feature_Score.toFixed(1)}</b></td>
+        <td><span class="${gapOf(m) >= 0 ? "up" : "down"}" style="font-weight:800">${gapOf(m) >= 0 ? "+" : ""}${gapOf(m).toFixed(1)}</span></td>
+      </tr>`).join("");
+  }
+
+  function renderDimoHome() {
+    const ms = dimoModels(), n = ms.length;
+    const cnt = (k, v) => ms.filter(m => m[k] === v).length;
+    const prices = ms.map(m => m.Std_Price_Mn);
+    const avg = (ms.reduce((a, m) => a + m.Feature_Score, 0) / n).toFixed(1);
+    const fin = companyFin.dimo, last = fin[fin.length - 1][1], prev = fin[fin.length - 2][1];
+    const q = quadrantData.filter(r => r.id === "dimo");
+    const above = ms.filter(m => gapOf(m) >= 0).length;
+
+    document.getElementById("dimoBrands").innerHTML = ["Mercedes-Benz", "Tata"].map(b => `<span class="dimo-brand"><span class="logo-box sm">${brandLogoInner(b)}</span>${b}</span>`).join("");
+    document.getElementById("dimoKpis").innerHTML = [
+      [`Rs ${last}B`, `FY25/26 revenue • +${Math.round((last / prev - 1) * 100)}% y/y`],
+      [n, `models • ${cnt("Powertrain", "ICE")} ICE / ${cnt("Powertrain", "EV")} EV / ${cnt("Powertrain", "Hybrid")} Hybrid`],
+      [`${Math.min(...prices).toFixed(1)}–${Math.max(...prices).toFixed(0)}M`, "price range (LKR, 18% VAT)"],
+      [avg, "average MECE feature score"],
+      [`${above}/${n}`, "models above the Value Frontier"]
+    ].map(([v, l], i) => `<div class="kpi ${i % 2 ? "steel" : ""}"><div class="kpi-val">${v}</div><div class="kpi-sub">${l}</div></div>`).join("");
+
+    Plotly.newPlot("dimoRevChart", [{ x: fin.map(f => f[0]), y: fin.map(f => f[1]), type: "bar", text: fin.map(f => "Rs " + f[1] + "B"), textposition: "outside", cliponaxis: false,
+      marker: { color: fin.map((f, i) => i === fin.length - 1 ? "#043248" : "#4D8DBA") }, hovertemplate: "%{x}: Rs %{y}B<extra></extra>" }],
+      { paper_bgcolor: "#FFFFFF", plot_bgcolor: "#F8FBFE", font: plotFont, margin: { l: 44, r: 12, t: 26, b: 34 }, yaxis: { gridcolor: gridCol, rangemode: "tozero" }, bargap: .45 },
+      { responsive: true, displaylogo: false });
+
+    const brands = ["Mercedes-Benz", "Tata"], pts = ["ICE", "Hybrid", "EV"], col = { ICE: "#043248", Hybrid: "#4D8DBA", EV: "#97D7FF" };
+    document.getElementById("dimoMix").innerHTML = brands.map(b => {
+      const bm = ms.filter(m => m.Brand === b);
+      return `<div class="dimo-mix-row"><div class="dmr-head"><span class="logo-box sm">${brandLogoInner(b)}</span><b>${b}</b><span>${bm.length} models</span></div>
+        <div class="co-mix">${pts.map(p => { const c = bm.filter(m => m.Powertrain === p).length; return c ? `<i style="width:${c / bm.length * 100}%;background:${col[p]}" title="${p}: ${c}"></i>` : ""; }).join("")}</div>
+        <div class="co-legend" style="margin-bottom:6px">${pts.map(p => `<span style="--c:${col[p]}">${p} ${bm.filter(m => m.Powertrain === p).length}</span>`).join("")}</div></div>`;
+    }).join("") + `<div class="dimo-note">${cnt("Powertrain", "Hybrid") === 0 ? "No hybrid models — DIMO goes straight from ICE to full EV." : ""}</div>`;
+
+    const others = currentData.filter(m => m.Distributor !== "DIMO" && m.Std_Price_Mn <= 250);
+    const fx = []; for (let p = 4; p <= 250; p += 2) fx.push(p);
+    Plotly.newPlot("dimoMapChart", [
+      { x: others.map(m => m.Std_Price_Mn), y: others.map(m => m.Feature_Score), text: others.map(m => `${m.Brand} ${m.Model} (${m.Distributor})`), mode: "markers", name: "Other distributors",
+        marker: { size: 8, color: "#B8CEDD", opacity: .7 }, hovertemplate: "%{text}<br>LKR %{x:.1f}M • Score %{y:.1f}<extra></extra>" },
+      { x: fx, y: fx.map(frontierScore), mode: "lines", name: "Value Frontier", line: { color: "#4D8DBA", dash: "dash", width: 2 }, hoverinfo: "skip" },
+      { x: ms.map(m => m.Std_Price_Mn), y: ms.map(m => m.Feature_Score), text: ms.map(m => `${m.Brand} ${m.Model}`), mode: "markers", name: "DIMO",
+        marker: { size: 14, color: ms.map(m => m.Powertrain === "EV" ? "#086288" : "#043248"), symbol: ms.map(m => m.Brand === "Tata" ? "diamond" : "circle"), line: { color: "#97D7FF", width: 2 } },
+        hovertemplate: "<b>%{text}</b><br>LKR %{x:.1f}M • Score %{y:.1f}<extra></extra>" }
+    ], { paper_bgcolor: "#FFFFFF", plot_bgcolor: "#F8FBFE", font: plotFont, margin: { l: 56, r: 16, t: 16, b: 48 },
+      xaxis: { title: "Brand-new price (LKR Millions, 18% VAT) — log scale", type: "log", gridcolor: gridCol, tickvals: [5, 10, 20, 40, 80, 160, 240], ticktext: ["5M", "10M", "20M", "40M", "80M", "160M", "240M"] }, yaxis: { title: "MECE feature score", range: [48, 100], gridcolor: gridCol },
+      legend: { orientation: "h", y: 1.1 } }, { responsive: true, displaylogo: false });
+
+    renderDimoTable();
+
+    const ev = cnt("Powertrain", "EV"), hy = cnt("Powertrain", "Hybrid");
+    document.getElementById("dimoBriefSub").textContent = `${n} models • ${cnt("Powertrain", "ICE")} ICE / ${ev} EV / ${hy} Hybrid • average score ${avg}/100`;
+    const premium = ms.filter(m => m.Std_Price_Mn > 25).length;
+    document.getElementById("dimoMoves").innerHTML = `
+      <div class="ceo-act-card warn"><div class="ceo-act-tag">Blind Spot</div><h5>${hy === 0 ? "No Hybrid Bridge" : "Mid-Range Margin Defense"}</h5>
+        <p>${hy === 0 ? `DIMO has ${ev} EVs but no hybrids — outstation buyers who are hesitant about charging have no DIMO option between petrol and pure EV.` : "Defend mid-range share against Jetour and BYD."}</p></div>
+      <div class="ceo-act-card go"><div class="ceo-act-tag">Launch Bet</div><h5>Executive EV Gap (LKR 24–36M)</h5>
+        <p>Competition is thin between mass Chinese EVs (LKR 15–23M) and Mercedes-Benz EQ (LKR 39M+). A Tata or Mercedes model scoring 85+ here would sit above the frontier.</p></div>
+      <div class="ceo-act-card"><div class="ceo-act-tag">Defend the Core</div><h5>Premium Service Moat</h5>
+        <p>${premium} of ${n} models are premium (above LKR 25M). Bundle service and battery-health warranties to protect resale confidence as new entrants scale.</p></div>`;
+
+    const rivals = ms.map(m => {
+      const r = currentData.filter(o => o.Distributor !== "DIMO" && Math.abs(o.Std_Price_Mn - m.Std_Price_Mn) <= m.Std_Price_Mn * 0.2 && o.Feature_Score > m.Feature_Score)
+        .sort((a, b) => b.Feature_Score - a.Feature_Score)[0];
+      return r ? { m, r, d: r.Feature_Score - m.Feature_Score } : null;
+    }).filter(Boolean).sort((a, b) => b.d - a.d).slice(0, 6);
+    document.getElementById("dimoRivals").innerHTML = rivals.length ? rivals.map(x => `
+      <div class="dr-row">
+        <div><b>${x.m.Brand} ${x.m.Model}</b><small>LKR ${x.m.Std_Price_Mn.toFixed(1)}M • ${x.m.Feature_Score.toFixed(1)}</small></div>
+        <span class="dr-vs">vs</span>
+        <div><b>${x.r.Brand} ${x.r.Model}</b><small>${x.r.Distributor} • LKR ${x.r.Std_Price_Mn.toFixed(1)}M • ${x.r.Feature_Score.toFixed(1)}</small></div>
+        <span class="dr-gap">−${x.d.toFixed(1)}</span>
+      </div>`).join("") : `<div class="co-empty">No higher-scoring rivals within ±20% of any DIMO price point.</div>`;
+
+    const o = outlookData.find(x => x.id === "dimo"), offer = offeringsData.find(x => x[0] === "DIMO"), press = pressSignals["DIMO PLC"] || [];
+    document.getElementById("dimoSignals").innerHTML = `
+      ${o ? `<div class="co-sig"><h5>Analyst outlook</h5><span class="badge dark">${o.label}</span><p>${o.text}</p></div>` : ""}
+      ${q.length ? `<div class="co-sig"><h5>Innovator benchmark</h5>
+        <div class="co-qbar"><span>Ability to execute</span><div class="track"><i style="width:${q[0].exec / 5 * 100}%"></i></div><b>${q[0].exec.toFixed(2)}</b></div>
+        <div class="co-qbar"><span>Completeness of vision</span><div class="track"><i style="width:${q[0].vision / 5 * 100}%"></i></div><b>${q[0].vision.toFixed(2)}</b></div>
+        <p style="margin-top:8px">${q.map(r => `${r.seg}: <strong>${r.quad}</strong>`).join(" • ")}</p></div>` : ""}
+      ${press.length ? `<div class="co-sig"><h5>Registration signals (press)</h5><ul class="press-list">${press.map(p => `<li>${p}</li>`).join("")}</ul></div>` : ""}
+      ${offer ? `<div class="co-sig"><h5>Evidenced offering • ${offer[1]}</h5><p>${offer[3]}</p></div>` : ""}`;
+  }
+
   // Initial setup
   renderLandingLogoWall();
   renderOverviewBrands();
@@ -4875,6 +5115,7 @@
     if (savedLens && [...sel.options].some(o => o.value === savedLens)) { sel.value = savedLens; activeCeoCompany = savedLens; }
   } catch (e) {}
   renderCeoDecisionBrief();
+  applyRole();
   renderRegistry();
   renderRegCarousel();
   initHeroShows();
