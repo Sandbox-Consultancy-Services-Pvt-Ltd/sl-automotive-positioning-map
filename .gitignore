@@ -6,6 +6,8 @@
 *.aac
 *.mp3
 *.wav
+*.ogg
+*.opus
 
 # Python
 __pycache__/

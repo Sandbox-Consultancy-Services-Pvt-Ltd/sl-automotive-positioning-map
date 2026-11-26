@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DriveX — SL Auto Intelligence | Sri Lanka Automotive Positioning 2026</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2264%22 height=%2264%22 viewBox=%220 0 64 64%22 aria-hidden=%22true%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2217%22 fill=%22%230B1117%22/%3E%3Ccircle cx=%2242%22 cy=%2223%22 r=%2212.5%22 fill=%22%23FFC629%22/%3E%3Cpath d=%22M12.5 11.5l6.5 6.5M19 11.5L12.5 18%22 stroke=%22%23FFC629%22 stroke-width=%223%22 stroke-linecap=%22round%22/%3E%3Cpath d=%22M4 42c0-2.4 1.6-3.8 4.2-4.4l8.8-2c4-3.2 9-5.4 15-5.8 6-.4 11 .8 15.5 3.4l6.5 1.6c3.6.8 6 2.4 6 5V42c0 1-.8 1.8-1.8 1.8H5.8C4.8 43.8 4 43 4 42z%22 fill=%22%23FFFFFF%22/%3E%3Cpath d=%22M22.5 35c3-2.4 6.5-3.6 10.5-3.8h3.6l.6 3.7zM39.6 31.5c2.8.5 5 1.5 6.6 2.9l-6 .5z%22 fill=%22%230B1117%22/%3E%3Ccircle cx=%2216%22 cy=%2244%22 r=%225.2%22 fill=%22%230B1117%22 stroke=%22%23FFFFFF%22 stroke-width=%222.2%22/%3E%3Ccircle cx=%2248.5%22 cy=%2244%22 r=%225.2%22 fill=%22%230B1117%22 stroke=%22%23FFFFFF%22 stroke-width=%222.2%22/%3E%3Cpath d=%22M6 55c12-5 24 3 36-1s14-4 17-3%22 fill=%22none%22 stroke=%22%23FFFFFF%22 stroke-width=%222.6%22 stroke-linecap=%22round%22/%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2264%22 height=%2264%22 viewBox=%220 0 64 64%22 aria-hidden=%22true%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2217%22 fill=%22%230B1117%22/%3E%3Cg transform=%22translate(3.5 15) scale(.2375)%22%3E%3Cpath d=%22M120 8C95 8 73 13 59 23C49 30 41 38 35 47C46 44 62 41 80 41C96 41 110 44 120 50ZM6 29C16 28 29 32 40 39L35 46C24 40 14 35 6 29ZM27 46L39 48.5L36.5 54L25 51ZM29 57L64 60L73 75L45 77C38 71 32 64 29 57Z%22 fill=%22%23FFFFFF%22/%3E%3Cpath d=%22M120 8C95 8 73 13 59 23C49 30 41 38 35 47C46 44 62 41 80 41C96 41 110 44 120 50ZM6 29C16 28 29 32 40 39L35 46C24 40 14 35 6 29ZM27 46L39 48.5L36.5 54L25 51ZM29 57L64 60L73 75L45 77C38 71 32 64 29 57Z%22 fill=%22%23FFFFFF%22 transform=%22translate(240 0) scale(-1 1)%22/%3E%3Cpath d=%22M68 25C82 15 99 11 116 11C101 13 86 19 77 31C74 29 71 27 68 25Z%22 fill=%22%230B1117%22 opacity=%22.55%22/%3E%3Cpath class=%22lamp%22 d=%22M37 50.5L74 51.5L72 55.5L39 54.5Z%22 fill=%22%23FFC629%22/%3E%3Cpath class=%22lamp%22 d=%22M37 50.5L74 51.5L72 55.5L39 54.5Z%22 fill=%22%23FFC629%22 transform=%22translate(240 0) scale(-1 1)%22/%3E%3Cpath class=%22spark%22 d=%22M112.5 68l2-4 2 4-2 4zM123.5 68l2-4 2 4-2 4z%22 fill=%22%23FFC629%22/%3E%3C/g%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -133,7 +133,7 @@
     background: none; border: none; color: var(--muted); cursor: pointer; padding: 4px;
   }
   .login-err {
-    display: none; background: #FEF2F2; border: 1px solid #FECACA; color: #B91C1C;
+    display: none; background: #EEF6FB; border: 1px solid #97D7FF; color: #043248;
     font-size: 12px; font-weight: 600; padding: 9px 12px; border-radius: 8px; margin-bottom: 14px;
   }
   .login-err.show { display: block; animation: shake 0.32s ease; }
@@ -1237,8 +1237,8 @@
   .co-model-main { flex: 1; display: flex; flex-direction: column; min-width: 0; }
   .co-model-list .co-model-score { grid-row: auto; display: flex; flex-direction: column; align-items: flex-end; font-size: 17px; }
   .co-model-score small { font-size: 10.5px; font-weight: 700; }
-  .up { color: #0E9F6E !important; } .down { color: #C2410C !important; }
-  .co-model.active small.up { color: #6EE7B7 !important; } .co-model.active small.down { color: #FDBA74 !important; }
+  .up { color: #086288 !important; } .down { color: #4D8DBA !important; }
+  .co-model.active small.up { color: #97D7FF !important; } .co-model.active small.down { color: #CFEBFF !important; }
   .co-model-detail { position: sticky; top: 84px; align-self: start; animation: coIn .35s ease; }
   .co-md-name { font-size: 20px; font-weight: 800; letter-spacing: -.4px; color: var(--deep-dark); margin-bottom: 12px; }
   .co-md-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 16px; }
@@ -1477,25 +1477,25 @@
      bento page headers, profile menu, sign-out confirm
      ====================================================================== */
   .brand-word { display: inline-flex; flex-direction: column; line-height: 1; letter-spacing: 3.4px; font-size: 18px; }
-  .brand-word b { color: #FFC629; }
+  .brand-word b { color: #97D7FF; }
   .brand-word small { font-family: 'Inter', sans-serif; font-size: 8.5px; font-weight: 700; letter-spacing: 2.2px; text-transform: uppercase; color: var(--ice); margin-top: 4px; }
   .brand-mark { filter: drop-shadow(0 6px 16px rgba(0,0,0,.35)); border-radius: 26.5%; outline: 1px solid rgba(255,255,255,.18); outline-offset: -1px; }
   .sb-logo { width: 38px; height: 38px; border-radius: 10px; overflow: visible; }
   .sb-logo .brand-mark { width: 38px; height: 38px; }
   .sb-brand-title { font-family: 'Outfit','Inter',sans-serif; font-weight: 900; letter-spacing: 3px; font-size: 17px; }
-  .sb-brand-title b { color: #FFC629; }
+  .sb-brand-title b { color: #97D7FF; }
 
   #preloader { background: radial-gradient(circle at 50% 40%, #0B3C56 0%, #041E2D 55%, #02121C 100%); }
   .loader-logo { margin-bottom: 22px; animation: lgPop .7s cubic-bezier(.22,1.4,.36,1) both; }
-  .loader-mark { display: block; border-radius: 30px; box-shadow: 0 0 0 12px rgba(255,198,41,.08), 0 28px 60px rgba(0,0,0,.5); }
+  .loader-mark { display: block; border-radius: 30px; box-shadow: 0 0 0 12px rgba(151,215,255,.1), 0 28px 60px rgba(0,0,0,.5); }
   .loader-mark circle:first-of-type { transform-origin: 42px 23px; animation: sunPulse 1.4s ease-in-out infinite; }
   @keyframes lgPop { from { opacity: 0; transform: scale(.7) rotate(-6deg); } to { opacity: 1; transform: none; } }
   @keyframes sunPulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.08); } }
   .loader-word { font-family: 'Outfit','Inter',sans-serif; font-size: 30px; font-weight: 900; letter-spacing: 7px; color: #FFFFFF; animation: lgPop .7s .1s both; }
-  .loader-word b { color: #FFC629; }
+  .loader-word b { color: #97D7FF; }
   .loader-sub { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--ice); margin: 6px 0 22px 0; animation: lgPop .7s .18s both; }
   .loader-track { width: 220px; }
-  .loader-bar { background: linear-gradient(90deg, #4D8DBA, #97D7FF, #FFC629); transition: none; }
+  .loader-bar { background: linear-gradient(90deg, #4D8DBA, #97D7FF, #FFFFFF); transition: none; }
 
   /* overview slideshow: every slide the same size */
   .hero-show:not(.static) { height: 460px; min-height: 0; }
@@ -1504,7 +1504,7 @@
 
   /* square tags everywhere (no rounded pills) */
   .hs-kicker { border-radius: 3px; background: linear-gradient(90deg, #086288, #4D8DBA); color: #FFFFFF; padding: 6px 11px; letter-spacing: 1.8px; }
-  .hs-kicker::before { width: 6px; height: 6px; border-radius: 1px; background: #FFC629; box-shadow: none; }
+  .hs-kicker::before { width: 6px; height: 6px; border-radius: 1px; background: #97D7FF; box-shadow: none; }
   .visual-card-kicker, .badge, .co-chip, .sec-chip, .ov-kicker, .hud-pill { border-radius: 4px; }
 
   /* bento page headers */
@@ -1518,7 +1518,7 @@
   .bento-main::after { content: ""; position: absolute; right: -40px; bottom: -40px; width: 180px; height: 180px; border-radius: 50%; border: 26px solid rgba(255,255,255,.04); }
   .bento-tag { align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; font-size: 10.5px; font-weight: 800; letter-spacing: 1.6px; text-transform: uppercase;
     background: rgba(255,255,255,.1); color: #CFEBFF; padding: 6px 11px; border-radius: 3px; margin-bottom: 14px; }
-  .bento-tag::before { content: ""; width: 6px; height: 6px; border-radius: 1px; background: #FFC629; }
+  .bento-tag::before { content: ""; width: 6px; height: 6px; border-radius: 1px; background: #97D7FF; }
   .bento-main h2 { font-size: 27px; font-weight: 800; letter-spacing: -.6px; line-height: 1.15; margin-bottom: 10px; }
   .bento-main h2 span { color: var(--ice); }
   .bento-main p { font-size: 13.5px; line-height: 1.65; color: rgba(225,241,252,.88); max-width: 560px; }
@@ -1541,7 +1541,7 @@
   .avatar { position: relative; width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; color: #FFFFFF; background: linear-gradient(135deg, #086288, #031B29); flex: none; }
   .avatar .ico { width: 17px; height: 17px; }
   .avatar.lg { width: 44px; height: 44px; } .avatar.lg .ico { width: 21px; height: 21px; }
-  .avatar .online { position: absolute; right: 0; bottom: 0; width: 10px; height: 10px; border-radius: 50%; background: #22C55E; border: 2px solid #FFFFFF; }
+  .avatar .online { position: absolute; right: 0; bottom: 0; width: 10px; height: 10px; border-radius: 50%; background: #97D7FF; border: 2px solid #FFFFFF; }
   .profile-meta { display: flex; flex-direction: column; text-align: left; line-height: 1.2; }
   .profile-meta b { font-size: 12.5px; color: var(--deep-dark); } .profile-meta small { font-size: 10.5px; color: var(--muted); }
   .profile-btn .chev { width: 14px; height: 14px; color: var(--muted); transition: transform .2s; }
@@ -1553,7 +1553,7 @@
   .pp-head b { display: block; font-size: 13.5px; color: var(--deep-dark); } .pp-head small { display: block; font-size: 11px; line-height: 1.4; color: var(--muted); }
   .profile-pop button { display: flex; align-items: center; gap: 10px; width: 100%; padding: 10px 12px; border: none; background: transparent; border-radius: 10px; font-size: 13px; font-weight: 600; color: var(--ink); cursor: pointer; font-family: inherit; text-align: left; }
   .profile-pop button:hover { background: var(--ice-soft); }
-  .profile-pop button.danger { color: #B91C1C; } .profile-pop button.danger:hover { background: #FEF2F2; }
+  .profile-pop button.danger { color: #043248; } .profile-pop button.danger:hover { background: #EEF6FB; }
   @media (max-width: 640px) { .profile-meta, .profile-btn .chev { display: none; } .profile-btn { padding: 3px; } }
 
   /* sign-out confirmation */
@@ -1561,14 +1561,291 @@
   #signout-modal.active { display: flex; animation: fadeIn .2s ease; }
   .so-card { width: 380px; max-width: 100%; background: #FFFFFF; border-radius: 22px; padding: 28px 26px 22px 26px; text-align: center; box-shadow: 0 30px 70px rgba(2,18,28,.45); animation: soPop .28s cubic-bezier(.22,1.3,.36,1); }
   @keyframes soPop { from { opacity: 0; transform: translateY(12px) scale(.96); } to { opacity: 1; transform: none; } }
-  .so-icon { width: 56px; height: 56px; border-radius: 18px; margin: 0 auto 14px auto; display: grid; place-items: center; background: #FEF2F2; color: #B91C1C; }
+  .so-icon { width: 56px; height: 56px; border-radius: 18px; margin: 0 auto 14px auto; display: grid; place-items: center; background: #EEF6FB; color: #086288; }
   .so-icon .ico { width: 24px; height: 24px; }
   .so-card h3 { font-size: 19px; font-weight: 800; color: var(--deep-dark); margin-bottom: 6px; }
   .so-card p { font-size: 13px; color: var(--muted); line-height: 1.55; margin-bottom: 20px; }
   .so-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
   .so-actions button { padding: 11px 14px; border-radius: 12px; font-size: 13.5px; font-weight: 700; cursor: pointer; font-family: inherit; border: none; }
   .so-cancel { background: var(--canvas); color: var(--deep-dark); } .so-cancel:hover { background: var(--ice-soft); }
-  .so-confirm { background: #B91C1C; color: #FFFFFF; } .so-confirm:hover { background: #991B1B; }
+  .so-confirm { background: linear-gradient(135deg, #086288, #043248); color: #FFFFFF; } .so-confirm:hover { background: #043248; }
+
+
+  /* ==================== LEVEL-1000 PROACTIVE CEO DECISION ENGINE ==================== */
+  .ceo-lens-wrap {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #EEF6FB; border: 1px solid #B8D4E6; border-radius: 8px;
+    padding: 4px 10px;
+  }
+  .ceo-lens-lbl { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.7px; color: #086288; white-space: nowrap; }
+  .ceo-lens-select {
+    background: #FFFFFF; color: #043248; border: 1px solid #C2D6E4;
+    border-radius: 6px; padding: 4px 8px; font-size: 12px; font-weight: 700;
+    cursor: pointer; outline: none;
+  }
+  .ceo-lens-select:focus { border-color: #086288; }
+  .board-export-btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 7px 12px; border-radius: 8px; border: 1px solid #086288;
+    background: #FFFFFF; color: #086288; font-size: 12px; font-weight: 700;
+    cursor: pointer; transition: background 0.15s, color 0.15s; white-space: nowrap;
+  }
+  .board-export-btn:hover { background: #086288; color: #FFFFFF; }
+
+  .ceo-brief-panel {
+    background: #FFFFFF; border: 1px solid #C2D6E4; border-top: 4px solid #086288;
+    border-radius: 12px; padding: 18px 20px; margin-bottom: 18px;
+  }
+  .ceo-brief-top {
+    display: flex; justify-content: space-between; align-items: center; gap: 12px;
+    flex-wrap: wrap; margin-bottom: 14px; padding-bottom: 12px; border-bottom: 1px solid var(--border);
+  }
+  .ceo-brief-title { font-size: 15.5px; font-weight: 800; color: #043248; letter-spacing: -0.25px; }
+  .ceo-brief-sub { font-size: 12px; color: var(--muted); }
+  .ceo-action-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  @media (max-width: 960px) { .ceo-action-grid { grid-template-columns: 1fr; } }
+  .ceo-act-card {
+    background: #F7FAFC; border: 1px solid #D6E4EE; border-left: 3.5px solid #086288;
+    border-radius: 9px; padding: 13px 14px;
+  }
+  .ceo-act-card.warn { border-left-color: #4D8DBA; background: #F5F9FC; }
+  .ceo-act-card.go { border-left-color: #086288; background: #F5F9FC; }
+  .ceo-act-tag {
+    display: inline-block; font-size: 9.5px; font-weight: 800; letter-spacing: 0.8px; text-transform: uppercase;
+    padding: 2px 7px; border-radius: 4px; margin-bottom: 6px;
+    background: #E6F3FA; color: #086288;
+  }
+  .ceo-act-card.warn .ceo-act-tag { background: #E3EFF7; color: #4D8DBA; }
+  .ceo-act-card.go .ceo-act-tag { background: #E6F3FA; color: #086288; }
+  .ceo-act-card h5 { font-size: 13px; font-weight: 700; color: #043248; margin-bottom: 4px; }
+  .ceo-act-card p { font-size: 11.8px; color: #4A6375; line-height: 1.48; }
+
+  /* PROACTIVE AUTO-GAP RADAR */
+  .gap-radar-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 12px; }
+  @media (max-width: 960px) { .gap-radar-grid { grid-template-columns: 1fr; } }
+  .gap-card {
+    background: #F5F9FC; border: 1px solid #C2D6E4; border-top: 3px solid #086288;
+    border-radius: 10px; padding: 13px 15px; display: flex; flex-direction: column; gap: 5px;
+  }
+  .gap-card-head { display: flex; justify-content: space-between; align-items: center; gap: 6px; }
+  .gap-card h5 { font-size: 13px; font-weight: 800; color: #043248; }
+  .gap-card p { font-size: 11.6px; color: #4A6375; line-height: 1.45; }
+  .gap-pill {
+    font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 99px;
+    background: #043248; color: #97D7FF; white-space: nowrap;
+  }
+
+  /* WHAT-IF NEW MODEL LAUNCH SIMULATOR */
+  .sim-box {
+    background: #F5F9FC; border: 1px solid #B8D4E6; border-left: 4px solid #086288;
+    border-radius: 11px; padding: 16px 18px; margin-bottom: 18px;
+  }
+  .sim-grid { display: grid; grid-template-columns: 1.4fr 0.9fr 0.9fr 0.9fr auto; gap: 10px; align-items: end; margin-top: 10px; }
+  @media (max-width: 980px) { .sim-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { .sim-grid { grid-template-columns: 1fr; } }
+  .sim-field label { display: block; font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: #043248; margin-bottom: 4px; }
+  .sim-field input, .sim-field select {
+    width: 100%; padding: 8px 10px; border-radius: 7px; border: 1px solid #C2D6E4;
+    background: #FFFFFF; color: #0F2537; font-size: 12.5px; font-weight: 600; outline: none;
+  }
+  .sim-field input:focus, .sim-field select:focus { border-color: #086288; }
+  .sim-run-btn {
+    padding: 9px 16px; border-radius: 7px; border: none; background: #086288; color: #FFFFFF;
+    font-size: 12.5px; font-weight: 700; cursor: pointer; white-space: nowrap; height: 37px;
+  }
+  .sim-run-btn:hover { background: #043248; }
+  .sim-result {
+    margin-top: 12px; padding: 12px 14px; border-radius: 8px;
+    background: #FFFFFF; border: 1px solid #C2D6E4;
+    display: none; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;
+  }
+  .sim-result.active { display: flex; }
+
+  /* MONTHLY MRR INTELLIGENCE FEED */
+  .mrr-feed { display: grid; grid-template-columns: repeat(2, 1fr); gap: 11px; }
+  @media (max-width: 860px) { .mrr-feed { grid-template-columns: 1fr; } }
+  .mrr-item {
+    background: #FAFDFE; border: 1px solid #DCE7EF; border-radius: 9px; padding: 12px 14px;
+    display: flex; justify-content: space-between; align-items: flex-start; gap: 10px;
+  }
+  .mrr-date { font-size: 10px; font-weight: 700; color: #4D8DBA; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 3px; }
+  .mrr-title { font-size: 12.8px; font-weight: 700; color: #043248; margin-bottom: 3px; }
+  .mrr-desc { font-size: 11.6px; color: #526A7C; line-height: 1.45; }
+
+  @media (max-width: 760px) {
+    .ceo-lens-lbl, .board-export-btn span { display: none; }
+    .ceo-lens-wrap { padding: 3px 6px; }
+    .ceo-lens-select { max-width: 132px; font-size: 11.5px; }
+  }
+
+  /* CLEAN 1-PAGE PRINT BOARD BRIEF */
+  @media print {
+    .sidebar, .topbar, .ov-slideshow, .ov-brands-strip, #landing-mode, #preloader, #login-modal, #tour-overlay, .filter-bar, .sim-box, .reset-btn { display: none !important; }
+    .main { margin-left: 0 !important; width: 100% !important; }
+    body, #dashboard-mode { background: #FFFFFF !important; }
+    .card, .ceo-brief-panel { break-inside: avoid; box-shadow: none !important; }
+  }
+
+  /* ======================================================================
+     PHASE 3.5 — CEO ENGINE POLISH (matches DriveX design system:
+     no accent bars, square tags, soft cards, dark war-room panel)
+     ====================================================================== */
+  .ceo-lens-wrap { background: #FFFFFF; border: 1px solid var(--border); border-radius: 99px; padding: 4px 4px 4px 12px; gap: 8px; transition: box-shadow .15s; }
+  .ceo-lens-wrap:hover { box-shadow: var(--soft); }
+  .ceo-lens-ico { width: 14px; height: 14px; color: var(--deep); }
+  .ceo-lens-lbl { font-size: 10px; letter-spacing: 1px; color: var(--muted); }
+  .ceo-lens-select {
+    -webkit-appearance: none; appearance: none; border: none; border-radius: 99px; padding: 7px 30px 7px 12px;
+    background: var(--ice-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23086288' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") no-repeat right 10px center;
+    color: var(--deep-dark); font-weight: 700; font-family: inherit;
+  }
+  .board-export-btn { border-radius: 99px; border: 1px solid var(--border); background: #FFFFFF; color: var(--deep-dark); padding: 8px 14px; font-family: inherit; }
+  .board-export-btn:hover { background: var(--deep); color: #FFFFFF; border-color: var(--deep); }
+
+  /* war-room decision panel */
+  .ceo-brief-panel {
+    position: relative; overflow: hidden; border: none; border-top: none; border-radius: 22px; padding: 24px 24px 22px 24px; margin-bottom: 20px; color: #FFFFFF;
+    background: radial-gradient(700px 300px at 100% 0%, rgba(77,141,186,.22), transparent 60%), radial-gradient(600px 300px at 0% 100%, rgba(151,215,255,.14), transparent 60%), linear-gradient(145deg, #053A55 0%, #031B29 100%);
+    box-shadow: 0 18px 44px rgba(3,27,41,.24);
+  }
+  .ceo-brief-top { border-bottom: 1px solid rgba(151,215,255,.14); padding-bottom: 16px; margin-bottom: 16px; }
+  .ceo-brief-title { color: #FFFFFF; font-size: 18px; }
+  .ceo-brief-sub { color: rgba(190,225,247,.85); font-size: 12.5px; margin-top: 3px; }
+  .ceo-live { display: inline-flex; align-items: center; gap: 8px; font-size: 10.5px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;
+    color: #031B29; background: #97D7FF; padding: 6px 11px; border-radius: 3px; white-space: nowrap; }
+  .ceo-live i { width: 7px; height: 7px; border-radius: 50%; background: #031B29; animation: livePulse 1.4s ease-in-out infinite; }
+  @keyframes livePulse { 0%,100% { opacity: 1; } 50% { opacity: .25; } }
+  .ceo-action-grid { gap: 14px; }
+  .ceo-act-card, .ceo-act-card.warn, .ceo-act-card.go {
+    border: 1px solid rgba(151,215,255,.12); border-left: 1px solid rgba(151,215,255,.12); border-radius: 18px; padding: 16px 16px 15px 16px;
+    background: rgba(255,255,255,.06); backdrop-filter: blur(6px); transition: transform .18s, background .18s;
+  }
+  .ceo-act-card:hover { transform: translateY(-3px); background: rgba(255,255,255,.1); }
+  .ceo-act-tag { display: inline-flex; align-items: center; gap: 7px; border-radius: 3px; padding: 4px 9px; margin-bottom: 10px; background: rgba(151,215,255,.16); color: #CFEBFF; }
+  .ceo-act-tag::before { content: ""; width: 6px; height: 6px; border-radius: 1px; background: var(--ice); }
+  .ceo-act-card.warn .ceo-act-tag { background: rgba(77,141,186,.28); color: #DCEFFC; }
+  .ceo-act-card.warn .ceo-act-tag::before { background: #4D8DBA; }
+  .ceo-act-card.go .ceo-act-tag { background: #97D7FF; color: #031B29; }
+  .ceo-act-card.go .ceo-act-tag::before { background: #043248; }
+  .ceo-act-card h5 { color: #FFFFFF; font-size: 14px; margin-bottom: 6px; }
+  .ceo-act-card p { color: rgba(214,236,250,.85); font-size: 12.3px; line-height: 1.55; }
+
+  /* monthly threat feed */
+  .mrr-feed { gap: 12px; }
+  .mrr-item { border: none; border-radius: 16px; background: var(--tint-ice); padding: 15px 16px; transition: transform .18s, box-shadow .18s, background .18s; }
+  .mrr-item:hover { transform: translateY(-2px); background: #FFFFFF; box-shadow: var(--soft-hover); }
+  .mrr-date { display: inline-flex; align-items: center; gap: 7px; color: var(--steel); }
+  .mrr-date::before { content: ""; width: 6px; height: 6px; border-radius: 1px; background: #4D8DBA; }
+  .mrr-title { font-size: 13.5px; margin: 2px 0 4px 0; }
+  .mrr-desc { font-size: 12.2px; line-height: 1.55; }
+  .mrr-item .badge { flex: none; }
+
+  /* what-if simulator */
+  .sim-box { border: none; border-left: none; border-radius: 20px; background: #FFFFFF; box-shadow: var(--soft); padding: 20px 22px; }
+  .sim-head { display: flex; align-items: center; gap: 12px; }
+  .sim-ico { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; flex: none; color: #FFFFFF; background: linear-gradient(135deg, #086288, #043248); box-shadow: 0 6px 16px rgba(8,98,136,.28); }
+  .sim-ico .ico { width: 18px; height: 18px; fill: rgba(151,215,255,.25); }
+  .sim-title { font-size: 15px; font-weight: 800; color: var(--deep-dark); letter-spacing: -.2px; }
+  .sim-sub { font-size: 12.2px; color: var(--muted); }
+  .sim-grid { margin-top: 16px; gap: 12px; }
+  .sim-field label { color: var(--muted); font-size: 10px; letter-spacing: 1px; }
+  .sim-field input, .sim-field select { border-radius: 10px; border: 1px solid transparent; background: var(--canvas); padding: 10px 12px; font-family: inherit; transition: border-color .15s, background .15s; }
+  .sim-field input:focus, .sim-field select:focus { border-color: var(--deep); background: #FFFFFF; }
+  .sim-run-btn { height: 40px; border-radius: 10px; padding: 0 18px; background: linear-gradient(135deg, #086288, #043248); box-shadow: 0 8px 18px rgba(8,98,136,.28); font-family: inherit; }
+  .sim-run-btn:hover { background: linear-gradient(135deg, #0A74A0, #052F44); }
+  .sim-result { border: none; border-radius: 16px; padding: 14px 16px; margin-top: 14px; background: var(--tint-ice); animation: coIn .35s ease; }
+  .sim-v-title { font-size: 14px; font-weight: 800; color: var(--deep-dark); }
+  .sim-v-desc { font-size: 12.3px; color: var(--muted); margin-top: 2px; }
+  .sim-edge { font-size: 13px; font-weight: 800; padding: 8px 12px; border-radius: 4px; background: var(--deep); color: #FFFFFF; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .sim-result.go { background: linear-gradient(135deg, #E6F3FA, #D3EAF8); }
+  .sim-result.go .sim-v-title { color: #086288; } .sim-result.go .sim-edge { background: #086288; }
+  .sim-result.par { background: linear-gradient(135deg, #F3F8FB, #E6EFF6); }
+  .sim-result.par .sim-v-title { color: #4D8DBA; } .sim-result.par .sim-edge { background: #4D8DBA; }
+  .sim-result.caution { background: linear-gradient(135deg, #E8EEF2, #D9E3EA); }
+  .sim-result.caution .sim-v-title { color: #031B29; } .sim-result.caution .sim-edge { background: #031B29; }
+
+  /* auto-gap radar */
+  .gap-radar-grid { gap: 14px; margin-top: 16px; }
+  .gap-card { border: none; border-top: none; border-radius: 18px; background: var(--tint-ice); padding: 16px 16px 15px 16px; gap: 7px; transition: transform .18s, box-shadow .18s, background .18s; }
+  .gap-card:hover { transform: translateY(-3px); background: #FFFFFF; box-shadow: var(--soft-hover); }
+  .gap-card h5 { font-size: 14px; }
+  .gap-pt { font-size: 10px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--deep); background: #FFFFFF; padding: 4px 9px; border-radius: 3px; }
+  .gap-pill { border-radius: 3px; padding: 4px 9px; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; font-weight: 800; }
+  .gap-card.open .gap-pill { background: #086288; color: #FFFFFF; }
+  .gap-card.thin .gap-pill { background: #97D7FF; color: #031B29; }
+  .gap-count { display: flex; align-items: baseline; gap: 8px; }
+  .gap-count b { font-size: 30px; font-weight: 800; letter-spacing: -1px; color: var(--deep-dark); line-height: 1; }
+  .gap-count span { font-size: 11.5px; color: var(--muted); font-weight: 600; }
+  .gap-band { position: relative; height: 8px; border-radius: 99px; background: rgba(8,98,136,.12); margin-top: 4px; }
+  .gap-band i { position: absolute; top: 0; bottom: 0; border-radius: 99px; background: linear-gradient(90deg, var(--deep), var(--ice)); }
+  .gap-card.open .gap-band i { background: linear-gradient(90deg, #043248, #086288); }
+  .gap-band-lbl { display: flex; justify-content: space-between; font-size: 10.5px; color: var(--muted); font-weight: 600; }
+  .gap-band-lbl span:first-child { color: var(--deep-dark); font-weight: 700; }
+
+  @media (max-width: 760px) { .ceo-lens-ico { display: none; } .ceo-lens-wrap { padding: 3px; } .board-export-btn { padding: 8px 10px; } }
+
+  /* board brief print: hide chrome, never print reveal-hidden cards blank */
+  @media print {
+    .hero-show, .bento-head, .ov-brands-strip, .profile, .ceo-lens-wrap, .board-export-btn, .tour-trigger, #signout-modal, .grid-3:has(.visual-card) { display: none !important; }
+    .rv { opacity: 1 !important; transform: none !important; transition: none !important; }
+    .ceo-brief-panel { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+  @media (max-width: 640px) {
+    .topbar { gap: 8px; }
+    .crumb, .topbar-right .tour-trigger { display: none; }
+    .page-heading { font-size: 16px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 120px; }
+    .topbar > div:first-child { min-width: 0; }
+    .topbar-right { gap: 6px; }
+    .ceo-lens-select { max-width: 112px; padding: 7px 24px 7px 10px; background-position: right 7px center; }
+  }
+
+  /* ======================================================================
+     PHASE 3.7 — front-view supercar logo + headlight-blink loader
+     ====================================================================== */
+  #preloader { background: radial-gradient(120% 90% at 50% 38%, #0B3C56 0%, #041E2D 50%, #010D15 100%); overflow: hidden;
+    transition: opacity .75s ease, visibility .75s ease, transform .9s cubic-bezier(.7,0,.3,1); }
+  #preloader.hidden { opacity: 0; visibility: hidden; transform: scale(1.18); }
+  .ld-stage { position: relative; width: min(340px, 78vw); margin-bottom: 26px; animation: ldRise .9s cubic-bezier(.22,1,.36,1) both; }
+  .ld-car { display: block; width: 100%; height: auto; overflow: visible; filter: drop-shadow(0 18px 30px rgba(0,0,0,.55)); }
+  .ld-car .lamp { animation: lampBlink 2.1s steps(1, end) both, lampGlow 2.1s ease-in-out both; }
+  .ld-car .spark { opacity: 0; animation: sparkIn .5s 1.5s ease forwards; }
+  @keyframes lampBlink {
+    0%   { opacity: .12; } 22% { opacity: 1; } 30% { opacity: .15; } 40% { opacity: 1; } 48% { opacity: .15; } 58%, 100% { opacity: 1; }
+  }
+  @keyframes lampGlow { 0%, 55% { filter: none; } 70%, 100% { filter: drop-shadow(0 0 4px #FFC629) drop-shadow(0 0 10px rgba(255,198,41,.7)); } }
+  @keyframes sparkIn { to { opacity: 1; } }
+  .ld-beams { position: absolute; left: 0; right: 0; top: 54%; height: 140%; pointer-events: none; opacity: 0; animation: beamsOn 2.1s ease forwards; }
+  .ld-beams i { position: absolute; top: 0; width: 46%; height: 100%; background: radial-gradient(60% 50% at 50% 0%, rgba(255,214,102,.35), rgba(255,214,102,0) 70%); filter: blur(6px); }
+  .ld-beams i:first-child { left: 4%; transform: perspective(200px) rotateX(55deg) skewX(10deg); }
+  .ld-beams i:last-child { right: 4%; transform: perspective(200px) rotateX(55deg) skewX(-10deg); }
+  @keyframes beamsOn { 0%, 55% { opacity: 0; } 75%, 100% { opacity: 1; } }
+  .ld-road { height: 2px; margin: 10px auto 0 auto; width: 70%; background: linear-gradient(90deg, transparent, rgba(151,215,255,.45), transparent); }
+  #preloader.flash .ld-car .lamp { animation: none; opacity: 1; filter: drop-shadow(0 0 8px #FFE08A) drop-shadow(0 0 24px rgba(255,214,102,.95)); }
+  #preloader.flash .ld-beams { animation: none; opacity: 1; }
+  #preloader.flash .ld-beams i { background: radial-gradient(60% 55% at 50% 0%, rgba(255,232,160,.7), rgba(255,214,102,0) 72%); }
+  .ld-word { display: flex; gap: 9px; font-family: 'Outfit','Inter',sans-serif; font-size: 34px; font-weight: 900; color: #FFFFFF; }
+  .ld-word span { opacity: 0; transform: translateY(14px); animation: ldLetter .55s cubic-bezier(.22,1,.36,1) forwards; animation-delay: calc(.55s + var(--i) * .08s); }
+  .ld-word .x { color: var(--ice); margin-left: 8px; }
+  @keyframes ldLetter { to { opacity: 1; transform: none; } }
+  .ld-sub { font-size: 11px; font-weight: 700; letter-spacing: 3.4px; text-transform: uppercase; color: rgba(151,215,255,.85); margin: 8px 0 24px 0; opacity: 0; animation: sparkIn .6s 1.1s forwards; }
+  .ld-track { width: 200px; height: 2px; background: rgba(151,215,255,.16); border-radius: 99px; overflow: hidden; }
+  .ld-track .loader-bar { height: 100%; width: 0; background: linear-gradient(90deg, #4D8DBA, #97D7FF, #FFFFFF); }
+  @keyframes ldRise { from { opacity: 0; transform: translateY(18px) scale(.94); } to { opacity: 1; transform: none; } }
+  @media (max-width: 640px) { .ld-word { font-size: 28px; gap: 7px; } }
+
+  /* landing intro right after the loader */
+  body.intro .drive-stage .hero-3d { animation: heroIn 1.1s cubic-bezier(.22,1,.36,1) both; }
+  body.intro .drive-stage .drive-layer.cuts, body.intro .drive-stage .drive-layer:first-child { animation: carIn 1.3s cubic-bezier(.22,1,.36,1) both; }
+  body.intro .lp-nav { animation: navIn .9s .25s cubic-bezier(.22,1,.36,1) both; }
+  body.intro .drive-eyebrow, body.intro .drive-foot { animation: fadeUp .9s .45s ease both; }
+  @keyframes heroIn { from { opacity: 0; transform: perspective(900px) rotateX(28deg) translateY(40px); letter-spacing: 6px; } to { opacity: 1; } }
+  @keyframes carIn { from { opacity: 0; transform: scale(1.08); filter: brightness(.4); } to { opacity: 1; transform: none; filter: none; } }
+  @keyframes navIn { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: none; } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; } }
+  .drive-foot { transform: translateX(-50%); }
+  body.intro .drive-foot { animation-name: fadeUpFoot; }
+  @keyframes fadeUpFoot { from { opacity: 0; transform: translate(-50%, 14px); } to { opacity: 1; transform: translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce) { .ld-car .lamp, .ld-beams, .ld-word span, .ld-sub { animation: none !important; opacity: 1 !important; transform: none !important; } }
 
 </style>
 </head>
@@ -1576,12 +1853,14 @@
 
 <!-- ==================== RAPID BRAND-FLASH PRELOADER ==================== -->
 <div id="preloader">
-  <div class="loader-logo"><svg class="loader-mark" width="118" height="118" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="17" fill="#0B1117"/><circle cx="42" cy="23" r="12.5" fill="#FFC629"/><path d="M12.5 11.5l6.5 6.5M19 11.5L12.5 18" stroke="#FFC629" stroke-width="3" stroke-linecap="round"/><path d="M4 42c0-2.4 1.6-3.8 4.2-4.4l8.8-2c4-3.2 9-5.4 15-5.8 6-.4 11 .8 15.5 3.4l6.5 1.6c3.6.8 6 2.4 6 5V42c0 1-.8 1.8-1.8 1.8H5.8C4.8 43.8 4 43 4 42z" fill="#FFFFFF"/><path d="M22.5 35c3-2.4 6.5-3.6 10.5-3.8h3.6l.6 3.7zM39.6 31.5c2.8.5 5 1.5 6.6 2.9l-6 .5z" fill="#0B1117"/><circle cx="16" cy="44" r="5.2" fill="#0B1117" stroke="#FFFFFF" stroke-width="2.2"/><circle cx="48.5" cy="44" r="5.2" fill="#0B1117" stroke="#FFFFFF" stroke-width="2.2"/><path d="M6 55c12-5 24 3 36-1s14-4 17-3" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"/></svg></div>
-  <div class="loader-word">DRIVE<b>X</b></div>
-  <div class="loader-sub">SL Auto Intelligence</div>
-  <div class="loader-bar-wrap">
-    <div class="loader-track"><div class="loader-bar" id="loaderBar"></div></div>
+  <div class="ld-stage">
+    <div class="ld-beams"><i></i><i></i></div>
+    <svg class="ld-car" viewBox="0 0 240 90" aria-hidden="true"><path d="M120 8C95 8 73 13 59 23C49 30 41 38 35 47C46 44 62 41 80 41C96 41 110 44 120 50ZM6 29C16 28 29 32 40 39L35 46C24 40 14 35 6 29ZM27 46L39 48.5L36.5 54L25 51ZM29 57L64 60L73 75L45 77C38 71 32 64 29 57Z" fill="#FFFFFF"/><path d="M120 8C95 8 73 13 59 23C49 30 41 38 35 47C46 44 62 41 80 41C96 41 110 44 120 50ZM6 29C16 28 29 32 40 39L35 46C24 40 14 35 6 29ZM27 46L39 48.5L36.5 54L25 51ZM29 57L64 60L73 75L45 77C38 71 32 64 29 57Z" fill="#FFFFFF" transform="translate(240 0) scale(-1 1)"/><path d="M68 25C82 15 99 11 116 11C101 13 86 19 77 31C74 29 71 27 68 25Z" fill="#04253A" opacity=".55"/><path class="lamp" d="M37 50.5L74 51.5L72 55.5L39 54.5Z" fill="#FFC629"/><path class="lamp" d="M37 50.5L74 51.5L72 55.5L39 54.5Z" fill="#FFC629" transform="translate(240 0) scale(-1 1)"/><path class="spark" d="M112.5 68l2-4 2 4-2 4zM123.5 68l2-4 2 4-2 4z" fill="#FFC629"/></svg>
+    <div class="ld-road"></div>
   </div>
+  <div class="ld-word"><span style="--i:0">D</span><span style="--i:1">R</span><span style="--i:2">I</span><span style="--i:3">V</span><span style="--i:4">E</span><span class="x" style="--i:6">X</span></div>
+  <div class="ld-sub">SL Auto Intelligence</div>
+  <div class="ld-track"><div class="loader-bar" id="loaderBar"></div></div>
 </div>
 
 <!-- ==================== EXECUTIVE LOGIN MODAL ==================== -->
@@ -1591,7 +1870,7 @@
       <img src="assets/cars/hero_suv.jpg" alt="Executive Portal">
       <div class="login-visual-grad"></div>
       <div class="login-visual-top">
-        <a class="brand"><svg class="brand-mark" width="34" height="34" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="17" fill="#0B1117"/><circle cx="42" cy="23" r="12.5" fill="#FFC629"/><path d="M12.5 11.5l6.5 6.5M19 11.5L12.5 18" stroke="#FFC629" stroke-width="3" stroke-linecap="round"/><path d="M4 42c0-2.4 1.6-3.8 4.2-4.4l8.8-2c4-3.2 9-5.4 15-5.8 6-.4 11 .8 15.5 3.4l6.5 1.6c3.6.8 6 2.4 6 5V42c0 1-.8 1.8-1.8 1.8H5.8C4.8 43.8 4 43 4 42z" fill="#FFFFFF"/><path d="M22.5 35c3-2.4 6.5-3.6 10.5-3.8h3.6l.6 3.7zM39.6 31.5c2.8.5 5 1.5 6.6 2.9l-6 .5z" fill="#0B1117"/><circle cx="16" cy="44" r="5.2" fill="#0B1117" stroke="#FFFFFF" stroke-width="2.2"/><circle cx="48.5" cy="44" r="5.2" fill="#0B1117" stroke="#FFFFFF" stroke-width="2.2"/><path d="M6 55c12-5 24 3 36-1s14-4 17-3" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"/></svg><span class="brand-word"><span class="bw-main">DRIVE<b>X</b></span><small>SL Auto Intelligence</small></span></a>
+        <a class="brand"><svg class="brand-mark" width="34" height="34" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="17" fill="#0B1117"/><g transform="translate(3.5 15) scale(.2375)"><path d="M120 8C95 8 73 13 59 23C49 30 41 38 35 47C46 44 62 41 80 41C96 41 110 44 120 50ZM6 29C16 28 29 32 40 39L35 46C24 40 14 35 6 29ZM27 46L39 48.5L36.5 54L25 51ZM29 57L64 60L73 75L45 77C38 71 32 64 29 57Z" fill="#FFFFFF"/><path d="M120 8C95 8 73 13 59 23C49 30 41 38 35 47C46 44 62 41 80 41C96 41 110 44 120 50ZM6 29C16 28 29 32 40 39L35 46C24 40 14 35 6 29ZM27 46L39 48.5L36.5 54L25 51ZM29 57L64 60L73 75L45 77C38 71 32 64 29 57Z" fill="#FFFFFF" transform="translate(240 0) scale(-1 1)"/><path d="M68 25C82 15 99 11 116 11C101 13 86 19 77 31C74 29 71 27 68 25Z" fill="#0B1117" opacity=".55"/><path class="lamp" d="M37 50.5L74 51.5L72 55.5L39 54.5Z" fill="#FFC629"/><path class="lamp" d="M37 50.5L74 51.5L72 55.5L39 54.5Z" fill="#FFC629" transform="translate(240 0) scale(-1 1)"/><path class="spark" d="M112.5 68l2-4 2 4-2 4zM123.5 68l2-4 2 4-2 4z" fill="#FFC629"/></g></svg><span class="brand-word"><span class="bw-main">DRIVE<b>X</b></span><small>SL Auto Intelligence</small></span></a>
       </div>
       <div class="login-visual-bot">
         <h3>Sri Lanka <span>2026</span> Positioning Portal</h3>
@@ -1665,7 +1944,7 @@
 <!-- ====================================================================== -->
 <div id="landing-mode">
   <nav class="lp-nav" id="lpNav">
-    <a class="brand" href="#top"><svg class="brand-mark" width="34" height="34" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="17" fill="#0B1117"/><circle cx="42" cy="23" r="12.5" fill="#FFC629"/><path d="M12.5 11.5l6.5 6.5M19 11.5L12.5 18" stroke="#FFC629" stroke-width="3" stroke-linecap="round"/><path d="M4 42c0-2.4 1.6-3.8 4.2-4.4l8.8-2c4-3.2 9-5.4 15-5.8 6-.4 11 .8 15.5 3.4l6.5 1.6c3.6.8 6 2.4 6 5V42c0 1-.8 1.8-1.8 1.8H5.8C4.8 43.8 4 43 4 42z" fill="#FFFFFF"/><path d="M22.5 35c3-2.4 6.5-3.6 10.5-3.8h3.6l.6 3.7zM39.6 31.5c2.8.5 5 1.5 6.6 2.9l-6 .5z" fill="#0B1117"/><circle cx="16" cy="44" r="5.2" fill="#0B1117" stroke="#FFFFFF" stroke-width="2.2"/><circle cx="48.5" cy="44" r="5.2" fill="#0B1117" stroke="#FFFFFF" stroke-width="2.2"/><path d="M6 55c12-5 24 3 36-1s14-4 17-3" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"/></svg><span class="brand-word"><span class="bw-main">DRIVE<b>X</b></span><small>SL Auto Intelligence</small></span></a>
+    <a class="brand" href="#top"><svg class="brand-mark" width="34" height="34" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="17" fill="#0B1117"/><g transform="translate(3.5 15) scale(.2375)"><path d="M120 8C95 8 73 13 59 23C49 30 41 38 35 47C46 44 62 41 80 41C96 41 110 44 120 50ZM6 29C16 28 29 32 40 39L35 46C24 40 14 35 6 29ZM27 46L39 48.5L36.5 54L25 51ZM29 57L64 60L73 75L45 77C38 71 32 64 29 57Z" fill="#FFFFFF"/><path d="M120 8C95 8 73 13 59 23C49 30 41 38 35 47C46 44 62 41 80 41C96 41 110 44 120 50ZM6 29C16 28 29 32 40 39L35 46C24 40 14 35 6 29ZM27 46L39 48.5L36.5 54L25 51ZM29 57L64 60L73 75L45 77C38 71 32 64 29 57Z" fill="#FFFFFF" transform="translate(240 0) scale(-1 1)"/><path d="M68 25C82 15 99 11 116 11C101 13 86 19 77 31C74 29 71 27 68 25Z" fill="#0B1117" opacity=".55"/><path class="lamp" d="M37 50.5L74 51.5L72 55.5L39 54.5Z" fill="#FFC629"/><path class="lamp" d="M37 50.5L74 51.5L72 55.5L39 54.5Z" fill="#FFC629" transform="translate(240 0) scale(-1 1)"/><path class="spark" d="M112.5 68l2-4 2 4-2 4zM123.5 68l2-4 2 4-2 4z" fill="#FFC629"/></g></svg><span class="brand-word"><span class="bw-main">DRIVE<b>X</b></span><small>SL Auto Intelligence</small></span></a>
     <div class="lp-links">
       <a href="#evolution">The Evolution</a>
       <a href="#lp-brands">Brands</a>
@@ -1681,7 +1960,7 @@
   <aside id="lp-drawer">
     <div>
       <div class="lp-drawer-head">
-        <a class="brand" href="#top" onclick="toggleLpDrawer(false)"><svg class="brand-mark" width="30" height="30" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="17" fill="#0B1117"/><circle cx="42" cy="23" r="12.5" fill="#FFC629"/><path d="M12.5 11.5l6.5 6.5M19 11.5L12.5 18" stroke="#FFC629" stroke-width="3" stroke-linecap="round"/><path d="M4 42c0-2.4 1.6-3.8 4.2-4.4l8.8-2c4-3.2 9-5.4 15-5.8 6-.4 11 .8 15.5 3.4l6.5 1.6c3.6.8 6 2.4 6 5V42c0 1-.8 1.8-1.8 1.8H5.8C4.8 43.8 4 43 4 42z" fill="#FFFFFF"/><path d="M22.5 35c3-2.4 6.5-3.6 10.5-3.8h3.6l.6 3.7zM39.6 31.5c2.8.5 5 1.5 6.6 2.9l-6 .5z" fill="#0B1117"/><circle cx="16" cy="44" r="5.2" fill="#0B1117" stroke="#FFFFFF" stroke-width="2.2"/><circle cx="48.5" cy="44" r="5.2" fill="#0B1117" stroke="#FFFFFF" stroke-width="2.2"/><path d="M6 55c12-5 24 3 36-1s14-4 17-3" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"/></svg><span class="brand-word"><span class="bw-main">DRIVE<b>X</b></span><small>SL Auto Intelligence</small></span></a>
+        <a class="brand" href="#top" onclick="toggleLpDrawer(false)"><svg class="brand-mark" width="30" height="30" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="17" fill="#0B1117"/><g transform="translate(3.5 15) scale(.2375)"><path d="M120 8C95 8 73 13 59 23C49 30 41 38 35 47C46 44 62 41 80 41C96 41 110 44 120 50ZM6 29C16 28 29 32 40 39L35 46C24 40 14 35 6 29ZM27 46L39 48.5L36.5 54L25 51ZM29 57L64 60L73 75L45 77C38 71 32 64 29 57Z" fill="#FFFFFF"/><path d="M120 8C95 8 73 13 59 23C49 30 41 38 35 47C46 44 62 41 80 41C96 41 110 44 120 50ZM6 29C16 28 29 32 40 39L35 46C24 40 14 35 6 29ZM27 46L39 48.5L36.5 54L25 51ZM29 57L64 60L73 75L45 77C38 71 32 64 29 57Z" fill="#FFFFFF" transform="translate(240 0) scale(-1 1)"/><path d="M68 25C82 15 99 11 116 11C101 13 86 19 77 31C74 29 71 27 68 25Z" fill="#0B1117" opacity=".55"/><path class="lamp" d="M37 50.5L74 51.5L72 55.5L39 54.5Z" fill="#FFC629"/><path class="lamp" d="M37 50.5L74 51.5L72 55.5L39 54.5Z" fill="#FFC629" transform="translate(240 0) scale(-1 1)"/><path class="spark" d="M112.5 68l2-4 2 4-2 4zM123.5 68l2-4 2 4-2 4z" fill="#FFC629"/></g></svg><span class="brand-word"><span class="bw-main">DRIVE<b>X</b></span><small>SL Auto Intelligence</small></span></a>
         <button class="lp-drawer-close" onclick="toggleLpDrawer(false)" aria-label="Close"><svg class="ico" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
       </div>
       <div class="lp-drawer-nav">
@@ -1807,7 +2086,7 @@
   <footer class="lp-footer" id="lp-footer">
     <div class="lp-foot-grid">
       <div>
-        <a class="brand" href="#top"><svg class="brand-mark" width="34" height="34" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="17" fill="#0B1117"/><circle cx="42" cy="23" r="12.5" fill="#FFC629"/><path d="M12.5 11.5l6.5 6.5M19 11.5L12.5 18" stroke="#FFC629" stroke-width="3" stroke-linecap="round"/><path d="M4 42c0-2.4 1.6-3.8 4.2-4.4l8.8-2c4-3.2 9-5.4 15-5.8 6-.4 11 .8 15.5 3.4l6.5 1.6c3.6.8 6 2.4 6 5V42c0 1-.8 1.8-1.8 1.8H5.8C4.8 43.8 4 43 4 42z" fill="#FFFFFF"/><path d="M22.5 35c3-2.4 6.5-3.6 10.5-3.8h3.6l.6 3.7zM39.6 31.5c2.8.5 5 1.5 6.6 2.9l-6 .5z" fill="#0B1117"/><circle cx="16" cy="44" r="5.2" fill="#0B1117" stroke="#FFFFFF" stroke-width="2.2"/><circle cx="48.5" cy="44" r="5.2" fill="#0B1117" stroke="#FFFFFF" stroke-width="2.2"/><path d="M6 55c12-5 24 3 36-1s14-4 17-3" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"/></svg><span class="brand-word"><span class="bw-main">DRIVE<b>X</b></span><small>SL Auto Intelligence</small></span></a>
+        <a class="brand" href="#top"><svg class="brand-mark" width="34" height="34" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="17" fill="#0B1117"/><g transform="translate(3.5 15) scale(.2375)"><path d="M120 8C95 8 73 13 59 23C49 30 41 38 35 47C46 44 62 41 80 41C96 41 110 44 120 50ZM6 29C16 28 29 32 40 39L35 46C24 40 14 35 6 29ZM27 46L39 48.5L36.5 54L25 51ZM29 57L64 60L73 75L45 77C38 71 32 64 29 57Z" fill="#FFFFFF"/><path d="M120 8C95 8 73 13 59 23C49 30 41 38 35 47C46 44 62 41 80 41C96 41 110 44 120 50ZM6 29C16 28 29 32 40 39L35 46C24 40 14 35 6 29ZM27 46L39 48.5L36.5 54L25 51ZM29 57L64 60L73 75L45 77C38 71 32 64 29 57Z" fill="#FFFFFF" transform="translate(240 0) scale(-1 1)"/><path d="M68 25C82 15 99 11 116 11C101 13 86 19 77 31C74 29 71 27 68 25Z" fill="#0B1117" opacity=".55"/><path class="lamp" d="M37 50.5L74 51.5L72 55.5L39 54.5Z" fill="#FFC629"/><path class="lamp" d="M37 50.5L74 51.5L72 55.5L39 54.5Z" fill="#FFC629" transform="translate(240 0) scale(-1 1)"/><path class="spark" d="M112.5 68l2-4 2 4-2 4zM123.5 68l2-4 2 4-2 4z" fill="#FFC629"/></g></svg><span class="brand-word"><span class="bw-main">DRIVE<b>X</b></span><small>SL Auto Intelligence</small></span></a>
         <p>Executive positioning intelligence for Sri Lanka's brand-new vehicle market — 28 official distributors, 116 scored models and the SCALE strategy playbook in one portal.</p>
       </div>
       <div>
@@ -1842,7 +2121,7 @@
   <div id="mobile-backdrop" onclick="toggleMobileSidebar(false)"></div>
   <aside class="sidebar" id="sidebar">
     <div class="sb-brand">
-      <div class="sb-logo"><svg class="brand-mark" width="36" height="36" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="17" fill="#0B1117"/><circle cx="42" cy="23" r="12.5" fill="#FFC629"/><path d="M12.5 11.5l6.5 6.5M19 11.5L12.5 18" stroke="#FFC629" stroke-width="3" stroke-linecap="round"/><path d="M4 42c0-2.4 1.6-3.8 4.2-4.4l8.8-2c4-3.2 9-5.4 15-5.8 6-.4 11 .8 15.5 3.4l6.5 1.6c3.6.8 6 2.4 6 5V42c0 1-.8 1.8-1.8 1.8H5.8C4.8 43.8 4 43 4 42z" fill="#FFFFFF"/><path d="M22.5 35c3-2.4 6.5-3.6 10.5-3.8h3.6l.6 3.7zM39.6 31.5c2.8.5 5 1.5 6.6 2.9l-6 .5z" fill="#0B1117"/><circle cx="16" cy="44" r="5.2" fill="#0B1117" stroke="#FFFFFF" stroke-width="2.2"/><circle cx="48.5" cy="44" r="5.2" fill="#0B1117" stroke="#FFFFFF" stroke-width="2.2"/><path d="M6 55c12-5 24 3 36-1s14-4 17-3" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"/></svg></div>
+      <div class="sb-logo"><svg class="brand-mark" width="36" height="36" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="17" fill="#0B1117"/><g transform="translate(3.5 15) scale(.2375)"><path d="M120 8C95 8 73 13 59 23C49 30 41 38 35 47C46 44 62 41 80 41C96 41 110 44 120 50ZM6 29C16 28 29 32 40 39L35 46C24 40 14 35 6 29ZM27 46L39 48.5L36.5 54L25 51ZM29 57L64 60L73 75L45 77C38 71 32 64 29 57Z" fill="#FFFFFF"/><path d="M120 8C95 8 73 13 59 23C49 30 41 38 35 47C46 44 62 41 80 41C96 41 110 44 120 50ZM6 29C16 28 29 32 40 39L35 46C24 40 14 35 6 29ZM27 46L39 48.5L36.5 54L25 51ZM29 57L64 60L73 75L45 77C38 71 32 64 29 57Z" fill="#FFFFFF" transform="translate(240 0) scale(-1 1)"/><path d="M68 25C82 15 99 11 116 11C101 13 86 19 77 31C74 29 71 27 68 25Z" fill="#0B1117" opacity=".55"/><path class="lamp" d="M37 50.5L74 51.5L72 55.5L39 54.5Z" fill="#FFC629"/><path class="lamp" d="M37 50.5L74 51.5L72 55.5L39 54.5Z" fill="#FFC629" transform="translate(240 0) scale(-1 1)"/><path class="spark" d="M112.5 68l2-4 2 4-2 4zM123.5 68l2-4 2 4-2 4z" fill="#FFC629"/></g></svg></div>
       <div>
         <div class="sb-brand-title">DRIVE<b>X</b></div>
         <div class="sb-brand-sub">SL Auto Intelligence</div>
@@ -1905,6 +2184,24 @@
         </div>
       </div>
       <div class="topbar-right">
+        <div class="ceo-lens-wrap" title="Switch entire dashboard to a specific CEO perspective">
+          <svg class="ico ceo-lens-ico" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><span class="ceo-lens-lbl">CEO Lens</span>
+          <select id="ceoCompanySelect" class="ceo-lens-select" onchange="applyCeoLens()">
+            <option value="ALL">Market-Wide View</option>
+            <option value="United Motors (UNIMO)">United Motors (UNIMO)</option>
+            <option value="DIMO">DIMO PLC</option>
+            <option value="Toyota Lanka">Toyota Lanka</option>
+            <option value="John Keells CG Auto">John Keells (BYD)</option>
+            <option value="AMW">AMW (Suzuki/Nissan)</option>
+            <option value="Kia Motors Lanka">Kia Motors Lanka</option>
+            <option value="Hayleys Mobility">Hayleys Mobility</option>
+            <option value="Euro Motors">Euro Motors (Jetour)</option>
+          </select>
+        </div>
+        <button class="board-export-btn" onclick="exportBoardBrief()" title="Export 1-Page CEO Board Decision Brief">
+          <svg class="ico" viewBox="0 0 24 24"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          <span>Board Brief</span>
+        </button>
         <button class="tour-trigger" onclick="startTour(true)" title="Guided Tour" aria-label="Guided Tour">
           <svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
         </button>
@@ -1977,6 +2274,63 @@
           <div class="kpi"><div class="kpi-label">BYD New-Car Share</div><div class="kpi-val">48.8%</div><div class="kpi-sub">221 of 453 brand-new cars (Oct '26)</div></div>
           <div class="kpi steel"><div class="kpi-label">MECE Distributors</div><div class="kpi-val">28</div><div class="kpi-sub">100% Brand-New • 18% VAT Base</div></div>
           <div class="kpi"><div class="kpi-label">EV Luxury Tax Tier</div><div class="kpi-val">60% vs 100%+</div><div class="kpi-sub">EV &gt;Rs 6M vs Petrol &gt;Rs 5M</div></div>
+        </div>
+
+        <!-- PROACTIVE CEO DECISION BRIEF (DYNAMIC BY SELECTED COMPANY LENS) -->
+        <div class="ceo-brief-panel" id="ceoBriefPanel">
+          <div class="ceo-brief-top">
+            <div>
+              <div class="ceo-brief-title" id="ceoBriefTitle">Proactive CEO Decision Radar — Sri Lanka Automotive Market</div>
+              <div class="ceo-brief-sub" id="ceoBriefSub">Select your company in the topbar CEO Lens to unlock tailored blind spots, threat alerts, and 90-day launch bets.</div>
+            </div>
+            <span class="ceo-live" id="ceoBriefBadge"><i></i>Live Intelligence • Nov 2026 Cycle</span>
+          </div>
+          <div class="ceo-action-grid" id="ceoActionGrid"></div>
+        </div>
+
+        <!-- MONTHLY RECURRING INTELLIGENCE FEED (WHY A CEO PAYS MONTHLY) -->
+        <div class="card">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:12px;">
+            <div>
+              <div class="card-title">Monthly Market Pulse &amp; Competitive Threat Alerts</div>
+              <div class="card-sub" style="margin-bottom:0;">Curated monthly triggers—tariff shifts, rival price moves, and franchise handovers requiring immediate board action.</div>
+            </div>
+            <span class="badge">Updated Monthly • Board Subscription Feed</span>
+          </div>
+          <div class="mrr-feed">
+            <div class="mrr-item">
+              <div>
+                <div class="mrr-date">Nov 2026 • Pricing Disruption Alert</div>
+                <div class="mrr-title">Sub-10M LKR EVs Undercutting Entry Japanese Hatchbacks</div>
+                <div class="mrr-desc">Tata Tiago.ev (Rs 8.70M), BYD ATTO 1 (Rs 9.30M) &amp; BAW E7 (Rs 5.90M) now sit below or equal to entry ICE hatchbacks with 70% lower running cost.</div>
+              </div>
+              <span class="badge dark">High Impact</span>
+            </div>
+            <div class="mrr-item">
+              <div>
+                <div class="mrr-date">Nov 2026 • Tax Arbitrage Watch</div>
+                <div class="mrr-title">60% EV vs. 100%–120% Petrol Luxury Tax Window Still Open</div>
+                <div class="mrr-desc">Chinese EV/PHEV importers retain a massive CIF-to-showroom tax edge in the Rs 14M–25M Mid-Range SUV band—defending ICE-only SUVs is structurally losing share.</div>
+              </div>
+              <span class="badge dark">Policy Watch</span>
+            </div>
+            <div class="mrr-item">
+              <div>
+                <div class="mrr-date">Q4 2026 • Franchise &amp; Dealer Shift</div>
+                <div class="mrr-title">BMW Franchise Transition to Mels Automobiles (Melstacorp)</div>
+                <div class="mrr-desc">Luxury European competitive set is resetting as Melstacorp activates BMW operations alongside DIMO's Mercedes-Benz EQ EV expansion.</div>
+              </div>
+              <span class="badge steel">Franchise</span>
+            </div>
+            <div class="mrr-item">
+              <div>
+                <div class="mrr-date">FY 2025/26 • Audited CSE Benchmark</div>
+                <div class="mrr-title">Post-Ban Revenue Surge: DIMO Rs 103.6B &amp; UNIMO Rs 52.4B</div>
+                <div class="mrr-desc">United Motors grew revenue 4.4x and DIMO doubled—creating strong H1 cashflow that must now be reinvested into H2 Hybrid/EV white-space models.</div>
+              </div>
+              <span class="badge">Financials</span>
+            </div>
+          </div>
         </div>
 
         <div class="ov-brands-strip" id="tour-brands">
@@ -2084,6 +2438,52 @@
           <p><strong>Apples-to-Apples Automotive Positioning:</strong> Every brand-new model (including DIMO's Mercedes-Benz EQ &amp; Tata EVs, United Motors, Toyota Lanka, Kia &amp; BYD) is scored across <strong>6 MECE feature pillars (0–100)</strong> and plotted against Standardized LKR Price. Models <strong>above the dashed Value Frontier</strong> deliver superior features per LKR Million; empty bands reveal open market gaps.</p>
         </div>
 
+        <!-- WHAT-IF NEW MODEL LAUNCH & PRICING SIMULATOR (CEO DECISION TOOL) -->
+        <div class="sim-box">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
+            <div>
+              <div class="sim-head">
+                <span class="sim-ico"><svg class="ico" viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.8 5.5 21l2-7.5L2 9h7z"/></svg></span>
+                <div>
+                  <div class="sim-title">What-If New Model Launch &amp; Pricing Simulator</div>
+                  <div class="sim-sub">Test a proposed vehicle launch before signing an OEM franchise — it plots live on the matrix and scores your competitive edge.</div>
+                </div>
+              </div>
+            </div>
+            <button class="reset-btn" onclick="clearWhatIf()">Clear Simulation</button>
+          </div>
+          <div class="sim-grid">
+            <div class="sim-field">
+              <label>Proposed Model Name</label>
+              <input type="text" id="simName" value="Proposed Hybrid Compact SUV" placeholder="e.g., UNIMO Hybrid SUV">
+            </div>
+            <div class="sim-field">
+              <label>Powertrain</label>
+              <select id="simPt">
+                <option value="Hybrid">Hybrid</option>
+                <option value="EV">EV</option>
+                <option value="ICE">ICE</option>
+              </select>
+            </div>
+            <div class="sim-field">
+              <label>Target Price (LKR Mn)</label>
+              <input type="number" id="simPrice" value="16.5" min="5" max="150" step="0.5">
+            </div>
+            <div class="sim-field">
+              <label>Target MECE Score (50–98)</label>
+              <input type="number" id="simScore" value="84" min="50" max="98" step="1">
+            </div>
+            <button class="sim-run-btn" onclick="runWhatIfSim()">Simulate Launch</button>
+          </div>
+          <div class="sim-result" id="simResult">
+            <div>
+              <div class="sim-v-title" id="simVerdictTitle">STRONG GO — Market Disruptor</div>
+              <div class="sim-v-desc" id="simVerdictDesc">Undercuts nearby rivals while delivering superior feature value.</div>
+            </div>
+            <span class="sim-edge" id="simEdgeBadge">+9.4 pts vs Frontier</span>
+          </div>
+        </div>
+
         <div class="filter-bar" id="tour-pf-filters">
           <label>Powertrain:</label>
           <select id="pfPowertrain">
@@ -2136,6 +2536,18 @@
             </div>
             <div class="pillar-list" id="pfPillarList"></div>
           </div>
+        </div>
+
+        <!-- PROACTIVE AUTO-DETECTED MARKET GAP RADAR -->
+        <div class="card">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
+            <div>
+              <div class="card-title">Proactive Auto-Detected Market Gaps (White-Space Radar)</div>
+              <div class="card-sub" style="margin-bottom:0;">Automatically scans the active 116-model dataset to highlight underserved Price &times; Powertrain cells directly on the matrix above.</div>
+            </div>
+            <span class="badge dark">Auto-Highlighted on Chart</span>
+          </div>
+          <div class="gap-radar-grid" id="autoGapRadar"></div>
         </div>
 
         <div class="card">
@@ -2572,14 +2984,17 @@
   ];
 
   // RAPID BRAND-FLASH PRELOADER ENGINE
-  (function runLogoPreloader() {
+  (function runDriveXLoader() {
+    const pre = document.getElementById("preloader");
     const bar = document.getElementById("loaderBar");
-    const t0 = performance.now(), dur = 1300;
+    const t0 = performance.now(), dur = 2100;
     (function step(now) {
       const k = Math.min(1, (now - t0) / dur);
-      bar.style.width = (100 * (1 - Math.pow(1 - k, 3))).toFixed(1) + "%";
-      if (k < 1) requestAnimationFrame(step);
-      else setTimeout(() => document.getElementById("preloader").classList.add("hidden"), 220);
+      bar.style.width = (100 * (1 - Math.pow(1 - k, 2.4))).toFixed(1) + "%";
+      if (k < 1) return requestAnimationFrame(step);
+      pre.classList.add("flash");                                   // headlights full beam
+      setTimeout(() => { pre.classList.add("hidden"); document.body.classList.add("intro"); }, 420);
+      setTimeout(() => document.body.classList.remove("intro"), 2200);
     })(t0);
   })();
 
@@ -3240,7 +3655,163 @@
     }
   }
 
+  let activeCeoCompany = "ALL";
+  let whatIfLaunch = null;
+
+  function detectAutoGaps(dataset) {
+    const candidates = [
+      { title: "Budget Hybrid White Space", pt: "Hybrid", x0: 10.0, x1: 17.5, y0: 76, y1: 86, desc: "High-demand family buyers priced out of Rs 20M+ SUVs have almost zero high-feature Hybrid options here." },
+      { title: "Sub-12M Mass EV Sweet Spot", pt: "EV", x0: 7.5, x1: 12.0, y0: 75, y1: 85, desc: "Massive first-time car buyer demand under Rs 12M where 60% EV luxury tax enables disruptive specs." },
+      { title: "Executive EV Sedan / SUV Gap", pt: "EV", x0: 24.0, x1: 36.0, y0: 84, y1: 93, desc: "Wide open space between mass Chinese EVs (Rs 15M–23M) and Mercedes-Benz EQ (Rs 39M+)." }
+    ];
+    return candidates.map(g => {
+      const count = dataset.filter(d => d.Powertrain === g.pt && d.Std_Price_Mn >= g.x0 && d.Std_Price_Mn <= g.x1 && d.Feature_Score >= g.y0).length;
+      return { ...g, count };
+    });
+  }
+
+  function renderAutoGapRadar(dataset) {
+    const el = document.getElementById("autoGapRadar");
+    if (!el) return;
+    const gaps = detectAutoGaps(dataset);
+    const AX = 45;
+    el.innerHTML = gaps.map(g => `
+      <div class="gap-card ${g.count === 0 ? "open" : "thin"}">
+        <div class="gap-card-head">
+          <span class="gap-pt">${g.pt}</span>
+          <span class="gap-pill">${g.count === 0 ? "Open" : "Thin"}</span>
+        </div>
+        <h5>${g.title}</h5>
+        <div class="gap-count"><b>${g.count}</b><span>${g.count === 1 ? "rival" : "rivals"} scoring ${g.y0}+ in this band</span></div>
+        <div class="gap-band" title="LKR ${g.x0}M – ${g.x1}M on a 0–${AX}M scale"><i style="left:${(g.x0 / AX * 100).toFixed(1)}%;width:${((g.x1 - g.x0) / AX * 100).toFixed(1)}%"></i></div>
+        <div class="gap-band-lbl"><span>LKR ${g.x0}M – ${g.x1}M</span><span>0 – ${AX}M</span></div>
+        <p>${g.desc}</p>
+      </div>
+    `).join("");
+  }
+
+  function applyCeoLens() {
+    activeCeoCompany = document.getElementById("ceoCompanySelect").value;
+    renderCeoDecisionBrief();
+    if (document.getElementById("view-features").classList.contains("active")) applyPfFilters();
+    if (document.getElementById("view-ninebox").classList.contains("active")) applyFilters();
+  }
+
+  function renderCeoDecisionBrief() {
+    const titleEl = document.getElementById("ceoBriefTitle");
+    const subEl = document.getElementById("ceoBriefSub");
+    const gridEl = document.getElementById("ceoActionGrid");
+    if (!gridEl) return;
+
+    if (activeCeoCompany === "ALL") {
+      titleEl.textContent = "Proactive CEO Decision Radar — Market-Wide Executive Lens";
+      subEl.textContent = "Switch the CEO Lens dropdown in the topbar to any distributor (e.g., United Motors, DIMO, Toyota) for tailored blind spots and launch moves.";
+      gridEl.innerHTML = `
+        <div class="ceo-act-card go">
+          <div class="ceo-act-tag">Launch Opportunity</div>
+          <h5>Capture the LKR 10M–17.5M Hybrid Gap</h5>
+          <p>Only 2 models compete in Budget Hybrids despite massive buyer anxiety over EV charging outside Colombo. Ideal H2 entry for legacy distributors.</p>
+        </div>
+        <div class="ceo-act-card warn">
+          <div class="ceo-act-tag">Competitive Threat</div>
+          <h5>BYD &amp; Tata EVs Compressing ICE Margins</h5>
+          <p>BYD captured 48.8% of Oct '26 brand-new cars while Tata Tiago.ev (Rs 8.7M) &amp; BYD ATTO 1 (Rs 9.3M) undercut entry petrol cars on total cost of ownership.</p>
+        </div>
+        <div class="ceo-act-card">
+          <div class="ceo-act-tag">Board Priority</div>
+          <h5>Convert H1 Cashflow Into H2 NEV Franchises</h5>
+          <p>Audited CSE revenue surged (DIMO Rs 103.6B, UNIMO Rs 52.4B). Allocate 20% capital now to secure NEV/Hybrid models before 2027 tariff adjustments.</p>
+        </div>
+      `;
+      return;
+    }
+
+    const mine = currentData.filter(d => d.Distributor === activeCeoCompany);
+    const evC = mine.filter(d => d.Powertrain === "EV").length;
+    const hybC = mine.filter(d => d.Powertrain === "Hybrid").length;
+    const iceC = mine.filter(d => d.Powertrain === "ICE").length;
+    const avgP = mine.length ? (mine.reduce((a, b) => a + parseFloat(b.Std_Price_Mn), 0) / mine.length).toFixed(1) : "N/A";
+    const avgF = mine.length ? (mine.reduce((a, b) => a + b.Feature_Score, 0) / mine.length).toFixed(1) : "N/A";
+
+    titleEl.textContent = `CEO War-Room Brief — ${activeCeoCompany}`;
+    subEl.textContent = `Active Portfolio: ${mine.length} models (${iceC} ICE • ${hybC} Hybrid • ${evC} EV) | Avg Price: LKR ${avgP}M | Avg MECE Feature Score: ${avgF}/100`;
+
+    let blindSpot = evC === 0
+      ? `Zero EV exposure (${evC} EVs) while EVs capture 48.8% of new-car demand and enjoy the 60% luxury tax advantage.`
+      : (hybC === 0
+        ? `Zero Hybrid bridge models (${hybC} Hybrids)—missing outstation buyers hesitant about pure-EV charging.`
+        : `Balanced ${evC} EV + ${hybC} Hybrid mix; focus on defending Rs 15M–25M Mid-Range SUV share against Jetour & BYD.`);
+
+    let launchBet = evC === 0
+      ? `Introduce a LKR 12M–17M Hybrid or EV SUV (Target MECE Score 83+) to leapfrog directly into Sri Lanka's highest-growth white space.`
+      : `Target the Executive EV Gap (LKR 24M–36M, Score 85+) where competition is thin between mass Chinese EVs and Rs 39M+ Mercedes EQ.`;
+
+    let defendMove = `Leverage your islandwide service network & resale trust to bundle 5-year battery/service warranties—countering new entrants' thin after-sales footprints.`;
+
+    gridEl.innerHTML = `
+      <div class="ceo-act-card warn">
+        <div class="ceo-act-tag">Critical Blind Spot</div>
+        <h5>${evC === 0 ? "Urgent EV Portfolio Gap" : (hybC === 0 ? "Missing Hybrid Bridge" : "Mid-Range Margin Defense")}</h5>
+        <p>${blindSpot}</p>
+      </div>
+      <div class="ceo-act-card go">
+        <div class="ceo-act-tag">Recommended Launch Bet</div>
+        <h5>Proactive White-Space Move</h5>
+        <p>${launchBet}</p>
+      </div>
+      <div class="ceo-act-card">
+        <div class="ceo-act-tag">Defend Core Moat</div>
+        <h5>Monetize Service &amp; Trust Advantage</h5>
+        <p>${defendMove}</p>
+      </div>
+    `;
+  }
+
+  function runWhatIfSim() {
+    const name = (document.getElementById("simName").value || "Proposed Model").trim();
+    const pt = document.getElementById("simPt").value;
+    const price = parseFloat(document.getElementById("simPrice").value) || 16.5;
+    const score = parseFloat(document.getElementById("simScore").value) || 84;
+    whatIfLaunch = { name, pt, price, score };
+
+    const delta = score - frontierScore(price);
+    const nearbyRivals = currentData.filter(d => Math.abs(d.Std_Price_Mn - price) <= price * 0.2);
+    const beaten = nearbyRivals.filter(d => d.Feature_Score < score).length;
+
+    const res = document.getElementById("simResult");
+    res.classList.add("active");
+    res.classList.remove("go", "par", "caution");
+    res.classList.add(delta >= 3.5 ? "go" : (delta >= -2.5 ? "par" : "caution"));
+    document.getElementById("simEdgeBadge").textContent = `${delta >= 0 ? "+" : ""}${delta.toFixed(1)} pts vs Frontier`;
+    if (delta >= 3.5) {
+      document.getElementById("simVerdictTitle").textContent = `STRONG GO — High-Value ${pt} Disruptor`;
+      document.getElementById("simVerdictDesc").textContent = `"${name}" at LKR ${price.toFixed(1)}M outperforms ${beaten} of ${nearbyRivals.length} nearby rivals (±20% price band) on MECE Features.`;
+    } else if (delta >= -2.5) {
+      document.getElementById("simVerdictTitle").textContent = `CONDITIONAL GO — Competitive Parity`;
+      document.getElementById("simVerdictDesc").textContent = `"${name}" sits on the Value Frontier (beats ${beaten}/${nearbyRivals.length} nearby rivals). Differentiate via warranty or trim pricing.`;
+    } else {
+      document.getElementById("simVerdictTitle").textContent = `CAUTION / REPRICE — Below Value Frontier`;
+      document.getElementById("simVerdictDesc").textContent = `At LKR ${price.toFixed(1)}M and Score ${score}, "${name}" trails ${nearbyRivals.length - beaten} nearby rivals. Lower price by ~10–15% or raise ADAS/tech spec.`;
+    }
+    applyPfFilters();
+  }
+
+  function clearWhatIf() {
+    whatIfLaunch = null;
+    document.getElementById("simResult").classList.remove("active");
+    applyPfFilters();
+  }
+
+  function exportBoardBrief() {
+    const activeNav = document.querySelector(".nav-item.active");
+    if (!activeNav || activeNav.id !== "nav-overview") {
+      document.getElementById("nav-overview").click();
+    }
+    setTimeout(() => window.print(), 250);
+  }
+
   function renderPriceFeaturesChart(data, scale) {
+    renderAutoGapRadar(currentData);
     const ptColors = { "EV": "#086288", "Hybrid": "#4D8DBA", "ICE": "#032233" };
     const ptSymbols = { "EV": "circle", "Hybrid": "diamond", "ICE": "square" };
     const pts = ["EV", "Hybrid", "ICE"];
@@ -3251,12 +3822,13 @@
         y: rows.map(r => r.Feature_Score),
         text: rows.map(r => `${r.Brand} ${r.Model}`),
         customdata: rows,
-        mode: rows.length <= 16 ? "markers+text" : "markers",
+        mode: rows.length <= 14 ? "markers+text" : "markers",
         textposition: "top center",
         textfont: { size: 9.5, color: "#072233" },
         marker: {
-          size: 12,
-          color: ptColors[p],
+          size: rows.map(r => (activeCeoCompany !== "ALL" && r.Distributor === activeCeoCompany) ? 16 : 11),
+          color: rows.map(r => (activeCeoCompany !== "ALL" && r.Distributor === activeCeoCompany) ? "#086288" : ptColors[p]),
+          opacity: rows.map(r => (activeCeoCompany === "ALL" || r.Distributor === activeCeoCompany) ? 0.95 : 0.30),
           symbol: ptSymbols[p],
           line: { color: p === "EV" ? "#97D7FF" : "#FFFFFF", width: 1.8 }
         },
@@ -3277,6 +3849,36 @@
       hoverinfo: "skip"
     });
 
+    if (whatIfLaunch) {
+      traces.push({
+        x: [whatIfLaunch.price],
+        y: [whatIfLaunch.score],
+        text: [`PROPOSED: ${whatIfLaunch.name}`],
+        mode: "markers+text",
+        textposition: "top left", cliponaxis: false,
+        textfont: { size: 11, color: "#043248" },
+        marker: { size: 20, symbol: "star", color: "#043248", line: { color: "#97D7FF", width: 2 } },
+        name: "Proposed Launch",
+        hovertemplate: "<b>PROPOSED LAUNCH: %{text}</b><br>Target Price: LKR %{x:.2f}M • Target Score: %{y}/100<extra></extra>"
+      });
+    }
+
+    const autoGaps = detectAutoGaps(currentData).filter(g => g.x1 <= maxX);
+    const gapShapes = autoGaps.map(g => ({
+      type: "rect",
+      x0: g.x0, x1: g.x1, y0: g.y0, y1: g.y1,
+      fillcolor: "rgba(151, 215, 255, 0.24)",
+      line: { color: "#086288", width: 1.4, dash: "dot" },
+      layer: "below"
+    }));
+    const gapAnnots = autoGaps.map(g => ({
+      x: (g.x0 + g.x1) / 2,
+      y: g.y1 - 1.2,
+      text: `<b>GAP: ${g.pt}</b>`,
+      showarrow: false,
+      font: { color: "#043248", size: 9.5 }
+    }));
+
     const isMob = window.innerWidth < 640;
     Plotly.newPlot("priceFeaturesChart", traces, {
       paper_bgcolor: "#FFFFFF",
@@ -3285,9 +3887,11 @@
       margin: { l: isMob ? 42 : 56, r: isMob ? 10 : 18, t: 24, b: 48 },
       xaxis: { title: "Standardized Brand-New Price (LKR Millions, 18% VAT)", range: [3, maxX], gridcolor: gridCol, zeroline: false },
       yaxis: { title: "Composite MECE Feature Score (0–100)", range: [48, 100], gridcolor: gridCol, zeroline: false },
+      shapes: gapShapes,
       annotations: [
-        { x: maxX * 0.24, y: 96, text: "<b>HIGH-VALUE DISRUPTORS</b>", showarrow: false, font: { color: "#086288", size: isMob ? 9 : 10.5 } },
-        { x: maxX * 0.78, y: 53, text: "<b>OVERPRICED / LEGACY GAP</b>", showarrow: false, font: { color: "#64748B", size: isMob ? 9 : 10.5 } }
+        { x: maxX * 0.24, y: 97, text: "<b>HIGH-VALUE DISRUPTORS</b>", showarrow: false, font: { color: "#086288", size: isMob ? 9 : 10.5 } },
+        { x: maxX * 0.78, y: 52, text: "<b>OVERPRICED / LEGACY GAP</b>", showarrow: false, font: { color: "#64748B", size: isMob ? 9 : 10.5 } },
+        ...gapAnnots
       ],
       legend: { orientation: "h", y: -0.17, font: { size: 10.5 } }
     }, { responsive: true, displaylogo: false });
@@ -3980,6 +4584,7 @@
   renderOfferings();
   populateFilters(currentData);
   populatePfFilters(currentData);
+  renderCeoDecisionBrief();
   renderRegistry();
   initHeroShows();
   renderLeaderboard(0);
