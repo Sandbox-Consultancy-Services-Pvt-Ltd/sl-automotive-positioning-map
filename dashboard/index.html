@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SL Auto Intelligence — Sri Lanka Automotive Positioning 2026</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2397D7FF'/%3E%3Cstop offset='1' stop-color='%23086288'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='40' height='40' rx='11' fill='url(%23g)'/%3E%3Cpath d='M10.5 30 L17.6 10.5 h4.8 L29.5 30' fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M20 15.2v2.6M20 20.6v3M20 26.6v3.2' stroke='white' stroke-width='2.1' stroke-linecap='round'/%3E%3C/svg%3E">
+<title>DriveX — SL Auto Intelligence | Sri Lanka Automotive Positioning 2026</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2264%22 height=%2264%22 viewBox=%220 0 64 64%22 aria-hidden=%22true%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2217%22 fill=%22%230B1117%22/%3E%3Ccircle cx=%2242%22 cy=%2223%22 r=%2212.5%22 fill=%22%23FFC629%22/%3E%3Cpath d=%22M12.5 11.5l6.5 6.5M19 11.5L12.5 18%22 stroke=%22%23FFC629%22 stroke-width=%223%22 stroke-linecap=%22round%22/%3E%3Cpath d=%22M4 42c0-2.4 1.6-3.8 4.2-4.4l8.8-2c4-3.2 9-5.4 15-5.8 6-.4 11 .8 15.5 3.4l6.5 1.6c3.6.8 6 2.4 6 5V42c0 1-.8 1.8-1.8 1.8H5.8C4.8 43.8 4 43 4 42z%22 fill=%22%23FFFFFF%22/%3E%3Cpath d=%22M22.5 35c3-2.4 6.5-3.6 10.5-3.8h3.6l.6 3.7zM39.6 31.5c2.8.5 5 1.5 6.6 2.9l-6 .5z%22 fill=%22%230B1117%22/%3E%3Ccircle cx=%2216%22 cy=%2244%22 r=%225.2%22 fill=%22%230B1117%22 stroke=%22%23FFFFFF%22 stroke-width=%222.2%22/%3E%3Ccircle cx=%2248.5%22 cy=%2244%22 r=%225.2%22 fill=%22%230B1117%22 stroke=%22%23FFFFFF%22 stroke-width=%222.2%22/%3E%3Cpath d=%22M6 55c12-5 24 3 36-1s14-4 17-3%22 fill=%22none%22 stroke=%22%23FFFFFF%22 stroke-width=%222.6%22 stroke-linecap=%22round%22/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -1472,18 +1472,115 @@
   .batch-dot.bB { background: linear-gradient(135deg, #086288, #4D8DBA); }
   .batch-dot.bC { background: linear-gradient(135deg, #4D8DBA, #97D7FF); color: #031B29; }
 
+  /* ======================================================================
+     PHASE 3.4 — DriveX logo, logo loader, fixed slideshow, square tags,
+     bento page headers, profile menu, sign-out confirm
+     ====================================================================== */
+  .brand-word { display: inline-flex; flex-direction: column; line-height: 1; letter-spacing: 3.4px; font-size: 18px; }
+  .brand-word b { color: #FFC629; }
+  .brand-word small { font-family: 'Inter', sans-serif; font-size: 8.5px; font-weight: 700; letter-spacing: 2.2px; text-transform: uppercase; color: var(--ice); margin-top: 4px; }
+  .brand-mark { filter: drop-shadow(0 6px 16px rgba(0,0,0,.35)); border-radius: 26.5%; outline: 1px solid rgba(255,255,255,.18); outline-offset: -1px; }
+  .sb-logo { width: 38px; height: 38px; border-radius: 10px; overflow: visible; }
+  .sb-logo .brand-mark { width: 38px; height: 38px; }
+  .sb-brand-title { font-family: 'Outfit','Inter',sans-serif; font-weight: 900; letter-spacing: 3px; font-size: 17px; }
+  .sb-brand-title b { color: #FFC629; }
+
+  #preloader { background: radial-gradient(circle at 50% 40%, #0B3C56 0%, #041E2D 55%, #02121C 100%); }
+  .loader-logo { margin-bottom: 22px; animation: lgPop .7s cubic-bezier(.22,1.4,.36,1) both; }
+  .loader-mark { display: block; border-radius: 30px; box-shadow: 0 0 0 12px rgba(255,198,41,.08), 0 28px 60px rgba(0,0,0,.5); }
+  .loader-mark circle:first-of-type { transform-origin: 42px 23px; animation: sunPulse 1.4s ease-in-out infinite; }
+  @keyframes lgPop { from { opacity: 0; transform: scale(.7) rotate(-6deg); } to { opacity: 1; transform: none; } }
+  @keyframes sunPulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.08); } }
+  .loader-word { font-family: 'Outfit','Inter',sans-serif; font-size: 30px; font-weight: 900; letter-spacing: 7px; color: #FFFFFF; animation: lgPop .7s .1s both; }
+  .loader-word b { color: #FFC629; }
+  .loader-sub { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--ice); margin: 6px 0 22px 0; animation: lgPop .7s .18s both; }
+  .loader-track { width: 220px; }
+  .loader-bar { background: linear-gradient(90deg, #4D8DBA, #97D7FF, #FFC629); transition: none; }
+
+  /* overview slideshow: every slide the same size */
+  .hero-show:not(.static) { height: 460px; min-height: 0; }
+  .hero-show:not(.static) .hs-slide.active { position: absolute; }
+  @media (max-width: 900px) { .hero-show:not(.static) { height: 600px; } .hero-show p { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; } }
+
+  /* square tags everywhere (no rounded pills) */
+  .hs-kicker { border-radius: 3px; background: linear-gradient(90deg, #086288, #4D8DBA); color: #FFFFFF; padding: 6px 11px; letter-spacing: 1.8px; }
+  .hs-kicker::before { width: 6px; height: 6px; border-radius: 1px; background: #FFC629; box-shadow: none; }
+  .visual-card-kicker, .badge, .co-chip, .sec-chip, .ov-kicker, .hud-pill { border-radius: 4px; }
+
+  /* bento page headers */
+  .bento-head { display: grid; grid-template-columns: 1.15fr 1fr; gap: 14px; margin-bottom: 20px; }
+  @media (max-width: 1080px) { .bento-head { grid-template-columns: 1fr; } }
+  .bento-main {
+    position: relative; overflow: hidden; border-radius: 22px; padding: 28px 30px; color: #FFFFFF;
+    background: radial-gradient(600px 260px at 100% 0%, rgba(151,215,255,.22), transparent 60%), linear-gradient(145deg, #064A6A 0%, #031B29 100%);
+    box-shadow: 0 16px 38px rgba(3,27,41,.2); display: flex; flex-direction: column; justify-content: center;
+  }
+  .bento-main::after { content: ""; position: absolute; right: -40px; bottom: -40px; width: 180px; height: 180px; border-radius: 50%; border: 26px solid rgba(255,255,255,.04); }
+  .bento-tag { align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; font-size: 10.5px; font-weight: 800; letter-spacing: 1.6px; text-transform: uppercase;
+    background: rgba(255,255,255,.1); color: #CFEBFF; padding: 6px 11px; border-radius: 3px; margin-bottom: 14px; }
+  .bento-tag::before { content: ""; width: 6px; height: 6px; border-radius: 1px; background: #FFC629; }
+  .bento-main h2 { font-size: 27px; font-weight: 800; letter-spacing: -.6px; line-height: 1.15; margin-bottom: 10px; }
+  .bento-main h2 span { color: var(--ice); }
+  .bento-main p { font-size: 13.5px; line-height: 1.65; color: rgba(225,241,252,.88); max-width: 560px; }
+  .bento-cta { align-self: flex-start; margin-top: 16px; border: none; background: #FFFFFF; color: #043248; font-weight: 700; font-size: 12.8px; padding: 10px 18px; border-radius: 10px; cursor: pointer; }
+  .bento-cta:hover { background: var(--ice); }
+  .bento-side { display: grid; grid-template-columns: repeat(var(--n, 3), 1fr); grid-template-rows: 1fr auto; gap: 14px; }
+  .bento-img { grid-column: 1 / -1; min-height: 160px; border-radius: 22px; background-image: var(--img); background-size: cover; background-position: var(--pos, center);
+    box-shadow: 0 16px 38px rgba(3,27,41,.18); position: relative; overflow: hidden; }
+  .bento-img::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(3,27,41,0) 50%, rgba(3,27,41,.35) 100%); }
+  .bento-stat { background: #FFFFFF; border-radius: 18px; padding: 14px 16px; box-shadow: var(--soft); transition: transform .18s, box-shadow .18s; }
+  .bento-stat:hover { transform: translateY(-3px); box-shadow: var(--soft-hover); }
+  .bento-stat b { display: block; font-size: 22px; font-weight: 800; letter-spacing: -.5px; color: var(--deep-dark); font-variant-numeric: tabular-nums; line-height: 1.15; }
+  .bento-stat span { font-size: 11px; color: var(--muted); font-weight: 600; }
+  @media (max-width: 640px) { .bento-side { grid-template-columns: repeat(var(--n, 3), 1fr); } .bento-stat b { font-size: 17px; } .bento-main h2 { font-size: 22px; } }
+
+  /* profile menu */
+  .profile { position: relative; }
+  .profile-btn { display: flex; align-items: center; gap: 10px; padding: 4px 10px 4px 4px; border-radius: 99px; border: 1px solid var(--border); background: #FFFFFF; cursor: pointer; font-family: inherit; transition: box-shadow .15s; }
+  .profile-btn:hover { box-shadow: var(--soft); }
+  .avatar { position: relative; width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; color: #FFFFFF; background: linear-gradient(135deg, #086288, #031B29); flex: none; }
+  .avatar .ico { width: 17px; height: 17px; }
+  .avatar.lg { width: 44px; height: 44px; } .avatar.lg .ico { width: 21px; height: 21px; }
+  .avatar .online { position: absolute; right: 0; bottom: 0; width: 10px; height: 10px; border-radius: 50%; background: #22C55E; border: 2px solid #FFFFFF; }
+  .profile-meta { display: flex; flex-direction: column; text-align: left; line-height: 1.2; }
+  .profile-meta b { font-size: 12.5px; color: var(--deep-dark); } .profile-meta small { font-size: 10.5px; color: var(--muted); }
+  .profile-btn .chev { width: 14px; height: 14px; color: var(--muted); transition: transform .2s; }
+  .profile.open .chev { transform: rotate(180deg); }
+  .profile-pop { position: absolute; right: 0; top: calc(100% + 10px); width: 260px; background: #FFFFFF; border-radius: 16px; box-shadow: 0 22px 50px rgba(3,27,41,.22); padding: 8px;
+    opacity: 0; transform: translateY(-6px) scale(.98); pointer-events: none; transition: opacity .16s, transform .16s; z-index: 60; }
+  .profile.open .profile-pop { opacity: 1; transform: none; pointer-events: auto; }
+  .pp-head { display: flex; align-items: center; gap: 12px; padding: 10px 10px 12px 10px; border-bottom: 1px solid var(--border); margin-bottom: 6px; }
+  .pp-head b { display: block; font-size: 13.5px; color: var(--deep-dark); } .pp-head small { display: block; font-size: 11px; line-height: 1.4; color: var(--muted); }
+  .profile-pop button { display: flex; align-items: center; gap: 10px; width: 100%; padding: 10px 12px; border: none; background: transparent; border-radius: 10px; font-size: 13px; font-weight: 600; color: var(--ink); cursor: pointer; font-family: inherit; text-align: left; }
+  .profile-pop button:hover { background: var(--ice-soft); }
+  .profile-pop button.danger { color: #B91C1C; } .profile-pop button.danger:hover { background: #FEF2F2; }
+  @media (max-width: 640px) { .profile-meta, .profile-btn .chev { display: none; } .profile-btn { padding: 3px; } }
+
+  /* sign-out confirmation */
+  #signout-modal { position: fixed; inset: 0; z-index: 9500; display: none; align-items: center; justify-content: center; padding: 20px; background: rgba(3,27,41,.6); backdrop-filter: blur(8px); }
+  #signout-modal.active { display: flex; animation: fadeIn .2s ease; }
+  .so-card { width: 380px; max-width: 100%; background: #FFFFFF; border-radius: 22px; padding: 28px 26px 22px 26px; text-align: center; box-shadow: 0 30px 70px rgba(2,18,28,.45); animation: soPop .28s cubic-bezier(.22,1.3,.36,1); }
+  @keyframes soPop { from { opacity: 0; transform: translateY(12px) scale(.96); } to { opacity: 1; transform: none; } }
+  .so-icon { width: 56px; height: 56px; border-radius: 18px; margin: 0 auto 14px auto; display: grid; place-items: center; background: #FEF2F2; color: #B91C1C; }
+  .so-icon .ico { width: 24px; height: 24px; }
+  .so-card h3 { font-size: 19px; font-weight: 800; color: var(--deep-dark); margin-bottom: 6px; }
+  .so-card p { font-size: 13px; color: var(--muted); line-height: 1.55; margin-bottom: 20px; }
+  .so-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .so-actions button { padding: 11px 14px; border-radius: 12px; font-size: 13.5px; font-weight: 700; cursor: pointer; font-family: inherit; border: none; }
+  .so-cancel { background: var(--canvas); color: var(--deep-dark); } .so-cancel:hover { background: var(--ice-soft); }
+  .so-confirm { background: #B91C1C; color: #FFFFFF; } .so-confirm:hover { background: #991B1B; }
+
 </style>
 </head>
 <body>
 
 <!-- ==================== RAPID BRAND-FLASH PRELOADER ==================== -->
 <div id="preloader">
-  <div class="loader-stage" id="loaderStage"></div>
-  <div class="loader-brand-name" id="loaderBrandName">INITIALIZING</div>
-  <div class="loader-title">SL Auto Intelligence</div>
+  <div class="loader-logo"><svg class="loader-mark" width="118" height="118" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="17" fill="#0B1117"/><circle cx="42" cy="23" r="12.5" fill="#FFC629"/><path d="M12.5 11.5l6.5 6.5M19 11.5L12.5 18" stroke="#FFC629" stroke-width="3" stroke-linecap="round"/><path d="M4 42c0-2.4 1.6-3.8 4.2-4.4l8.8-2c4-3.2 9-5.4 15-5.8 6-.4 11 .8 15.5 3.4l6.5 1.6c3.6.8 6 2.4 6 5V42c0 1-.8 1.8-1.8 1.8H5.8C4.8 43.8 4 43 4 42z" fill="#FFFFFF"/><path d="M22.5 35c3-2.4 6.5-3.6 10.5-3.8h3.6l.6 3.7zM39.6 31.5c2.8.5 5 1.5 6.6 2.9l-6 .5z" fill="#0B1117"/><circle cx="16" cy="44" r="5.2" fill="#0B1117" stroke="#FFFFFF" stroke-width="2.2"/><circle cx="48.5" cy="44" r="5.2" fill="#0B1117" stroke="#FFFFFF" stroke-width="2.2"/><path d="M6 55c12-5 24 3 36-1s14-4 17-3" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"/></svg></div>
+  <div class="loader-word">DRIVE<b>X</b></div>
+  <div class="loader-sub">SL Auto Intelligence</div>
   <div class="loader-bar-wrap">
     <div class="loader-track"><div class="loader-bar" id="loaderBar"></div></div>
-    <div class="loader-pct" id="loaderPct">0%</div>
   </div>
 </div>
 
@@ -1494,7 +1591,7 @@
       <img src="assets/cars/hero_suv.jpg" alt="Executive Portal">
       <div class="login-visual-grad"></div>
       <div class="login-visual-top">
-        <a class="brand"><svg class="brand-mark" width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="lgLogin" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#97D7FF"/><stop offset="1" stop-color="#086288"/></linearGradient></defs><rect width="40" height="40" rx="11" fill="url(#lgLogin)"/><path d="M10.5 30 L17.6 10.5 h4.8 L29.5 30" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 15.2v2.6M20 20.6v3M20 26.6v3.2" stroke="#fff" stroke-width="2.1" stroke-linecap="round"/></svg><span class="brand-word">SL AUTO<b>INTEL</b></span></a>
+        <a class="brand"><svg class="brand-mark" width="34" height="34" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="17" fill="#0B1117"/><circle cx="42" cy="23" r="12.5" fill="#FFC629"/><path d="M12.5 11.5l6.5 6.5M19 11.5L12.5 18" stroke="#FFC629" stroke-width="3" stroke-linecap="round"/><path d="M4 42c0-2.4 1.6-3.8 4.2-4.4l8.8-2c4-3.2 9-5.4 15-5.8 6-.4 11 .8 15.5 3.4l6.5 1.6c3.6.8 6 2.4 6 5V42c0 1-.8 1.8-1.8 1.8H5.8C4.8 43.8 4 43 4 42z" fill="#FFFFFF"/><path d="M22.5 35c3-2.4 6.5-3.6 10.5-3.8h3.6l.6 3.7zM39.6 31.5c2.8.5 5 1.5 6.6 2.9l-6 .5z" fill="#0B1117"/><circle cx="16" cy="44" r="5.2" fill="#0B1117" stroke="#FFFFFF" stroke-width="2.2"/><circle cx="48.5" cy="44" r="5.2" fill="#0B1117" stroke="#FFFFFF" stroke-width="2.2"/><path d="M6 55c12-5 24 3 36-1s14-4 17-3" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"/></svg><span class="brand-word"><span class="bw-main">DRIVE<b>X</b></span><small>SL Auto Intelligence</small></span></a>
       </div>
       <div class="login-visual-bot">
         <h3>Sri Lanka <span>2026</span> Positioning Portal</h3>
@@ -1533,6 +1630,19 @@
   </div>
 </div>
 
+<!-- ==================== SIGN-OUT CONFIRMATION ==================== -->
+<div id="signout-modal" role="dialog" aria-modal="true" aria-labelledby="soTitle" onclick="if (event.target === this) closeSignOut()">
+  <div class="so-card">
+    <div class="so-icon"><svg class="ico" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg></div>
+    <h3 id="soTitle">Sign out of DriveX?</h3>
+    <p>Are you sure? You'll need to sign in again to open the executive dashboard.</p>
+    <div class="so-actions">
+      <button class="so-cancel" onclick="closeSignOut()">Cancel</button>
+      <button class="so-confirm" onclick="closeSignOut(); signOutDashboard()">Yes, sign out</button>
+    </div>
+  </div>
+</div>
+
 <!-- ==================== GUIDED TOUR OVERLAY ==================== -->
 <div id="tour-overlay">
   <div id="tour-spotlight"></div>
@@ -1555,7 +1665,7 @@
 <!-- ====================================================================== -->
 <div id="landing-mode">
   <nav class="lp-nav" id="lpNav">
-    <a class="brand" href="#top"><svg class="brand-mark" width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="lgNav" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#97D7FF"/><stop offset="1" stop-color="#086288"/></linearGradient></defs><rect width="40" height="40" rx="11" fill="url(#lgNav)"/><path d="M10.5 30 L17.6 10.5 h4.8 L29.5 30" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 15.2v2.6M20 20.6v3M20 26.6v3.2" stroke="#fff" stroke-width="2.1" stroke-linecap="round"/></svg><span class="brand-word">SL AUTO<b>INTEL</b></span></a>
+    <a class="brand" href="#top"><svg class="brand-mark" width="34" height="34" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="17" fill="#0B1117"/><circle cx="42" cy="23" r="12.5" fill="#FFC629"/><path d="M12.5 11.5l6.5 6.5M19 11.5L12.5 18" stroke="#FFC629" stroke-width="3" stroke-linecap="round"/><path d="M4 42c0-2.4 1.6-3.8 4.2-4.4l8.8-2c4-3.2 9-5.4 15-5.8 6-.4 11 .8 15.5 3.4l6.5 1.6c3.6.8 6 2.4 6 5V42c0 1-.8 1.8-1.8 1.8H5.8C4.8 43.8 4 43 4 42z" fill="#FFFFFF"/><path d="M22.5 35c3-2.4 6.5-3.6 10.5-3.8h3.6l.6 3.7zM39.6 31.5c2.8.5 5 1.5 6.6 2.9l-6 .5z" fill="#0B1117"/><circle cx="16" cy="44" r="5.2" fill="#0B1117" stroke="#FFFFFF" stroke-width="2.2"/><circle cx="48.5" cy="44" r="5.2" fill="#0B1117" stroke="#FFFFFF" stroke-width="2.2"/><path d="M6 55c12-5 24 3 36-1s14-4 17-3" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"/></svg><span class="brand-word"><span class="bw-main">DRIVE<b>X</b></span><small>SL Auto Intelligence</small></span></a>
     <div class="lp-links">
       <a href="#evolution">The Evolution</a>
       <a href="#lp-brands">Brands</a>
@@ -1571,7 +1681,7 @@
   <aside id="lp-drawer">
     <div>
       <div class="lp-drawer-head">
-        <a class="brand" href="#top" onclick="toggleLpDrawer(false)"><svg class="brand-mark" width="30" height="30" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="lgDrawer" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#97D7FF"/><stop offset="1" stop-color="#086288"/></linearGradient></defs><rect width="40" height="40" rx="11" fill="url(#lgDrawer)"/><path d="M10.5 30 L17.6 10.5 h4.8 L29.5 30" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 15.2v2.6M20 20.6v3M20 26.6v3.2" stroke="#fff" stroke-width="2.1" stroke-linecap="round"/></svg><span class="brand-word">SL AUTO<b>INTEL</b></span></a>
+        <a class="brand" href="#top" onclick="toggleLpDrawer(false)"><svg class="brand-mark" width="30" height="30" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="17" fill="#0B1117"/><circle cx="42" cy="23" r="12.5" fill="#FFC629"/><path d="M12.5 11.5l6.5 6.5M19 11.5L12.5 18" stroke="#FFC629" stroke-width="3" stroke-linecap="round"/><path d="M4 42c0-2.4 1.6-3.8 4.2-4.4l8.8-2c4-3.2 9-5.4 15-5.8 6-.4 11 .8 15.5 3.4l6.5 1.6c3.6.8 6 2.4 6 5V42c0 1-.8 1.8-1.8 1.8H5.8C4.8 43.8 4 43 4 42z" fill="#FFFFFF"/><path d="M22.5 35c3-2.4 6.5-3.6 10.5-3.8h3.6l.6 3.7zM39.6 31.5c2.8.5 5 1.5 6.6 2.9l-6 .5z" fill="#0B1117"/><circle cx="16" cy="44" r="5.2" fill="#0B1117" stroke="#FFFFFF" stroke-width="2.2"/><circle cx="48.5" cy="44" r="5.2" fill="#0B1117" stroke="#FFFFFF" stroke-width="2.2"/><path d="M6 55c12-5 24 3 36-1s14-4 17-3" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"/></svg><span class="brand-word"><span class="bw-main">DRIVE<b>X</b></span><small>SL Auto Intelligence</small></span></a>
         <button class="lp-drawer-close" onclick="toggleLpDrawer(false)" aria-label="Close"><svg class="ico" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
       </div>
       <div class="lp-drawer-nav">
@@ -1697,7 +1807,7 @@
   <footer class="lp-footer" id="lp-footer">
     <div class="lp-foot-grid">
       <div>
-        <a class="brand" href="#top"><svg class="brand-mark" width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="lgFoot" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#97D7FF"/><stop offset="1" stop-color="#086288"/></linearGradient></defs><rect width="40" height="40" rx="11" fill="url(#lgFoot)"/><path d="M10.5 30 L17.6 10.5 h4.8 L29.5 30" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 15.2v2.6M20 20.6v3M20 26.6v3.2" stroke="#fff" stroke-width="2.1" stroke-linecap="round"/></svg><span class="brand-word">SL AUTO<b>INTEL</b></span></a>
+        <a class="brand" href="#top"><svg class="brand-mark" width="34" height="34" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="17" fill="#0B1117"/><circle cx="42" cy="23" r="12.5" fill="#FFC629"/><path d="M12.5 11.5l6.5 6.5M19 11.5L12.5 18" stroke="#FFC629" stroke-width="3" stroke-linecap="round"/><path d="M4 42c0-2.4 1.6-3.8 4.2-4.4l8.8-2c4-3.2 9-5.4 15-5.8 6-.4 11 .8 15.5 3.4l6.5 1.6c3.6.8 6 2.4 6 5V42c0 1-.8 1.8-1.8 1.8H5.8C4.8 43.8 4 43 4 42z" fill="#FFFFFF"/><path d="M22.5 35c3-2.4 6.5-3.6 10.5-3.8h3.6l.6 3.7zM39.6 31.5c2.8.5 5 1.5 6.6 2.9l-6 .5z" fill="#0B1117"/><circle cx="16" cy="44" r="5.2" fill="#0B1117" stroke="#FFFFFF" stroke-width="2.2"/><circle cx="48.5" cy="44" r="5.2" fill="#0B1117" stroke="#FFFFFF" stroke-width="2.2"/><path d="M6 55c12-5 24 3 36-1s14-4 17-3" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"/></svg><span class="brand-word"><span class="bw-main">DRIVE<b>X</b></span><small>SL Auto Intelligence</small></span></a>
         <p>Executive positioning intelligence for Sri Lanka's brand-new vehicle market — 28 official distributors, 116 scored models and the SCALE strategy playbook in one portal.</p>
       </div>
       <div>
@@ -1732,10 +1842,10 @@
   <div id="mobile-backdrop" onclick="toggleMobileSidebar(false)"></div>
   <aside class="sidebar" id="sidebar">
     <div class="sb-brand">
-      <div class="sb-logo"><svg class="brand-mark" width="36" height="36" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="lgSide" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#97D7FF"/><stop offset="1" stop-color="#086288"/></linearGradient></defs><rect width="40" height="40" rx="11" fill="url(#lgSide)"/><path d="M10.5 30 L17.6 10.5 h4.8 L29.5 30" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 15.2v2.6M20 20.6v3M20 26.6v3.2" stroke="#fff" stroke-width="2.1" stroke-linecap="round"/></svg></div>
+      <div class="sb-logo"><svg class="brand-mark" width="36" height="36" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="17" fill="#0B1117"/><circle cx="42" cy="23" r="12.5" fill="#FFC629"/><path d="M12.5 11.5l6.5 6.5M19 11.5L12.5 18" stroke="#FFC629" stroke-width="3" stroke-linecap="round"/><path d="M4 42c0-2.4 1.6-3.8 4.2-4.4l8.8-2c4-3.2 9-5.4 15-5.8 6-.4 11 .8 15.5 3.4l6.5 1.6c3.6.8 6 2.4 6 5V42c0 1-.8 1.8-1.8 1.8H5.8C4.8 43.8 4 43 4 42z" fill="#FFFFFF"/><path d="M22.5 35c3-2.4 6.5-3.6 10.5-3.8h3.6l.6 3.7zM39.6 31.5c2.8.5 5 1.5 6.6 2.9l-6 .5z" fill="#0B1117"/><circle cx="16" cy="44" r="5.2" fill="#0B1117" stroke="#FFFFFF" stroke-width="2.2"/><circle cx="48.5" cy="44" r="5.2" fill="#0B1117" stroke="#FFFFFF" stroke-width="2.2"/><path d="M6 55c12-5 24 3 36-1s14-4 17-3" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"/></svg></div>
       <div>
-        <div class="sb-brand-title">SL Auto Intelligence</div>
-        <div class="sb-brand-sub">Executive Positioning Portal</div>
+        <div class="sb-brand-title">DRIVE<b>X</b></div>
+        <div class="sb-brand-sub">SL Auto Intelligence</div>
       </div>
     </div>
 
@@ -1776,7 +1886,7 @@
     </nav>
 
     <div class="sb-footer">
-      <button class="sb-signout-btn" onclick="signOutDashboard()">
+      <button class="sb-signout-btn" onclick="confirmSignOut()">
         <svg class="ico" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
         Sign Out
       </button>
@@ -1798,7 +1908,19 @@
         <button class="tour-trigger" onclick="startTour(true)" title="Guided Tour" aria-label="Guided Tour">
           <svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
         </button>
-        <div class="status-pill"><span class="status-dot"></span><span>angelo@sandbox.lk</span></div>
+        <div class="profile" id="profileMenu">
+          <button class="profile-btn" onclick="toggleProfile()" aria-label="Account menu">
+            <span class="avatar"><svg class="ico" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><i class="online"></i></span>
+            <span class="profile-meta"><b>Executive</b><small>Sandbox Consultancy</small></span>
+            <svg class="ico chev" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="profile-pop">
+            <div class="pp-head"><span class="avatar lg"><svg class="ico" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><div><b>Executive Reviewer</b><small>Sandbox Consultancy • Full access</small></div></div>
+            <button onclick="toggleProfile(false); startTour(true)"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>Guided tour</button>
+            <button onclick="toggleProfile(false); document.getElementById('nav-companies').click()"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>Company profiles</button>
+            <button class="danger" onclick="toggleProfile(false); confirmSignOut()"><svg class="ico" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>Sign out</button>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -1945,16 +2067,16 @@
 
       <!-- ==================== NEW PRIMARY VIEW: PRICE VS FEATURES (MECE) ==================== -->
       <section id="view-features" class="view">
-        <div class="hero-show static" id="hs-features">
-          <div class="hs-slide active" style="--img:url('https://images.unsplash.com/photo-1636763086471-9f29bc34ab9e?auto=format&fit=crop&w=1800&q=80'); --pos:center;">
-            <div class="hs-bg"></div><div class="hs-shade"></div>
-            <div class="hs-content">
-              <div class="hs-kicker">MECE Model-Level Positioning • Apples-to-Apples</div>
-              <h2>Price vs. <span>Features</span> Positioning Matrix</h2>
-              <p>Every brand-new model in Sri Lanka scored objectively across 6 mutually exclusive feature pillars and benchmarked against the Market Value Frontier to reveal exact product gaps.</p>
-              <div class="hs-stats"><div><b>116</b><span>scored models</span></div><div><b>42 · 28 · 46</b><span>EV · Hybrid · ICE</span></div><div><b>6</b><span>feature pillars</span></div></div>
-              
-            </div>
+        <div class="bento-head" id="bh-features">
+          <div class="bento-main">
+            <div class="bento-tag">MECE Model-Level Positioning • Apples-to-Apples</div>
+            <h2>Price vs. <span>Features</span> Positioning Matrix</h2>
+            <p>Every brand-new model in Sri Lanka scored objectively across 6 mutually exclusive feature pillars and benchmarked against the Market Value Frontier to reveal exact product gaps.</p>
+            
+          </div>
+          <div class="bento-side" style="--n:3">
+            <div class="bento-img" style="--img:url('https://images.unsplash.com/photo-1636763086471-9f29bc34ab9e?auto=format&fit=crop&w=1100&q=80'); --pos:center;"></div>
+            <div class="bento-stat"><b>116</b><span>scored models</span></div><div class="bento-stat"><b>42 · 28 · 46</b><span>EV · Hybrid · ICE</span></div><div class="bento-stat"><b>6</b><span>feature pillars</span></div>
           </div>
         </div>
         <div class="insight-strip">
@@ -2050,16 +2172,16 @@
 
       <!-- ==================== VIEW 1: INTERACTIVE 9-BOX SIMULATOR ==================== -->
       <section id="view-ninebox" class="view">
-        <div class="hero-show static" id="hs-ninebox">
-          <div class="hs-slide active" style="--img:url('https://images.unsplash.com/photo-1622893288761-823ba60f17a6?auto=format&fit=crop&w=1800&q=80'); --pos:center 60%;">
-            <div class="hs-bg"></div><div class="hs-shade"></div>
-            <div class="hs-content">
-              <div class="hs-kicker">Interactive Scenario Engine • 18% VAT Base</div>
-              <h2>9-Box <span>Powertrain vs. Price</span> Simulator</h2>
-              <p>Drag live Budget and Mid-Range LKR price ceilings to stress-test how ICE, Hybrid and EV portfolios cluster across Sri Lanka's 9 competitive cells.</p>
-              <div class="hs-stats"><div><b>27</b><span>budget models</span></div><div><b>51</b><span>mid-range models</span></div><div><b>38</b><span>premium models</span></div></div>
-              
-            </div>
+        <div class="bento-head" id="bh-ninebox">
+          <div class="bento-main">
+            <div class="bento-tag">Interactive Scenario Engine • 18% VAT Base</div>
+            <h2>9-Box <span>Powertrain vs. Price</span> Simulator</h2>
+            <p>Drag live Budget and Mid-Range LKR price ceilings to stress-test how ICE, Hybrid and EV portfolios cluster across Sri Lanka's 9 competitive cells.</p>
+            
+          </div>
+          <div class="bento-side" style="--n:3">
+            <div class="bento-img" style="--img:url('https://images.unsplash.com/photo-1622893288761-823ba60f17a6?auto=format&fit=crop&w=1100&q=80'); --pos:center 60%;"></div>
+            <div class="bento-stat"><b>27</b><span>budget models</span></div><div class="bento-stat"><b>51</b><span>mid-range models</span></div><div class="bento-stat"><b>38</b><span>premium models</span></div>
           </div>
         </div>
         <div class="insight-strip">
@@ -2110,16 +2232,16 @@
 
       <!-- ==================== VIEW 2: GARTNER MAGIC QUADRANT ==================== -->
       <section id="view-quadrant" class="view">
-        <div class="hero-show static" id="hs-quadrant">
-          <div class="hs-slide active" style="--img:url('https://images.unsplash.com/photo-1775189632564-9a089ed5d0b5?auto=format&fit=crop&w=1800&q=80'); --pos:center 45%;">
-            <div class="hs-bg"></div><div class="hs-shade"></div>
-            <div class="hs-content">
-              <div class="hs-kicker">Optional Corporate Innovator Lens</div>
-              <h2>Gartner-Style <span>Vision vs. Execution</span> Benchmark</h2>
-              <p>Compare corporate execution strength against strategic vision across 15 scored Sri Lankan automotive players and inspect analyst outlooks by vehicle segment.</p>
-              <div class="hs-stats"><div><b>15</b><span>scored players</span></div><div><b>5</b><span>segments</span></div><div><b>4</b><span>quadrants</span></div></div>
-              
-            </div>
+        <div class="bento-head" id="bh-quadrant">
+          <div class="bento-main">
+            <div class="bento-tag">Optional Corporate Innovator Lens</div>
+            <h2>Gartner-Style <span>Vision vs. Execution</span> Benchmark</h2>
+            <p>Compare corporate execution strength against strategic vision across 15 scored Sri Lankan automotive players and inspect analyst outlooks by vehicle segment.</p>
+            
+          </div>
+          <div class="bento-side" style="--n:3">
+            <div class="bento-img" style="--img:url('https://images.unsplash.com/photo-1775189632564-9a089ed5d0b5?auto=format&fit=crop&w=1100&q=80'); --pos:center 45%;"></div>
+            <div class="bento-stat"><b>15</b><span>scored players</span></div><div class="bento-stat"><b>5</b><span>segments</span></div><div class="bento-stat"><b>4</b><span>quadrants</span></div>
           </div>
         </div>
         <div class="insight-strip">
@@ -2152,16 +2274,16 @@
 
       <!-- ==================== VIEW 3: SCALE STRATEGY SUITE ==================== -->
       <section id="view-scale" class="view">
-        <div class="hero-show static" id="hs-scale">
-          <div class="hs-slide active" style="--img:url('https://images.unsplash.com/photo-1647962922288-4c7a48558979?auto=format&fit=crop&w=1800&q=80'); --pos:center;">
-            <div class="hs-bg"></div><div class="hs-shade"></div>
-            <div class="hs-content">
-              <div class="hs-kicker">The SCALE Pathway © • Executive Playbook</div>
-              <h2>Blue Ocean, <span>ERRC Grid</span> &amp; Three Horizons</h2>
-              <p>Translate positioning white spaces into boardroom execution: diagnose Adaptive/Shaping dynamics, plot value-innovation curves and allocate 70/20/10 capital across H1–H3.</p>
-              <div class="hs-stats"><div><b>S·C·A·L</b><span>Sense · Choose · Align · Layer</span></div><div><b>70/20/10</b><span>capital split</span></div></div>
-              
-            </div>
+        <div class="bento-head" id="bh-scale">
+          <div class="bento-main">
+            <div class="bento-tag">The SCALE Pathway © • Executive Playbook</div>
+            <h2>Blue Ocean, <span>ERRC Grid</span> &amp; Three Horizons</h2>
+            <p>Translate positioning white spaces into boardroom execution: diagnose Adaptive/Shaping dynamics, plot value-innovation curves and allocate 70/20/10 capital across H1–H3.</p>
+            
+          </div>
+          <div class="bento-side" style="--n:2">
+            <div class="bento-img" style="--img:url('https://images.unsplash.com/photo-1647962922288-4c7a48558979?auto=format&fit=crop&w=1100&q=80'); --pos:center;"></div>
+            <div class="bento-stat"><b>S·C·A·L</b><span>Sense · Choose · Align · Layer</span></div><div class="bento-stat"><b>70/20/10</b><span>capital split</span></div>
           </div>
         </div>
         <div class="grid-2-eq">
@@ -2208,16 +2330,16 @@
 
       <!-- ==================== VIEW 4: DEMAND & MACRO (DMT-READY) ==================== -->
       <section id="view-macro" class="view">
-        <div class="hero-show static" id="hs-macro">
-          <div class="hs-slide active" style="--img:url('https://images.unsplash.com/photo-1498084393753-b411b2d26b34?auto=format&fit=crop&w=1800&q=80'); --pos:center 40%;">
-            <div class="hs-bg"></div><div class="hs-shade"></div>
-            <div class="hs-content">
-              <div class="hs-kicker">Consumer Demand &amp; Macroeconomic Signals</div>
-              <h2>Post-Ban <span>Demand, DMT</span> &amp; Audited Financials</h2>
-              <p>Track what Sri Lankan consumers are actually buying — brand-wise registration signals paired with CBSL import bills, DCS sector GDP and audited CSE distributor revenue.</p>
-              <div class="hs-stats"><div><b>360,117</b><span>2025 registrations</span></div><div><b>254.8K</b><span>motorcycles</span></div><div><b>68.0K</b><span>motor cars</span></div></div>
-              
-            </div>
+        <div class="bento-head" id="bh-macro">
+          <div class="bento-main">
+            <div class="bento-tag">Consumer Demand &amp; Macroeconomic Signals</div>
+            <h2>Post-Ban <span>Demand, DMT</span> &amp; Audited Financials</h2>
+            <p>Track what Sri Lankan consumers are actually buying — brand-wise registration signals paired with CBSL import bills, DCS sector GDP and audited CSE distributor revenue.</p>
+            
+          </div>
+          <div class="bento-side" style="--n:3">
+            <div class="bento-img" style="--img:url('https://images.unsplash.com/photo-1498084393753-b411b2d26b34?auto=format&fit=crop&w=1100&q=80'); --pos:center 40%;"></div>
+            <div class="bento-stat"><b>360,117</b><span>2025 registrations</span></div><div class="bento-stat"><b>254.8K</b><span>motorcycles</span></div><div class="bento-stat"><b>68.0K</b><span>motor cars</span></div>
           </div>
         </div>
         <div class="card">
@@ -2314,16 +2436,16 @@
 
       <!-- ==================== VIEW 5: 28-PLAYER REGISTRY & EVIDENCE ==================== -->
       <section id="view-registry" class="view">
-        <div class="hero-show static" id="hs-registry">
-          <div class="hs-slide active" style="--img:url('https://images.unsplash.com/photo-1574023240744-64c47c8c0676?auto=format&fit=crop&w=1800&q=80'); --pos:center;">
-            <div class="hs-bg"></div><div class="hs-shade"></div>
-            <div class="hs-content">
-              <div class="hs-kicker">100% Verified Official Franchises • Nov 2026</div>
-              <h2>MECE <span>28-Distributor</span> Master Registry</h2>
-              <p>Search and filter all 28 verified brand-new vehicle distributors across Batches A, B and C, with official website verification and evidenced market offerings.</p>
-              <div class="hs-stats"><div><b>28</b><span>verified distributors</span></div><div><b>3</b><span>research batches</span></div><div><b>100%</b><span>brand-new scope</span></div></div>
-              <button class="hs-cta" onclick="document.getElementById('nav-companies').click()">Open Company Profiles →</button>
-            </div>
+        <div class="bento-head" id="bh-registry">
+          <div class="bento-main">
+            <div class="bento-tag">100% Verified Official Franchises • Nov 2026</div>
+            <h2>MECE <span>28-Distributor</span> Master Registry</h2>
+            <p>Search and filter all 28 verified brand-new vehicle distributors across Batches A, B and C, with official website verification and evidenced market offerings.</p>
+            <button class="bento-cta" onclick="document.getElementById('nav-companies').click()">Open Company Profiles →</button>
+          </div>
+          <div class="bento-side" style="--n:3">
+            <div class="bento-img" style="--img:url('https://images.unsplash.com/photo-1574023240744-64c47c8c0676?auto=format&fit=crop&w=1100&q=80'); --pos:center;"></div>
+            <div class="bento-stat"><b>28</b><span>verified distributors</span></div><div class="bento-stat"><b>3</b><span>research batches</span></div><div class="bento-stat"><b>100%</b><span>brand-new scope</span></div>
           </div>
         </div>
         <div class="card">
@@ -2450,29 +2572,15 @@
   ];
 
   // RAPID BRAND-FLASH PRELOADER ENGINE
-  (function runBrandPreloader() {
-    const stage = document.getElementById("loaderStage");
-    const label = document.getElementById("loaderBrandName");
+  (function runLogoPreloader() {
     const bar = document.getElementById("loaderBar");
-    const pct = document.getElementById("loaderPct");
-    const seq = showcaseBrands.slice(0, 10);
-    let idx = 0;
-
-    function tick() {
-      const item = seq[idx % seq.length];
-      stage.innerHTML = getLogoInner(item, item.brand, item.code);
-      label.textContent = item.brand.toUpperCase();
-      const progress = Math.min(100, Math.round(((idx + 1) / seq.length) * 100));
-      bar.style.width = progress + "%";
-      pct.textContent = progress + "%";
-      idx++;
-      if (idx < seq.length) {
-        setTimeout(tick, 145);
-      } else {
-        setTimeout(() => document.getElementById("preloader").classList.add("hidden"), 260);
-      }
-    }
-    tick();
+    const t0 = performance.now(), dur = 1300;
+    (function step(now) {
+      const k = Math.min(1, (now - t0) / dur);
+      bar.style.width = (100 * (1 - Math.pow(1 - k, 3))).toFixed(1) + "%";
+      if (k < 1) requestAnimationFrame(step);
+      else setTimeout(() => document.getElementById("preloader").classList.add("hidden"), 220);
+    })(t0);
   })();
 
   let carouselReversed = false;
@@ -3842,7 +3950,7 @@
     const v = document.getElementById("view-" + viewId);
     if (!v) return;
     const targets = [...v.children].filter(el => !el.classList.contains("hero-show"));
-    v.querySelectorAll(".grid-3 > *, .grid-2 > *, .grid-2-eq > *, .kpi-grid > *, .co-grid > *, .co-sig-grid > *").forEach(el => targets.push(el));
+    v.querySelectorAll(".grid-3 > *, .grid-2 > *, .grid-2-eq > *, .kpi-grid > *, .co-grid > *, .co-sig-grid > *, .bento-side > *").forEach(el => targets.push(el));
     targets.forEach(el => {
       el.classList.add("rv"); el.classList.remove("in");
       const sib = el.parentElement ? [...el.parentElement.children].indexOf(el) : 0;
@@ -3852,6 +3960,18 @@
     const h = v.querySelector(".hero-show");
     if (h) { h.style.opacity = ""; h.style.transform = ""; h.style.filter = ""; }
   }
+
+
+  // ==================== PHASE 3.4: PROFILE MENU + SIGN-OUT CONFIRM ====================
+  function toggleProfile(force) {
+    const m = document.getElementById("profileMenu");
+    if (!m) return;
+    m.classList.toggle("open", typeof force === "boolean" ? force : !m.classList.contains("open"));
+  }
+  document.addEventListener("click", e => { const m = document.getElementById("profileMenu"); if (m && !m.contains(e.target)) m.classList.remove("open"); });
+  function confirmSignOut() { toggleMobileSidebar(false); document.getElementById("signout-modal").classList.add("active"); setTimeout(() => document.querySelector(".so-cancel").focus(), 60); }
+  function closeSignOut() { document.getElementById("signout-modal").classList.remove("active"); }
+  document.addEventListener("keydown", e => { if (e.key === "Escape") { closeSignOut(); toggleProfile(false); } });
 
   // Initial setup
   renderLandingLogoWall();
