@@ -1852,6 +1852,144 @@
   .lens-pill::before { content: ""; width: 6px; height: 6px; border-radius: 1px; background: #97D7FF; }
   .co-chip.lens { background: #97D7FF; color: #031B29; font-weight: 800; }
 
+  /* ======================================================================
+     PHASE 3.9 — varied bento layouts, interactive SCALE, outlook cards,
+     registry carousel
+     ====================================================================== */
+  .bv-card { position: relative; overflow: hidden; border-radius: 22px; color: #FFFFFF; box-shadow: 0 16px 38px rgba(3,27,41,.2);
+    background: linear-gradient(145deg, #064A6A 0%, #031B29 100%); }
+  .bv-text { position: relative; z-index: 2; padding: 28px 30px; }
+  .bv-text h2 { font-size: 27px; font-weight: 800; letter-spacing: -.6px; line-height: 1.15; margin-bottom: 10px; }
+  .bv-text h2 span { color: var(--ice); }
+  .bv-text p { font-size: 13.5px; line-height: 1.65; color: rgba(225,241,252,.88); max-width: 560px; }
+  /* split — Price vs. Features */
+  .bv-split { display: block; }
+  .bv-split .bv-card::before { content: ""; position: absolute; top: 0; right: 0; bottom: 0; width: 56%; background-image: var(--img); background-size: cover; background-position: var(--pos);
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 45%); mask-image: linear-gradient(90deg, transparent 0%, #000 45%); opacity: .85; }
+  .bv-split .bv-text { max-width: 640px; }
+  .bv-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+  .bv-chip { background: rgba(255,255,255,.1); backdrop-filter: blur(8px); border-radius: 14px; padding: 10px 14px; min-width: 110px; }
+  .bv-chip b { display: block; font-size: 20px; font-weight: 800; letter-spacing: -.4px; }
+  .bv-chip span { font-size: 11px; color: rgba(190,225,247,.9); font-weight: 600; }
+  /* stack — 9-Box */
+  .bv-stack { grid-template-columns: 230px 1fr; }
+  .bv-stats { display: grid; gap: 12px; }
+  .bv-stack .bento-stat { display: flex; flex-direction: column; justify-content: center; }
+  .bv-card.photo::before { content: ""; position: absolute; inset: 0; background-image: var(--img); background-size: cover; background-position: var(--pos); }
+  .bv-card.photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(3,27,41,.94) 0%, rgba(3,27,41,.7) 55%, rgba(3,27,41,.25) 100%); }
+  .bv-card.photo .bv-text { display: flex; flex-direction: column; justify-content: center; min-height: 100%; }
+  /* strip — Demand & Macro */
+  .bv-strip { grid-template-columns: 2.2fr 1fr 1fr 1fr; }
+  .bv-strip .bv-card { display: flex; align-items: stretch; }
+  .bv-strip .bv-text { flex: 1; }
+  .bv-thumb { width: 34%; flex: none; background-image: var(--img); background-size: cover; background-position: var(--pos); -webkit-mask-image: linear-gradient(90deg, transparent, #000 40%); mask-image: linear-gradient(90deg, transparent, #000 40%); }
+  .bento-stat.tall { display: flex; flex-direction: column; justify-content: center; padding: 18px; background: var(--tint-ice); }
+  .bento-stat.tall b { font-size: 30px; }
+  .view > .scale-steps { position: sticky; top: 74px; z-index: 30; }
+  .scale-steps.rv { opacity: 1; transform: none; }
+  @media (max-width: 1080px) { .bv-stack, .bv-strip { grid-template-columns: 1fr; } .bv-stats { grid-template-columns: repeat(3, 1fr); } .bv-thumb { display: none; } .bv-split .bv-card::before { width: 100%; opacity: .25; } }
+
+  /* SCALE stepper + sections */
+  .scale-steps { position: sticky; top: 74px; z-index: 30; display: grid; grid-template-columns: repeat(4, 1fr); background: #FFFFFF; border-radius: 16px; box-shadow: var(--soft); padding: 6px; margin-bottom: 18px; }
+  .scale-steps button { position: relative; z-index: 1; display: flex; align-items: center; justify-content: center; gap: 10px; padding: 10px; border: none; background: transparent; cursor: pointer; font-family: inherit; border-radius: 12px; color: var(--muted); }
+  .scale-steps button b { width: 28px; height: 28px; border-radius: 8px; display: grid; place-items: center; background: var(--canvas); color: var(--deep); font-weight: 800; transition: background .2s, color .2s; }
+  .scale-steps button span { font-size: 13px; font-weight: 700; }
+  .scale-steps button.active { color: #FFFFFF; } .scale-steps button.active b { background: rgba(255,255,255,.16); color: #FFFFFF; }
+  .scale-steps-bar { position: absolute; top: 6px; bottom: 6px; left: 0; width: calc(25% - 3px); margin-left: 6px; border-radius: 12px; background: linear-gradient(135deg, #086288, #043248); transition: left .35s cubic-bezier(.22,1,.36,1); }
+  .scale-sec { scroll-margin-top: 140px; }
+  .scale-sec-head { display: flex; gap: 14px; align-items: center; margin-bottom: 16px; }
+  .scale-letter { width: 44px; height: 44px; flex: none; border-radius: 12px; display: grid; place-items: center; font-size: 20px; font-weight: 800; color: #FFFFFF; background: linear-gradient(135deg, #086288, #043248); }
+  .scale-sec-head .card-sub { margin-bottom: 0; }
+  .palette-wrap { display: grid; grid-template-columns: 1.3fr 1fr; gap: 16px; }
+  .palette { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+  .palette button { border: none; border-radius: 14px; padding: 16px 10px; background: var(--canvas); cursor: pointer; font-family: inherit; text-align: left; transition: transform .15s, background .15s; display: flex; flex-direction: column; gap: 4px; min-height: 92px; justify-content: flex-end; }
+  .palette button b { font-size: 13px; color: var(--deep-dark); } .palette button span { font-size: 11px; color: var(--muted); }
+  .palette button.fit { background: var(--tint-ice); }
+  .palette button:hover { transform: translateY(-2px); }
+  .palette button.active { background: linear-gradient(145deg, #086288, #043248); } .palette button.active b, .palette button.active span { color: #FFFFFF; }
+  .palette-read { border-radius: 16px; padding: 16px 18px; background: var(--tint-ice); animation: coIn .3s ease; }
+  .palette-read h4 { font-size: 15px; color: var(--deep-dark); margin: 8px 0 4px 0; } .palette-read p { font-size: 12.6px; color: var(--muted); line-height: 1.55; }
+  .pr-tag { font-size: 10px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; padding: 4px 9px; border-radius: 3px; background: var(--deep); color: #FFFFFF; }
+  .dilemma { display: grid; grid-template-columns: 1fr auto 1.3fr; gap: 12px; align-items: stretch; margin-top: 16px; }
+  .dilemma-lane { border-radius: 16px; padding: 14px 16px; background: var(--canvas); }
+  .dilemma-lane.dark { background: linear-gradient(145deg, #064A6A, #031B29); color: #FFFFFF; } .dilemma-lane.dark p { color: rgba(225,241,252,.88); }
+  .dilemma-lane p { font-size: 12.6px; line-height: 1.55; color: var(--muted); margin-top: 6px; }
+  .dl-tag { font-size: 10px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--steel); }
+  .dilemma-lane.dark .dl-tag { color: var(--ice); }
+  .dilemma-arrow { display: grid; place-items: center; color: var(--steel); }
+  .choose-grid { display: grid; grid-template-columns: 1.25fr 1fr; gap: 16px; align-items: start; }
+  .errc-pick { display: grid; gap: 10px; }
+  .errc-pick button { display: flex; gap: 12px; align-items: flex-start; text-align: left; border: none; border-radius: 14px; padding: 12px 14px; background: var(--canvas); cursor: pointer; font-family: inherit; transition: transform .15s, background .15s; }
+  .errc-pick button:hover { transform: translateX(3px); }
+  .errc-pick button b { font-size: 13px; color: var(--deep-dark); } .errc-pick button p { font-size: 11.8px; color: var(--muted); line-height: 1.5; margin-top: 2px; }
+  .ep-l { width: 32px; height: 32px; flex: none; border-radius: 9px; display: grid; place-items: center; font-weight: 800; color: var(--deep); background: #FFFFFF; }
+  .errc-pick button.active { background: linear-gradient(145deg, #086288, #043248); } .errc-pick button.active b { color: #FFFFFF; } .errc-pick button.active p { color: rgba(225,241,252,.88); }
+  .errc-pick button.active .ep-l { background: var(--ice); color: #031B29; }
+  .align-wrap { display: grid; grid-template-columns: 1.5fr 1fr; gap: 16px; align-items: center; }
+  .align-list { display: grid; gap: 10px; }
+  .align-list label { display: flex; gap: 12px; align-items: flex-start; padding: 12px 14px; border-radius: 14px; background: var(--canvas); cursor: pointer; transition: background .15s; }
+  .align-list label:hover { background: var(--ice-soft); }
+  .align-list input { display: none; }
+  .al-box { width: 22px; height: 22px; flex: none; border-radius: 6px; background: #FFFFFF; box-shadow: inset 0 0 0 2px var(--border-strong); position: relative; margin-top: 1px; }
+  .align-list input:checked + .al-box { background: var(--deep); box-shadow: none; }
+  .align-list input:checked + .al-box::after { content: ""; position: absolute; left: 7px; top: 3px; width: 6px; height: 11px; border: solid #FFFFFF; border-width: 0 2.4px 2.4px 0; transform: rotate(45deg); }
+  .align-list b { font-size: 13px; color: var(--deep-dark); display: block; } .align-list small { font-size: 11.8px; color: var(--muted); }
+  .align-gauge { text-align: center; }
+  .ag-ring { --p: 0; width: 150px; height: 150px; margin: 0 auto; border-radius: 50%; display: grid; place-content: center;
+    background: radial-gradient(closest-side, #FFFFFF 76%, transparent 77% 100%), conic-gradient(#086288 calc(var(--p) * 1%), #E3EEF5 0); transition: --p .4s; }
+  .ag-ring b { font-size: 32px; font-weight: 800; color: var(--deep-dark); line-height: 1; } .ag-ring span { font-size: 11px; color: var(--muted); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+  .align-gauge p { font-size: 12.5px; color: var(--muted); margin-top: 12px; }
+  .alloc-top { display: grid; grid-template-columns: 220px 1fr auto; gap: 18px; align-items: end; margin-bottom: 14px; }
+  .alloc-budget { font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .6px; display: flex; flex-direction: column; gap: 6px; }
+  .alloc-budget input { padding: 10px 12px; border-radius: 10px; border: 1px solid transparent; background: var(--canvas); font-size: 15px; font-weight: 800; color: var(--deep-dark); font-family: inherit; outline: none; }
+  .alloc-budget input:focus { border-color: var(--deep); background: #FFFFFF; }
+  .alloc-sliders { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .alloc-sliders label { font-size: 12px; font-weight: 700; color: var(--deep-dark); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px; }
+  .alloc-sliders input { width: 100%; accent-color: var(--deep); }
+  .alloc-bar { display: flex; height: 16px; border-radius: 99px; overflow: hidden; background: var(--canvas); margin-bottom: 16px; }
+  .alloc-bar i { display: block; height: 100%; transition: width .3s ease; }
+  .alloc-bar .h1 { background: #043248; } .alloc-bar .h2 { background: #4D8DBA; } .alloc-bar .h3 { background: #97D7FF; }
+  .alloc-amt { font-size: 14px; font-weight: 800; color: var(--steel); margin: -2px 0 10px 0; font-variant-numeric: tabular-nums; }
+  .h-card.h3 .alloc-amt { color: var(--ice); }
+  .alloc-note { margin-top: 12px; font-size: 12.5px; color: var(--deep-dark); font-weight: 600; background: var(--tint-ice); border-radius: 12px; padding: 10px 14px; }
+  @media (max-width: 980px) { .palette-wrap, .choose-grid, .align-wrap, .alloc-top, .dilemma { grid-template-columns: 1fr; } .palette { grid-template-columns: repeat(3, 1fr); } .dilemma-arrow { transform: rotate(90deg); } .scale-steps button span { display: none; } }
+
+  /* Innovator: outlook cards below the big chart */
+  .ol-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 14px; flex-wrap: wrap; margin-bottom: 16px; }
+  .outlook-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 14px; }
+  .outlook-grid .outlook-item { display: flex; flex-direction: column; gap: 8px; padding: 16px; animation: coIn .4s ease both; }
+  .outlook-grid .outlook-item.highlighted { background: linear-gradient(145deg, #064A6A, #031B29); }
+  .outlook-grid .outlook-item.highlighted .outlook-name { color: #FFFFFF; }
+  .outlook-grid .outlook-item.highlighted .outlook-text, .outlook-grid .outlook-item.highlighted .ol-bar span { color: rgba(225,241,252,.85); }
+  .outlook-grid .outlook-item.highlighted .ol-bar b { color: #FFFFFF; }
+  .ol-bar { display: grid; grid-template-columns: 58px 1fr 34px; gap: 8px; align-items: center; font-size: 11px; font-weight: 700; color: var(--muted); }
+  .ol-bar .track { height: 6px; border-radius: 99px; background: rgba(8,98,136,.12); overflow: hidden; }
+  .ol-bar .track i { display: block; height: 100%; border-radius: 99px; background: linear-gradient(90deg, var(--deep), var(--ice)); }
+  .ol-bar b { text-align: right; color: var(--deep-dark); }
+  .ol-cta { margin-top: auto; font-size: 11.5px; font-weight: 700; color: var(--deep); }
+  .outlook-grid .outlook-item.highlighted .ol-cta { color: var(--ice); }
+
+  /* registry carousel */
+  .reg-carousel { background: #FFFFFF; border-radius: 22px; box-shadow: var(--soft); padding: 24px 0 22px 0; margin-bottom: 20px; overflow: hidden; }
+  .rc-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 14px; padding: 0 24px; margin-bottom: 18px; }
+  .rc-head h2 { font-size: 24px; font-weight: 800; letter-spacing: -.5px; color: var(--deep-dark); margin: 10px 0 4px 0; }
+  .rc-head p { font-size: 13px; color: var(--muted); }
+  .rc-nav { display: flex; gap: 8px; }
+  .rc-nav button { width: 40px; height: 40px; border-radius: 50%; border: none; background: var(--canvas); color: var(--deep); cursor: pointer; display: grid; place-items: center; }
+  .rc-nav button:hover { background: var(--deep); color: #FFFFFF; }
+  .rc-track { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 6px 24px 10px 24px; scroll-padding: 0 24px; }
+  .rc-card { flex: 0 0 268px; scroll-snap-align: start; border: none; border-radius: 20px; padding: 18px; text-align: left; cursor: pointer; font-family: inherit;
+    background: var(--tint-ice); display: flex; flex-direction: column; gap: 8px; transition: transform .2s, box-shadow .2s, background .2s; }
+  .rc-card:hover { transform: translateY(-4px); background: #FFFFFF; box-shadow: var(--soft-hover); }
+  .rc-logo { width: 64px; height: 64px; border-radius: 18px; background: #FFFFFF; display: grid; place-items: center; padding: 11px; box-shadow: 0 2px 10px rgba(4,50,72,.1); margin-bottom: 4px; }
+  .rc-logo img, .rc-logo svg { width: 100%; height: 100%; object-fit: contain; }
+  .rc-name { font-size: 15px; font-weight: 800; color: var(--deep-dark); line-height: 1.25; }
+  .rc-focus { font-size: 11.5px; color: var(--muted); font-weight: 600; }
+  .rc-brands { display: flex; flex-wrap: wrap; gap: 5px; }
+  .rc-brands i { font-style: normal; font-size: 10.5px; font-weight: 700; padding: 3px 8px; border-radius: 4px; background: #FFFFFF; color: var(--deep); }
+  .rc-web { margin-top: auto; padding-top: 6px; display: inline-flex; align-items: center; gap: 6px; font-size: 11.5px; font-weight: 700; color: var(--deep); }
+  .rc-web .ico { width: 13px; height: 13px; }
+
 </style>
 </head>
 <body>
@@ -2203,10 +2341,6 @@
             <option value="Euro Motors">Euro Motors (Jetour)</option>
           </select>
         </div>
-        <button class="board-export-btn" onclick="exportBoardBrief()" title="Export 1-Page CEO Board Decision Brief">
-          <svg class="ico" viewBox="0 0 24 24"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
-          <span>Board Brief</span>
-        </button>
         <button class="tour-trigger" onclick="startTour(true)" title="Guided Tour" aria-label="Guided Tour">
           <svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
         </button>
@@ -2220,6 +2354,7 @@
             <div class="pp-head"><span class="avatar lg"><svg class="ico" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><div><b>Executive Reviewer</b><small>Sandbox Consultancy • Full access</small></div></div>
             <button onclick="toggleProfile(false); startTour(true)"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>Guided tour</button>
             <button onclick="toggleProfile(false); document.getElementById('nav-companies').click()"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>Company profiles</button>
+            <button onclick="toggleProfile(false); exportBoardBrief()"><svg class="ico" viewBox="0 0 24 24"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>Board brief (print)</button>
             <button class="danger" onclick="toggleProfile(false); confirmSignOut()"><svg class="ico" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>Sign out</button>
           </div>
         </div>
@@ -2406,12 +2541,6 @@
         <div class="co-dock-card">
           <div class="co-dock-top">
             <input type="text" class="co-search" id="coSearch" placeholder="Search company or brand..." oninput="renderCompanyList()">
-            <div class="co-batch">
-              <button class="active" onclick="setCoBatch('ALL', this)">All 28</button>
-              <button onclick="setCoBatch('A', this)">Batch A</button>
-              <button onclick="setCoBatch('B', this)">Batch B</button>
-              <button onclick="setCoBatch('C', this)">Batch C</button>
-            </div>
             <div class="co-count" id="coCount"></div>
           </div>
           <div class="co-dock-wrap">
@@ -2426,21 +2555,15 @@
 
       <!-- ==================== NEW PRIMARY VIEW: PRICE VS FEATURES (MECE) ==================== -->
       <section id="view-features" class="view">
-        <div class="bento-head" id="bh-features">
-          <div class="bento-main">
-            <div class="bento-tag">MECE Model-Level Positioning • Apples-to-Apples</div>
-            <h2>Price vs. <span>Features</span> Positioning Matrix</h2>
-            <p>Every brand-new model in Sri Lanka scored objectively across 6 mutually exclusive feature pillars and benchmarked against the Market Value Frontier to reveal exact product gaps.</p>
-            
+        <div class="bento-head bv-split" id="bh-features">
+          <div class="bv-card" style="--img:url('https://images.unsplash.com/photo-1636763086471-9f29bc34ab9e?auto=format&fit=crop&w=1100&q=80'); --pos:center;">
+            <div class="bv-text">
+              <div class="bento-tag">MECE Model-Level Positioning • Apples-to-Apples</div>
+              <h2>Price vs. <span>Features</span> Positioning Matrix</h2>
+              <p>Every brand-new model in Sri Lanka scored objectively across 6 mutually exclusive feature pillars and benchmarked against the Market Value Frontier to reveal exact product gaps.</p>
+              <div class="bv-chips"><div class="bv-chip"><b>116</b><span>scored models</span></div><div class="bv-chip"><b>42 · 28 · 46</b><span>EV · Hybrid · ICE</span></div><div class="bv-chip"><b>6</b><span>feature pillars</span></div></div>
+            </div>
           </div>
-          <div class="bento-side" style="--n:3">
-            <div class="bento-img" style="--img:url('https://images.unsplash.com/photo-1636763086471-9f29bc34ab9e?auto=format&fit=crop&w=1100&q=80'); --pos:center;"></div>
-            <div class="bento-stat"><b>116</b><span>scored models</span></div><div class="bento-stat"><b>42 · 28 · 46</b><span>EV · Hybrid · ICE</span></div><div class="bento-stat"><b>6</b><span>feature pillars</span></div>
-          </div>
-        </div>
-        <div class="insight-strip">
-          <svg class="ico" viewBox="0 0 24 24" style="color:var(--deep)"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-          <p><strong>Apples-to-Apples Automotive Positioning:</strong> Every brand-new model (including DIMO's Mercedes-Benz EQ &amp; Tata EVs, United Motors, Toyota Lanka, Kia &amp; BYD) is scored across <strong>6 MECE feature pillars (0–100)</strong> and plotted against Standardized LKR Price. Models <strong>above the dashed Value Frontier</strong> deliver superior features per LKR Million; empty bands reveal open market gaps.</p>
         </div>
 
         <!-- WHAT-IF NEW MODEL LAUNCH & PRICING SIMULATOR (CEO DECISION TOOL) -->
@@ -2589,21 +2712,15 @@
 
       <!-- ==================== VIEW 1: INTERACTIVE 9-BOX SIMULATOR ==================== -->
       <section id="view-ninebox" class="view">
-        <div class="bento-head" id="bh-ninebox">
-          <div class="bento-main">
-            <div class="bento-tag">Interactive Scenario Engine • 18% VAT Base</div>
-            <h2>9-Box <span>Powertrain vs. Price</span> Simulator</h2>
-            <p>Drag live Budget and Mid-Range LKR price ceilings to stress-test how ICE, Hybrid and EV portfolios cluster across Sri Lanka's 9 competitive cells.</p>
-            
+        <div class="bento-head bv-stack" id="bh-ninebox">
+          <div class="bv-stats"><div class="bento-stat"><b>27</b><span>budget models</span></div><div class="bento-stat"><b>51</b><span>mid-range models</span></div><div class="bento-stat"><b>38</b><span>premium models</span></div></div>
+          <div class="bv-card photo" style="--img:url('https://images.unsplash.com/photo-1622893288761-823ba60f17a6?auto=format&fit=crop&w=1100&q=80'); --pos:center 60%;">
+            <div class="bv-text">
+              <div class="bento-tag">Interactive Scenario Engine • 18% VAT Base</div>
+              <h2>9-Box <span>Powertrain vs. Price</span> Simulator</h2>
+              <p>Drag live Budget and Mid-Range LKR price ceilings to stress-test how ICE, Hybrid and EV portfolios cluster across Sri Lanka's 9 competitive cells.</p>
+            </div>
           </div>
-          <div class="bento-side" style="--n:3">
-            <div class="bento-img" style="--img:url('https://images.unsplash.com/photo-1622893288761-823ba60f17a6?auto=format&fit=crop&w=1100&q=80'); --pos:center 60%;"></div>
-            <div class="bento-stat"><b>27</b><span>budget models</span></div><div class="bento-stat"><b>51</b><span>mid-range models</span></div><div class="bento-stat"><b>38</b><span>premium models</span></div>
-          </div>
-        </div>
-        <div class="insight-strip">
-          <svg class="ico" viewBox="0 0 24 24" style="color:var(--deep)"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-          <p><strong>Interactive Simulator:</strong> Drag the <strong>Budget</strong> and <strong>Mid-Range</strong> price sliders below to dynamically test how Sri Lankan brand-new models cluster across the 9 boxes.</p>
         </div>
 
         <div class="slider-panel" id="tour-sliders">
@@ -2649,22 +2766,6 @@
 
       <!-- ==================== VIEW 2: GARTNER MAGIC QUADRANT ==================== -->
       <section id="view-quadrant" class="view">
-        <div class="bento-head" id="bh-quadrant">
-          <div class="bento-main">
-            <div class="bento-tag">Optional Corporate Innovator Lens</div>
-            <h2>Gartner-Style <span>Vision vs. Execution</span> Benchmark</h2>
-            <p>Compare corporate execution strength against strategic vision across 15 scored Sri Lankan automotive players and inspect analyst outlooks by vehicle segment.</p>
-            
-          </div>
-          <div class="bento-side" style="--n:3">
-            <div class="bento-img" style="--img:url('https://images.unsplash.com/photo-1775189632564-9a089ed5d0b5?auto=format&fit=crop&w=1100&q=80'); --pos:center 45%;"></div>
-            <div class="bento-stat"><b>15</b><span>scored players</span></div><div class="bento-stat"><b>5</b><span>segments</span></div><div class="bento-stat"><b>4</b><span>quadrants</span></div>
-          </div>
-        </div>
-        <div class="insight-strip">
-          <svg class="ico" viewBox="0 0 24 24" style="color:var(--deep)"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-          <p><strong>Optional Innovator Benchmark (Gartner Lens):</strong> Evaluates corporate Vision vs. Execution across 15 scored players. For model-level automotive gap analysis, use the <strong>Price vs. Features</strong> and <strong>9-Box Matrix</strong> tabs.</p>
-        </div>
 
         <div class="pill-bar" id="tour-quad-pills">
           <button class="pill active" onclick="filterQuadrant('ALL', this)">All Segments</button>
@@ -2675,16 +2776,24 @@
           <button class="pill" onclick="filterQuadrant('MF', this)">MF · Manufacturing</button>
         </div>
 
-        <div class="grid-2">
-          <div class="card">
+        <div>
+          <div class="card" id="quadCard">
             <div class="card-title">Sri Lanka Automotive Magic Quadrant</div>
             <div class="card-sub">Source: <code style="color:var(--deep)">quadrant_scores_default_weights.csv</code>. Solid markers = evidenced; light-fill = watchlist.</div>
-            <div id="magicQuadrantChart" style="width:100%; height:495px;"></div>
+            <div id="magicQuadrantChart" style="width:100%; height:620px;"></div>
           </div>
           <div class="card">
-            <div class="card-title">Analyst Outlook Judgement</div>
-            <div class="card-sub">Select a company below to highlight on the quadrant.</div>
-            <div class="outlook-list" id="outlookList"></div>
+            <div class="ol-head">
+              <div><div class="card-title">Analyst Outlook Judgement</div>
+              <div class="card-sub" style="margin-bottom:0">Select a company to spotlight it on the quadrant above.</div></div>
+              <div class="seg-tabs" id="olTabs">
+                <button class="active" onclick="setOutlookFilter('ALL', this)">All</button>
+                <button onclick="setOutlookFilter('Likely Leader', this)">Likely Leaders</button>
+                <button onclick="setOutlookFilter('Contender', this)">Contenders</button>
+                <button onclick="setOutlookFilter('Watch', this)">Watch</button>
+              </div>
+            </div>
+            <div class="outlook-grid" id="outlookList"></div>
           </div>
         </div>
       </section>
@@ -2703,61 +2812,91 @@
             <div class="bento-stat"><b>S·C·A·L</b><span>Sense · Choose · Align · Layer</span></div><div class="bento-stat"><b>70/20/10</b><span>capital split</span></div>
           </div>
         </div>
-        <div class="grid-2-eq">
-          <div class="card">
-            <div class="card-title">S · Sense: Strategy Palette &amp; Disruption</div>
-            <div class="card-sub">Diagnosing Sri Lanka's post-ban competitive terrain.</div>
-            <div class="errc-box" style="margin-bottom:12px;">
-              <h4>Environment: Adaptive / Shaping</h4>
-              <p>Low predictability (tariff &amp; FX shifts) paired with high malleability (60% EV luxury tax edge &amp; rapid Chinese OEM entry). Classical 5-year plans age in months; winners vary, select, and scale fast.</p>
+        <nav class="scale-steps" id="scaleSteps">
+          <button data-t="scale-s" class="active"><b>S</b><span>Sense</span></button>
+          <button data-t="scale-c"><b>C</b><span>Choose</span></button>
+          <button data-t="scale-a"><b>A</b><span>Align</span></button>
+          <button data-t="scale-l"><b>L</b><span>Layer</span></button>
+          <i class="scale-steps-bar" id="scaleStepsBar"></i>
+        </nav>
+
+        <div class="card scale-sec" id="scale-s">
+          <div class="scale-sec-head"><span class="scale-letter">S</span><div><div class="card-title">Sense — Strategy Palette &amp; Disruption</div><div class="card-sub">Which environment is Sri Lanka's post-ban market? Select a style to read what winning looks like.</div></div></div>
+          <div class="palette-wrap">
+            <div class="palette" id="scalePalette">
+              <button data-k="classical"><b>Classical</b><span>Be big</span></button>
+              <button data-k="adaptive" class="fit active"><b>Adaptive</b><span>Be fast</span></button>
+              <button data-k="visionary"><b>Visionary</b><span>Be first</span></button>
+              <button data-k="shaping" class="fit"><b>Shaping</b><span>Be the orchestrator</span></button>
+              <button data-k="renewal"><b>Renewal</b><span>Be viable</span></button>
             </div>
-            <div class="errc-box steel">
-              <h4>The Innovator's Dilemma in Action</h4>
-              <p>Incumbents defend high-margin ICE heritage while disruptors (<strong>BYD, Jetour, Jaecoo, Kaiyi</strong>) enter lower with superior cabin tech and climb straight into the mainstream.</p>
-            </div>
+            <div class="palette-read" id="paletteRead"></div>
           </div>
-          <div class="card">
-            <div class="card-title">C · Choose: Blue Ocean Strategy Canvas</div>
-            <div class="card-sub">Traditional ICE Distributors vs. Chinese EV Entrants (1 = low, 5 = high).</div>
-            <div id="scaleCanvasChart" style="width:100%; height:310px;"></div>
+          <div class="dilemma">
+            <div class="dilemma-lane"><span class="dl-tag">Incumbents</span><p>Defend high-margin ICE heritage, dealer networks and brand equity.</p></div>
+            <div class="dilemma-arrow"><svg class="ico" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+            <div class="dilemma-lane dark"><span class="dl-tag">Disruptors</span><p><strong>BYD, Jetour, Jaecoo, Kaiyi</strong> enter lower with superior cabin tech and climb straight into the mainstream — the Innovator's Dilemma in action.</p></div>
           </div>
         </div>
 
-        <div class="card">
-          <div class="card-title">C · Choose: ERRC Action Grid</div>
-          <div class="card-sub">Eliminate · Reduce · Raise · Create framework applied to Sri Lanka's EV transition.</div>
-          <div class="errc-grid">
-            <div class="errc-box" data-l="E"><h4>Eliminate</h4><p>Combustion engine complexity, high fuel dependency, and 100%–120% petrol/diesel luxury tax penalties.</p></div>
-            <div class="errc-box steel" data-l="R"><h4>Reduce</h4><p>Landed price via vertical scale + 60% EV luxury tax tier; model refresh cycles cut to ~18 months vs. 48+ months.</p></div>
-            <div class="errc-box ice" data-l="R"><h4>Raise</h4><p>ADAS driver-assist, large infotainment displays, and connected features delivered as standard in the LKR 10M–22M segment.</p></div>
-            <div class="errc-box" data-l="C"><h4>Create</h4><p>Software-defined vehicles (OTA updates), bundled home-charging, and battery-health resale warranties.</p></div>
+        <div class="card scale-sec" id="scale-c">
+          <div class="scale-sec-head"><span class="scale-letter">C</span><div><div class="card-title">Choose — Blue Ocean Canvas &amp; ERRC Grid</div><div class="card-sub">Select an ERRC move to see which value factors it changes on the canvas (1 = low, 5 = high).</div></div></div>
+          <div class="choose-grid">
+            <div id="scaleCanvasChart" style="width:100%; height:340px;"></div>
+            <div class="errc-pick" id="errcPick">
+              <button data-m="E"><span class="ep-l">E</span><div><b>Eliminate</b><p>Combustion engine complexity, high fuel dependency, and 100%–120% petrol/diesel luxury tax penalties.</p></div></button>
+              <button data-m="R1"><span class="ep-l">R</span><div><b>Reduce</b><p>Landed price via vertical scale + 60% EV luxury tax tier; model refresh cycles cut to ~18 months vs. 48+ months.</p></div></button>
+              <button data-m="R2"><span class="ep-l">R</span><div><b>Raise</b><p>ADAS driver-assist, large infotainment displays, and connected features delivered as standard in the LKR 10M–22M segment.</p></div></button>
+              <button data-m="C"><span class="ep-l">C</span><div><b>Create</b><p>Software-defined vehicles (OTA updates), bundled home-charging, and battery-health resale warranties.</p></div></button>
+            </div>
           </div>
         </div>
 
-        <div class="card">
-          <div class="card-title">L · Layer: Three Horizons Roadmap (70 / 20 / 10)</div>
-          <div class="card-sub">Recommended capital &amp; team split for a legacy Sri Lankan distributor (e.g., United Motors / DIMO).</div>
-          <div class="grid-3">
-            <div class="h-card"><div class="h-pct">~70%</div><div class="h-meter"><i style="width:70%"></i></div><h4>H1 · Immediate (Defend Core)</h4><p>Protect profitable ICE SUV/commercial lines and monetize existing islandwide service workshops &amp; spare parts.</p></div>
-            <div class="h-card h2"><div class="h-pct">~20%</div><div class="h-meter"><i style="width:20%"></i></div><h4>H2 · Growth (Scale NEVs)</h4><p>Capture white-space boxes in <strong>Budget &amp; Mid-Range Hybrids/EVs</strong> (LKR 10M–20M) via an autonomous NEV unit.</p></div>
-            <div class="h-card h3"><div class="h-pct">~10%</div><div class="h-meter"><i style="width:10%"></i></div><h4>H3 · Transformative (Future Bets)</h4><p>Pilot fast-charging alliances (ChargeNET / PUCSL framework), certified EV battery resale guarantees, and fleet mobility.</p></div>
+        <div class="card scale-sec" id="scale-a">
+          <div class="scale-sec-head"><span class="scale-letter">A</span><div><div class="card-title">Align — Organisation Readiness</div><div class="card-sub">Tick the moves already in place to see how ready the organisation is to execute the playbook.</div></div></div>
+          <div class="align-wrap">
+            <div class="align-list" id="alignList">
+              <label><input type="checkbox"><span class="al-box"></span><div><b>Autonomous NEV business unit</b><small>A separate team to capture the LKR 10M–20M hybrid/EV white space (H2).</small></div></label>
+              <label><input type="checkbox"><span class="al-box"></span><div><b>Workshops ready for EV &amp; hybrid service</b><small>Turn the islandwide service network into an EV-era advantage (H1).</small></div></label>
+              <label><input type="checkbox"><span class="al-box"></span><div><b>Fast-charging alliance</b><small>Partner under the ChargeNET / PUCSL framework (H3).</small></div></label>
+              <label><input type="checkbox"><span class="al-box"></span><div><b>Battery-health resale guarantee</b><small>Certified EV battery checks to protect resale confidence (Create).</small></div></label>
+            </div>
+            <div class="align-gauge"><div class="ag-ring" id="alignRing"><b id="alignPct">0%</b><span>ready</span></div><p id="alignNote">Start by ticking what is already in place.</p></div>
           </div>
+        </div>
+
+        <div class="card scale-sec" id="scale-l">
+          <div class="scale-sec-head"><span class="scale-letter">L</span><div><div class="card-title">Layer — Three Horizons Capital Allocator</div><div class="card-sub">Recommended split for a legacy distributor is 70 / 20 / 10. Enter a budget and drag to test your own mix.</div></div></div>
+          <div class="alloc-top">
+            <label class="alloc-budget">Annual strategic budget (LKR Mn)<input type="number" id="allocBudget" value="1000" min="10" step="10"></label>
+            <div class="alloc-sliders">
+              <label>H1 · Defend core <b id="allocH1v">70%</b><input type="range" id="allocH1" min="0" max="100" value="70"></label>
+              <label>H2 · Scale NEVs <b id="allocH2v">20%</b><input type="range" id="allocH2" min="0" max="100" value="20"></label>
+            </div>
+            <button class="reset-btn" onclick="resetAlloc()">Reset to 70/20/10</button>
+          </div>
+          <div class="alloc-bar" id="allocBar"><i class="h1"></i><i class="h2"></i><i class="h3"></i></div>
+          <div class="grid-3 alloc-cards">
+            <div class="h-card"><div class="h-pct" id="allocP1">70%</div><div class="alloc-amt" id="allocA1"></div><h4>H1 · Immediate (Defend Core)</h4><p>Protect profitable ICE SUV/commercial lines and monetize existing islandwide service workshops &amp; spare parts.</p></div>
+            <div class="h-card h2"><div class="h-pct" id="allocP2">20%</div><div class="alloc-amt" id="allocA2"></div><h4>H2 · Growth (Scale NEVs)</h4><p>Capture white-space boxes in <strong>Budget &amp; Mid-Range Hybrids/EVs</strong> (LKR 10M–20M) via an autonomous NEV unit.</p></div>
+            <div class="h-card h3"><div class="h-pct" id="allocP3">10%</div><div class="alloc-amt" id="allocA3"></div><h4>H3 · Transformative (Future Bets)</h4><p>Pilot fast-charging alliances (ChargeNET / PUCSL framework), certified EV battery resale guarantees, and fleet mobility.</p></div>
+          </div>
+          <div class="alloc-note" id="allocNote"></div>
         </div>
       </section>
 
       <!-- ==================== VIEW 4: DEMAND & MACRO (DMT-READY) ==================== -->
       <section id="view-macro" class="view">
-        <div class="bento-head" id="bh-macro">
-          <div class="bento-main">
-            <div class="bento-tag">Consumer Demand &amp; Macroeconomic Signals</div>
-            <h2>Post-Ban <span>Demand, DMT</span> &amp; Audited Financials</h2>
-            <p>Track what Sri Lankan consumers are actually buying — brand-wise registration signals paired with CBSL import bills, DCS sector GDP and audited CSE distributor revenue.</p>
-            
+        <div class="bento-head bv-strip" id="bh-macro">
+          <div class="bv-card" style="--img:url('https://images.unsplash.com/photo-1498084393753-b411b2d26b34?auto=format&fit=crop&w=1100&q=80'); --pos:center 40%;">
+            <div class="bv-text">
+              <div class="bento-tag">Consumer Demand &amp; Macroeconomic Signals</div>
+              <h2>Post-Ban <span>Demand, DMT</span> &amp; Audited Financials</h2>
+              <p>Track what Sri Lankan consumers are actually buying — brand-wise registration signals paired with CBSL import bills, DCS sector GDP and audited CSE distributor revenue.</p>
+            </div>
+            <div class="bv-thumb"></div>
           </div>
-          <div class="bento-side" style="--n:3">
-            <div class="bento-img" style="--img:url('https://images.unsplash.com/photo-1498084393753-b411b2d26b34?auto=format&fit=crop&w=1100&q=80'); --pos:center 40%;"></div>
-            <div class="bento-stat"><b>360,117</b><span>2025 registrations</span></div><div class="bento-stat"><b>254.8K</b><span>motorcycles</span></div><div class="bento-stat"><b>68.0K</b><span>motor cars</span></div>
-          </div>
+          <div class="bento-stat tall"><b>360,117</b><span>2025 registrations</span></div><div class="bento-stat tall"><b>254.8K</b><span>motorcycles</span></div><div class="bento-stat tall"><b>68.0K</b><span>motor cars</span></div>
         </div>
         <div class="card">
           <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:12px; margin-bottom:12px;">
@@ -2853,33 +2992,27 @@
 
       <!-- ==================== VIEW 5: 28-PLAYER REGISTRY & EVIDENCE ==================== -->
       <section id="view-registry" class="view">
-        <div class="bento-head" id="bh-registry">
-          <div class="bento-main">
-            <div class="bento-tag">100% Verified Official Franchises • Nov 2026</div>
-            <h2>MECE <span>28-Distributor</span> Master Registry</h2>
-            <p>Search and filter all 28 verified brand-new vehicle distributors across Batches A, B and C, with official website verification and evidenced market offerings.</p>
-            <button class="bento-cta" onclick="document.getElementById('nav-companies').click()">Open Company Profiles →</button>
+        <div class="reg-carousel">
+          <div class="rc-head">
+            <div>
+              <div class="bento-tag" style="background:#E6F3FA;color:#086288">100% Verified Official Franchises • Nov 2026</div>
+              <h2>28 brand-new vehicle distributors</h2>
+              <p>Swipe through every verified distributor — select a card to open its full company profile.</p>
+            </div>
+            <div class="rc-nav"><button onclick="slideReg(-1)" aria-label="Previous"><svg class="ico" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button><button onclick="slideReg(1)" aria-label="Next"><svg class="ico" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></button></div>
           </div>
-          <div class="bento-side" style="--n:3">
-            <div class="bento-img" style="--img:url('https://images.unsplash.com/photo-1574023240744-64c47c8c0676?auto=format&fit=crop&w=1100&q=80'); --pos:center;"></div>
-            <div class="bento-stat"><b>28</b><span>verified distributors</span></div><div class="bento-stat"><b>3</b><span>research batches</span></div><div class="bento-stat"><b>100%</b><span>brand-new scope</span></div>
-          </div>
+          <div class="rc-track" id="regTrack"></div>
         </div>
+
         <div class="card">
           <div class="card-title">Verified 28-Distributor MECE Master Registry</div>
-          <div class="card-sub">Brand-new Sri Lankan distributors only (as of Nov 2026). Filter by batch or search any company or brand.</div>
+          <div class="card-sub">Brand-new Sri Lankan distributors only (as of Nov 2026). Search any company or brand.</div>
           <div class="filter-bar">
-            <input type="text" id="registrySearch" placeholder="Search distributor, brand, or owner..." style="width:280px; background:#fff;">
-            <div class="pill-bar" style="margin-bottom:0;">
-              <button class="pill active" onclick="filterBatch('ALL', this)">All (28)</button>
-              <button class="pill" onclick="filterBatch('A', this)">Batch A · Arundathie (9)</button>
-              <button class="pill" onclick="filterBatch('B', this)">Batch B · Sithumini (10)</button>
-              <button class="pill" onclick="filterBatch('C', this)">Batch C · Thilakshana (9)</button>
-            </div>
+            <input type="text" id="registrySearch" placeholder="Search distributor or brand..." style="width:280px; background:#fff;">
           </div>
           <div class="table-wrap">
             <table>
-              <thead><tr><th>Batch</th><th>Distributor</th><th>Brands Carried</th><th>Website Status</th><th>Owner</th></tr></thead>
+              <thead><tr><th>Batch</th><th>Distributor</th><th>Brands Carried</th><th>Website Status</th></tr></thead>
               <tbody id="registryBody"></tbody>
             </table>
           </div>
@@ -3493,8 +3626,9 @@
   function highlightOutlook(id, el) {
     highlightedCompany = (highlightedCompany === id) ? null : id;
     document.querySelectorAll(".outlook-item").forEach(i => i.classList.remove("highlighted"));
-    if (highlightedCompany) el.classList.add("highlighted");
+    renderOutlooks();
     renderQuadrant(activeSegment);
+    if (highlightedCompany) document.getElementById("quadCard").scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
   function renderStrategyCanvas() {
@@ -3505,7 +3639,11 @@
     ], {
       paper_bgcolor:"#FFFFFF", plot_bgcolor:"#F8FBFE", font:plotFont,
       margin:{l:40,r:16,t:14,b:72}, yaxis:{range:[0.5,5.5], tickvals:[1,2,3,4,5], gridcolor:gridCol},
-      xaxis:{tickangle:-18}, legend:{orientation:"h", y:1.15}
+      xaxis:{tickangle:-18}, legend:{orientation:"h", y:1.15},
+      shapes: (typeof errcSel !== "undefined" && errcSel ? ERRC_FACTORS[errcSel] : []).map(name => {
+        const i = f.indexOf(name);
+        return { type:"rect", xref:"x", yref:"paper", x0:i - 0.42, x1:i + 0.42, y0:0, y1:1, fillcolor:"rgba(151,215,255,0.32)", line:{ width:0 }, layer:"below" };
+      })
     }, { responsive:true, displaylogo:false });
   }
 
@@ -3534,16 +3672,28 @@
     ], { barmode:"group", paper_bgcolor:"#FFFFFF", plot_bgcolor:"#F8FBFE", font:plotFont, margin:{l:42,r:12,t:12,b:36}, yaxis:{gridcolor:gridCol}, legend:{orientation:"h", y:1.15} }, { responsive:true, displaylogo:false });
   }
 
+  let outlookFilter = "ALL";
+  function setOutlookFilter(f, btn) {
+    outlookFilter = f;
+    document.querySelectorAll("#olTabs button").forEach(b => b.classList.toggle("active", b === btn));
+    renderOutlooks();
+  }
   function renderOutlooks() {
-    document.getElementById("outlookList").innerHTML = outlookData.map(o => `
-      <div class="outlook-item ${o.cls}" onclick="highlightOutlook('${o.id}', this)">
+    const rows = outlookData.filter(o => outlookFilter === "ALL" || o.label.startsWith(outlookFilter));
+    document.getElementById("outlookList").innerHTML = rows.map((o, k) => {
+      const q = quadrantData.find(r => r.id === o.id);
+      const bar = (lbl, v) => `<div class="ol-bar"><span>${lbl}</span><div class="track"><i style="width:${v / 5 * 100}%"></i></div><b>${v.toFixed(2)}</b></div>`;
+      return `
+      <div class="outlook-item ${o.cls} ${o.id === highlightedCompany ? "highlighted" : ""}" style="animation-delay:${k * 50}ms" onclick="highlightOutlook('${o.id}', this)">
         <div class="outlook-top">
           <div class="outlook-head-left">${getBrandLogoHTML(o.company, true)}<div class="outlook-name">${o.company}</div></div>
-          <span class="badge ${o.cls===''?'dark':(o.cls==='contender'?'steel':'')}">${o.label}</span>
+          <span class="badge ${o.cls === "" ? "dark" : (o.cls === "contender" ? "steel" : "")}">${o.label}</span>
         </div>
         <div class="outlook-text">${o.text}</div>
-      </div>
-    `).join("");
+        ${q ? bar("Execute", q.exec) + bar("Vision", q.vision) : ""}
+        <div class="ol-cta">${o.id === highlightedCompany ? "Spotlighted on chart" : "Show on chart"}</div>
+      </div>`;
+    }).join("");
   }
 
   function renderOfferings() {
@@ -3566,7 +3716,6 @@
         <td><div class="co-cell">${getBrandLogoHTML(r[1], true)}<strong>${r[1]}</strong></div></td>
         <td>${r[2]}</td>
         <td><span class="badge ${r[4]==='Verified'?'dark':''}">${r[3]}</span></td>
-        <td>${r[5]}</td>
       </tr>
     `).join("");
   }
@@ -3591,7 +3740,7 @@
   }
 
   ["filterPowertrain","filterDistributor","filterBody"].forEach(id => document.getElementById(id).addEventListener("change", applyFilters));
-  document.getElementById("registrySearch").addEventListener("input", renderRegistry);
+  document.getElementById("registrySearch").addEventListener("input", () => { renderRegistry(); renderRegCarousel(); });
 
 
   // ==================== PHASE 2: PRICE VS FEATURES (MECE) ====================
@@ -4615,6 +4764,104 @@
   function closeSignOut() { document.getElementById("signout-modal").classList.remove("active"); }
   document.addEventListener("keydown", e => { if (e.key === "Escape") { closeSignOut(); toggleProfile(false); } });
 
+
+  // ==================== PHASE 3.9: SCALE interactivity + registry carousel ====================
+  const PALETTE = {
+    classical: ["Classical — be big", "Predictable and hard to change. Win through scale, position and cost leadership.", false],
+    adaptive: ["Adaptive — be fast", "Unpredictable but hard to shape. Tariff and FX swings make 5-year plans age in months; winners run many small experiments and scale what works.", true],
+    visionary: ["Visionary — be first", "Predictable and changeable. Win by seeing the end-state early and committing ahead of rivals.", false],
+    shaping: ["Shaping — be the orchestrator", "Unpredictable but changeable. The 60% EV luxury-tax edge and rapid Chinese OEM entry let players reshape the market through partnerships and ecosystems.", true],
+    renewal: ["Renewal — be viable", "A harsh environment. Conserve resources, restore viability, then pick a new growth style.", false]
+  };
+  function setPalette(k) {
+    document.querySelectorAll("#scalePalette button").forEach(b => b.classList.toggle("active", b.dataset.k === k));
+    const [t, d, fit] = PALETTE[k];
+    document.getElementById("paletteRead").innerHTML = `<span class="pr-tag">${fit ? "Fits Sri Lanka 2026" : "Less relevant today"}</span><h4>${t}</h4><p>${d}</p>`;
+  }
+  const ERRC_FACTORS = { E: ["Engine Refinement"], R1: ["Price Level", "Model Refresh"], R2: ["In-Car Tech & OTA", "Driver Assist"], C: ["Low Running Cost", "In-Car Tech & OTA"] };
+  let errcSel = null;
+  function pickErrc(m) {
+    errcSel = errcSel === m ? null : m;
+    document.querySelectorAll("#errcPick button").forEach(b => b.classList.toggle("active", b.dataset.m === errcSel));
+    renderStrategyCanvas();
+  }
+  function updateAlign() {
+    const boxes = [...document.querySelectorAll("#alignList input")];
+    const n = boxes.filter(b => b.checked).length, pct = Math.round(n / boxes.length * 100);
+    document.getElementById("alignPct").textContent = pct + "%";
+    document.getElementById("alignRing").style.setProperty("--p", pct);
+    document.getElementById("alignNote").textContent = pct === 100 ? "Fully aligned — the organisation can execute all three horizons."
+      : pct >= 50 ? "Partly aligned — close the remaining gaps before scaling H2." : "Early stage — alignment gaps will slow the NEV push.";
+  }
+  function fmtMn(v) { return "LKR " + Math.round(v).toLocaleString() + "M"; }
+  function updateAlloc(src) {
+    const h1 = document.getElementById("allocH1"), h2 = document.getElementById("allocH2");
+    let a = +h1.value, b = +h2.value;
+    if (a + b > 100) { if (src === "h1") b = 100 - a; else a = 100 - b; h1.value = a; h2.value = b; }
+    const c = 100 - a - b, budget = Math.max(0, +document.getElementById("allocBudget").value || 0);
+    [["1", a], ["2", b], ["3", c]].forEach(([k, v]) => {
+      document.getElementById("allocP" + k).textContent = v + "%";
+      document.getElementById("allocA" + k).textContent = fmtMn(budget * v / 100);
+    });
+    document.getElementById("allocH1v").textContent = a + "%";
+    document.getElementById("allocH2v").textContent = b + "%";
+    const bar = document.getElementById("allocBar").children;
+    bar[0].style.width = a + "%"; bar[1].style.width = b + "%"; bar[2].style.width = c + "%";
+    const off = Math.abs(a - 70) + Math.abs(b - 20) + Math.abs(c - 10);
+    document.getElementById("allocNote").textContent = off === 0 ? "On the recommended 70 / 20 / 10 split."
+      : b + c < 20 ? "Under-investing in NEVs and future bets — the EV shift will outpace this mix."
+      : a < 50 ? "Very aggressive — the profitable ICE core may be starved before NEVs pay back."
+      : `Custom mix: ${a} / ${b} / ${c} (recommended 70 / 20 / 10).`;
+  }
+  function resetAlloc() { document.getElementById("allocH1").value = 70; document.getElementById("allocH2").value = 20; updateAlloc(); }
+  (function initScale() {
+    document.querySelectorAll("#scalePalette button").forEach(b => b.addEventListener("click", () => setPalette(b.dataset.k)));
+    document.querySelectorAll("#errcPick button").forEach(b => b.addEventListener("click", () => pickErrc(b.dataset.m)));
+    document.querySelectorAll("#alignList input").forEach(b => b.addEventListener("change", updateAlign));
+    document.getElementById("allocH1").addEventListener("input", () => updateAlloc("h1"));
+    document.getElementById("allocH2").addEventListener("input", () => updateAlloc("h2"));
+    document.getElementById("allocBudget").addEventListener("input", () => updateAlloc());
+    const steps = [...document.querySelectorAll("#scaleSteps button")];
+    steps.forEach(b => b.addEventListener("click", () => {
+      const t = document.getElementById(b.dataset.t);
+      window.scrollTo({ top: t.getBoundingClientRect().top + window.scrollY - 140, behavior: "smooth" });
+    }));
+    const setStep = id => {
+      steps.forEach((b, i) => { const on = b.dataset.t === id; b.classList.toggle("active", on); if (on) document.getElementById("scaleStepsBar").style.left = (i * 25) + "%"; });
+    };
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) setStep(e.target.id); }), { rootMargin: "-40% 0px -55% 0px" });
+    ["scale-s", "scale-c", "scale-a", "scale-l"].forEach(id => io.observe(document.getElementById(id)));
+    setPalette("adaptive"); updateAlign(); updateAlloc();
+  })();
+
+  function renderRegCarousel() {
+    const q = (document.getElementById("registrySearch").value || "").toLowerCase();
+    const rows = companyProfiles.filter(c => (c.name + " " + c.brands.join(" ")).toLowerCase().includes(q));
+    document.getElementById("regTrack").innerHTML = rows.map(c => `
+      <button class="rc-card" onclick="openCompanyByName('${c.name.split(" (")[0].replace(/'/g, "")}')">
+        <span class="rc-logo">${brandLogoInner(c.lead)}</span>
+        <span class="rc-name">${c.name}</span>
+        <span class="rc-focus">${c.focus}</span>
+        <span class="rc-brands">${c.brands.map(b => `<i>${b}</i>`).join("")}</span>
+        <span class="rc-web">${c.web.split(";")[0]} <svg class="ico" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </button>`).join("") || `<div class="co-empty">No distributor matches that search.</div>`;
+  }
+  function slideReg(dir) {
+    const t = document.getElementById("regTrack");
+    t.scrollBy({ left: dir * Math.max(300, t.clientWidth * 0.8), behavior: "smooth" });
+  }
+  (function regAutoplay() {
+    let pause = false;
+    const t = () => document.getElementById("regTrack");
+    document.addEventListener("mouseover", e => { pause = !!(e.target.closest && e.target.closest(".reg-carousel")); });
+    setInterval(() => {
+      const el = t();
+      if (!el || pause || !el.offsetParent) return;
+      if (el.scrollLeft + el.clientWidth >= el.scrollWidth - 4) el.scrollTo({ left: 0, behavior: "smooth" });
+      else el.scrollBy({ left: 282, behavior: "smooth" });
+    }, 3800);
+  })();
+
   // Initial setup
   renderLandingLogoWall();
   renderOverviewBrands();
@@ -4629,6 +4876,7 @@
   } catch (e) {}
   renderCeoDecisionBrief();
   renderRegistry();
+  renderRegCarousel();
   initHeroShows();
   renderLeaderboard(0);
   renderCompanyList();
